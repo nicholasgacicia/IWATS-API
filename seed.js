@@ -1,3 +1,5 @@
+const db = require('./models');
+
 const showsDataArray = [
   {
     "showid": 1326251770,
@@ -11,7 +13,7 @@ const showsDataArray = [
     "venueid": 1140,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "1983",
+    "tour_year": "1983",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26,7 +28,7 @@ const showsDataArray = [
     "venueid": 7,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "1983",
+    "tour_year": "1983",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41,7 +43,7 @@ const showsDataArray = [
     "venueid": 7,
     "tourid": 1,
     "tourname": "1983 Tour",
-    "tour_when": "1983",
+    "tour_year": "1983",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56,7 +58,7 @@ const showsDataArray = [
     "venueid": 272,
     "tourid": 1,
     "tourname": "1983 Tour",
-    "tour_when": "1983",
+    "tour_year": "1983",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -71,7 +73,7 @@ const showsDataArray = [
     "venueid": 246,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -86,7 +88,7 @@ const showsDataArray = [
     "venueid": 46,
     "tourid": 2,
     "tourname": "1984 Tour",
-    "tour_when": "1984",
+    "tour_year": "1984",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -101,7 +103,7 @@ const showsDataArray = [
     "venueid": 246,
     "tourid": 2,
     "tourname": "1984 Tour",
-    "tour_when": "1984",
+    "tour_year": "1984",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -116,7 +118,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 2,
     "tourname": "1984 Tour",
-    "tour_when": "1984",
+    "tour_year": "1984",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -131,7 +133,7 @@ const showsDataArray = [
     "venueid": 344,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -146,7 +148,7 @@ const showsDataArray = [
     "venueid": 344,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -161,7 +163,7 @@ const showsDataArray = [
     "venueid": 344,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -176,7 +178,7 @@ const showsDataArray = [
     "venueid": 344,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -191,7 +193,7 @@ const showsDataArray = [
     "venueid": 345,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -206,7 +208,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -221,7 +223,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -236,7 +238,7 @@ const showsDataArray = [
     "venueid": 344,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -251,7 +253,7 @@ const showsDataArray = [
     "venueid": 344,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -266,7 +268,7 @@ const showsDataArray = [
     "venueid": 344,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -281,7 +283,7 @@ const showsDataArray = [
     "venueid": 346,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -296,7 +298,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -311,7 +313,7 @@ const showsDataArray = [
     "venueid": 347,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -326,7 +328,7 @@ const showsDataArray = [
     "venueid": 348,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -341,7 +343,7 @@ const showsDataArray = [
     "venueid": 348,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -356,7 +358,7 @@ const showsDataArray = [
     "venueid": 348,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -371,7 +373,7 @@ const showsDataArray = [
     "venueid": 348,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -386,7 +388,7 @@ const showsDataArray = [
     "venueid": 348,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -401,7 +403,7 @@ const showsDataArray = [
     "venueid": 346,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -416,7 +418,7 @@ const showsDataArray = [
     "venueid": 246,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -431,7 +433,7 @@ const showsDataArray = [
     "venueid": 349,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -446,7 +448,7 @@ const showsDataArray = [
     "venueid": 246,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -461,7 +463,7 @@ const showsDataArray = [
     "venueid": 346,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -476,7 +478,7 @@ const showsDataArray = [
     "venueid": 246,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -491,7 +493,7 @@ const showsDataArray = [
     "venueid": 347,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -506,7 +508,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -521,7 +523,7 @@ const showsDataArray = [
     "venueid": 246,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -536,7 +538,7 @@ const showsDataArray = [
     "venueid": 350,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -551,7 +553,7 @@ const showsDataArray = [
     "venueid": 347,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -566,7 +568,7 @@ const showsDataArray = [
     "venueid": 345,
     "tourid": 3,
     "tourname": "1985 Tour",
-    "tour_when": "1985",
+    "tour_year": "1985",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -581,7 +583,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -596,7 +598,7 @@ const showsDataArray = [
     "venueid": 825,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -611,7 +613,7 @@ const showsDataArray = [
     "venueid": 246,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -626,7 +628,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -641,7 +643,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -656,7 +658,7 @@ const showsDataArray = [
     "venueid": 348,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -671,7 +673,7 @@ const showsDataArray = [
     "venueid": 348,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -686,7 +688,7 @@ const showsDataArray = [
     "venueid": 348,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -701,7 +703,7 @@ const showsDataArray = [
     "venueid": 350,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -716,7 +718,7 @@ const showsDataArray = [
     "venueid": 347,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -731,7 +733,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -746,7 +748,7 @@ const showsDataArray = [
     "venueid": 422,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -761,7 +763,7 @@ const showsDataArray = [
     "venueid": 1385,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -776,7 +778,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -791,7 +793,7 @@ const showsDataArray = [
     "venueid": 346,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -806,7 +808,7 @@ const showsDataArray = [
     "venueid": 423,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -821,7 +823,7 @@ const showsDataArray = [
     "venueid": 424,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -836,7 +838,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -851,7 +853,7 @@ const showsDataArray = [
     "venueid": 426,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -866,7 +868,7 @@ const showsDataArray = [
     "venueid": 427,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -881,7 +883,7 @@ const showsDataArray = [
     "venueid": 246,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -896,7 +898,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -911,7 +913,7 @@ const showsDataArray = [
     "venueid": 65,
     "tourid": 4,
     "tourname": "1986 Tour",
-    "tour_when": "1986",
+    "tour_year": "1986",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -926,7 +928,7 @@ const showsDataArray = [
     "venueid": 430,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -941,7 +943,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -956,7 +958,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -971,7 +973,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -986,7 +988,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1001,7 +1003,7 @@ const showsDataArray = [
     "venueid": 432,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1016,7 +1018,7 @@ const showsDataArray = [
     "venueid": 433,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1031,7 +1033,7 @@ const showsDataArray = [
     "venueid": 246,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1046,7 +1048,7 @@ const showsDataArray = [
     "venueid": 246,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1061,7 +1063,7 @@ const showsDataArray = [
     "venueid": 347,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1076,7 +1078,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1091,7 +1093,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1106,7 +1108,7 @@ const showsDataArray = [
     "venueid": 434,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1121,7 +1123,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1136,7 +1138,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1151,7 +1153,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1166,7 +1168,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1181,7 +1183,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1196,7 +1198,7 @@ const showsDataArray = [
     "venueid": 424,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1211,7 +1213,7 @@ const showsDataArray = [
     "venueid": 428,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1226,7 +1228,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1241,7 +1243,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1256,7 +1258,7 @@ const showsDataArray = [
     "venueid": 431,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1271,7 +1273,7 @@ const showsDataArray = [
     "venueid": 437,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1286,7 +1288,7 @@ const showsDataArray = [
     "venueid": 428,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1301,7 +1303,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1316,7 +1318,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1331,7 +1333,7 @@ const showsDataArray = [
     "venueid": 347,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1346,7 +1348,7 @@ const showsDataArray = [
     "venueid": 347,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1361,7 +1363,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1376,7 +1378,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1391,7 +1393,7 @@ const showsDataArray = [
     "venueid": 166,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1406,7 +1408,7 @@ const showsDataArray = [
     "venueid": 65,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1421,7 +1423,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1436,7 +1438,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1451,7 +1453,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1466,7 +1468,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1481,7 +1483,7 @@ const showsDataArray = [
     "venueid": 438,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1496,7 +1498,7 @@ const showsDataArray = [
     "venueid": 438,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1511,7 +1513,7 @@ const showsDataArray = [
     "venueid": 426,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1526,7 +1528,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1541,7 +1543,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1556,7 +1558,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1571,7 +1573,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1586,7 +1588,7 @@ const showsDataArray = [
     "venueid": 10,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1601,7 +1603,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1616,7 +1618,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1631,7 +1633,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 5,
     "tourname": "1987 Tour",
-    "tour_when": "1987",
+    "tour_year": "1987",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1646,7 +1648,7 @@ const showsDataArray = [
     "venueid": 13,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1661,7 +1663,7 @@ const showsDataArray = [
     "venueid": 13,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1676,7 +1678,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1691,7 +1693,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1706,7 +1708,7 @@ const showsDataArray = [
     "venueid": 13,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1721,7 +1723,7 @@ const showsDataArray = [
     "venueid": 166,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1736,7 +1738,7 @@ const showsDataArray = [
     "venueid": 13,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1751,7 +1753,7 @@ const showsDataArray = [
     "venueid": 450,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1766,7 +1768,7 @@ const showsDataArray = [
     "venueid": 13,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1781,7 +1783,7 @@ const showsDataArray = [
     "venueid": 461,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1796,7 +1798,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1811,7 +1813,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1826,7 +1828,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1841,7 +1843,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1856,7 +1858,7 @@ const showsDataArray = [
     "venueid": 467,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1871,7 +1873,7 @@ const showsDataArray = [
     "venueid": 468,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1886,7 +1888,7 @@ const showsDataArray = [
     "venueid": 13,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1901,7 +1903,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1916,7 +1918,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1931,7 +1933,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1946,7 +1948,7 @@ const showsDataArray = [
     "venueid": 348,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1961,7 +1963,7 @@ const showsDataArray = [
     "venueid": 13,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1976,7 +1978,7 @@ const showsDataArray = [
     "venueid": 470,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -1991,7 +1993,7 @@ const showsDataArray = [
     "venueid": 24,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2006,7 +2008,7 @@ const showsDataArray = [
     "venueid": 24,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2021,7 +2023,7 @@ const showsDataArray = [
     "venueid": 24,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2036,7 +2038,7 @@ const showsDataArray = [
     "venueid": 246,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2051,7 +2053,7 @@ const showsDataArray = [
     "venueid": 779,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2066,7 +2068,7 @@ const showsDataArray = [
     "venueid": 467,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2081,7 +2083,7 @@ const showsDataArray = [
     "venueid": 347,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2096,7 +2098,7 @@ const showsDataArray = [
     "venueid": 473,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2111,7 +2113,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2126,7 +2128,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2141,7 +2143,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2156,7 +2158,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2171,7 +2173,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2186,7 +2188,7 @@ const showsDataArray = [
     "venueid": 488,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2201,7 +2203,7 @@ const showsDataArray = [
     "venueid": 489,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2216,7 +2218,7 @@ const showsDataArray = [
     "venueid": 489,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2231,7 +2233,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2246,7 +2248,7 @@ const showsDataArray = [
     "venueid": 490,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2261,7 +2263,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2276,7 +2278,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2291,7 +2293,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2306,7 +2308,7 @@ const showsDataArray = [
     "venueid": 491,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2321,7 +2323,7 @@ const showsDataArray = [
     "venueid": 492,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2336,7 +2338,7 @@ const showsDataArray = [
     "venueid": 493,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2351,7 +2353,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2366,7 +2368,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2381,7 +2383,7 @@ const showsDataArray = [
     "venueid": 504,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2396,7 +2398,7 @@ const showsDataArray = [
     "venueid": 504,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2411,7 +2413,7 @@ const showsDataArray = [
     "venueid": 614,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2426,7 +2428,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2441,7 +2443,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2456,7 +2458,7 @@ const showsDataArray = [
     "venueid": 617,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2471,7 +2473,7 @@ const showsDataArray = [
     "venueid": 617,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2486,7 +2488,7 @@ const showsDataArray = [
     "venueid": 617,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2501,7 +2503,7 @@ const showsDataArray = [
     "venueid": 60,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2516,7 +2518,7 @@ const showsDataArray = [
     "venueid": 617,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2531,7 +2533,7 @@ const showsDataArray = [
     "venueid": 617,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2546,7 +2548,7 @@ const showsDataArray = [
     "venueid": 618,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2561,7 +2563,7 @@ const showsDataArray = [
     "venueid": 619,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2576,7 +2578,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2591,7 +2593,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2606,7 +2608,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2621,7 +2623,7 @@ const showsDataArray = [
     "venueid": 13,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2636,7 +2638,7 @@ const showsDataArray = [
     "venueid": 504,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2651,7 +2653,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2666,7 +2668,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2681,7 +2683,7 @@ const showsDataArray = [
     "venueid": 621,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2696,7 +2698,7 @@ const showsDataArray = [
     "venueid": 622,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2711,7 +2713,7 @@ const showsDataArray = [
     "venueid": 623,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2726,7 +2728,7 @@ const showsDataArray = [
     "venueid": 504,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2741,7 +2743,7 @@ const showsDataArray = [
     "venueid": 504,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2756,7 +2758,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2771,7 +2773,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2786,7 +2788,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2801,7 +2803,7 @@ const showsDataArray = [
     "venueid": 504,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2816,7 +2818,7 @@ const showsDataArray = [
     "venueid": 504,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2831,7 +2833,7 @@ const showsDataArray = [
     "venueid": 627,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2846,7 +2848,7 @@ const showsDataArray = [
     "venueid": 628,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2861,7 +2863,7 @@ const showsDataArray = [
     "venueid": 468,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2876,7 +2878,7 @@ const showsDataArray = [
     "venueid": 631,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2891,7 +2893,7 @@ const showsDataArray = [
     "venueid": 426,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2906,7 +2908,7 @@ const showsDataArray = [
     "venueid": 634,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2921,7 +2923,7 @@ const showsDataArray = [
     "venueid": 636,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2936,7 +2938,7 @@ const showsDataArray = [
     "venueid": 1491,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2951,7 +2953,7 @@ const showsDataArray = [
     "venueid": 582,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2966,7 +2968,7 @@ const showsDataArray = [
     "venueid": 634,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2981,7 +2983,7 @@ const showsDataArray = [
     "venueid": 581,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -2996,7 +2998,7 @@ const showsDataArray = [
     "venueid": 630,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3011,7 +3013,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3026,7 +3028,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3041,7 +3043,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3056,7 +3058,7 @@ const showsDataArray = [
     "venueid": 637,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3071,7 +3073,7 @@ const showsDataArray = [
     "venueid": 582,
     "tourid": 6,
     "tourname": "1988 Tour",
-    "tour_when": "1988",
+    "tour_year": "1988",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3086,7 +3088,7 @@ const showsDataArray = [
     "venueid": 13,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3101,7 +3103,7 @@ const showsDataArray = [
     "venueid": 577,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3116,7 +3118,7 @@ const showsDataArray = [
     "venueid": 53,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3131,7 +3133,7 @@ const showsDataArray = [
     "venueid": 579,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3146,7 +3148,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3161,7 +3163,7 @@ const showsDataArray = [
     "venueid": 580,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3176,7 +3178,7 @@ const showsDataArray = [
     "venueid": 13,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3191,7 +3193,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3206,7 +3208,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3221,7 +3223,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3236,7 +3238,7 @@ const showsDataArray = [
     "venueid": 41,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3251,7 +3253,7 @@ const showsDataArray = [
     "venueid": 581,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3266,7 +3268,7 @@ const showsDataArray = [
     "venueid": 582,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3281,7 +3283,7 @@ const showsDataArray = [
     "venueid": 582,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3296,7 +3298,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3311,7 +3313,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3326,7 +3328,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3341,7 +3343,7 @@ const showsDataArray = [
     "venueid": 13,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3356,7 +3358,7 @@ const showsDataArray = [
     "venueid": 450,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3371,7 +3373,7 @@ const showsDataArray = [
     "venueid": 79,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3386,7 +3388,7 @@ const showsDataArray = [
     "venueid": 780,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3401,7 +3403,7 @@ const showsDataArray = [
     "venueid": 581,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3416,7 +3418,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3431,7 +3433,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3446,7 +3448,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3461,7 +3463,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3476,7 +3478,7 @@ const showsDataArray = [
     "venueid": 20,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3491,7 +3493,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3506,7 +3508,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3521,7 +3523,7 @@ const showsDataArray = [
     "venueid": 233,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3536,7 +3538,7 @@ const showsDataArray = [
     "venueid": 585,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3551,7 +3553,7 @@ const showsDataArray = [
     "venueid": 582,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3566,7 +3568,7 @@ const showsDataArray = [
     "venueid": 586,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3581,7 +3583,7 @@ const showsDataArray = [
     "venueid": 461,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3596,7 +3598,7 @@ const showsDataArray = [
     "venueid": 434,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3611,7 +3613,7 @@ const showsDataArray = [
     "venueid": 588,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3626,7 +3628,7 @@ const showsDataArray = [
     "venueid": 468,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3641,7 +3643,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3656,7 +3658,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3671,7 +3673,7 @@ const showsDataArray = [
     "venueid": 590,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3686,7 +3688,7 @@ const showsDataArray = [
     "venueid": 591,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3701,7 +3703,7 @@ const showsDataArray = [
     "venueid": 32,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3716,7 +3718,7 @@ const showsDataArray = [
     "venueid": 592,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3731,7 +3733,7 @@ const showsDataArray = [
     "venueid": 233,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3746,7 +3748,7 @@ const showsDataArray = [
     "venueid": 594,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3761,7 +3763,7 @@ const showsDataArray = [
     "venueid": 595,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3776,7 +3778,7 @@ const showsDataArray = [
     "venueid": 436,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3791,7 +3793,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3806,7 +3808,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3821,7 +3823,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3836,7 +3838,7 @@ const showsDataArray = [
     "venueid": 596,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3851,7 +3853,7 @@ const showsDataArray = [
     "venueid": 593,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3866,7 +3868,7 @@ const showsDataArray = [
     "venueid": 165,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3881,7 +3883,7 @@ const showsDataArray = [
     "venueid": 20,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3896,7 +3898,7 @@ const showsDataArray = [
     "venueid": 598,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3911,7 +3913,7 @@ const showsDataArray = [
     "venueid": 599,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3926,7 +3928,7 @@ const showsDataArray = [
     "venueid": 600,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3941,7 +3943,7 @@ const showsDataArray = [
     "venueid": 586,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3956,7 +3958,7 @@ const showsDataArray = [
     "venueid": 601,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3971,7 +3973,7 @@ const showsDataArray = [
     "venueid": 609,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -3986,7 +3988,7 @@ const showsDataArray = [
     "venueid": 233,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4001,7 +4003,7 @@ const showsDataArray = [
     "venueid": 79,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4016,7 +4018,7 @@ const showsDataArray = [
     "venueid": 610,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4031,7 +4033,7 @@ const showsDataArray = [
     "venueid": 32,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4046,7 +4048,7 @@ const showsDataArray = [
     "venueid": 611,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4061,7 +4063,7 @@ const showsDataArray = [
     "venueid": 20,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4076,7 +4078,7 @@ const showsDataArray = [
     "venueid": 20,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4091,7 +4093,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4106,7 +4108,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -4121,7 +4123,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4136,7 +4138,7 @@ const showsDataArray = [
     "venueid": 233,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4151,7 +4153,7 @@ const showsDataArray = [
     "venueid": 612,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4166,7 +4168,7 @@ const showsDataArray = [
     "venueid": 20,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4181,7 +4183,7 @@ const showsDataArray = [
     "venueid": 615,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4196,7 +4198,7 @@ const showsDataArray = [
     "venueid": 616,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4211,7 +4213,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4226,7 +4228,7 @@ const showsDataArray = [
     "venueid": 233,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4241,7 +4243,7 @@ const showsDataArray = [
     "venueid": 436,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4256,7 +4258,7 @@ const showsDataArray = [
     "venueid": 32,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4271,7 +4273,7 @@ const showsDataArray = [
     "venueid": 598,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4286,7 +4288,7 @@ const showsDataArray = [
     "venueid": 330,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4301,7 +4303,7 @@ const showsDataArray = [
     "venueid": 620,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4316,7 +4318,7 @@ const showsDataArray = [
     "venueid": 79,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4331,7 +4333,7 @@ const showsDataArray = [
     "venueid": 32,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4346,7 +4348,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4361,7 +4363,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4376,7 +4378,7 @@ const showsDataArray = [
     "venueid": 624,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4391,7 +4393,7 @@ const showsDataArray = [
     "venueid": 32,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4406,7 +4408,7 @@ const showsDataArray = [
     "venueid": 626,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4421,7 +4423,7 @@ const showsDataArray = [
     "venueid": 20,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4436,7 +4438,7 @@ const showsDataArray = [
     "venueid": 32,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4451,7 +4453,7 @@ const showsDataArray = [
     "venueid": 233,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4466,7 +4468,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4481,7 +4483,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4496,7 +4498,7 @@ const showsDataArray = [
     "venueid": 638,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4511,7 +4513,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4526,7 +4528,7 @@ const showsDataArray = [
     "venueid": 42,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4541,7 +4543,7 @@ const showsDataArray = [
     "venueid": 597,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4556,7 +4558,7 @@ const showsDataArray = [
     "venueid": 639,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4571,7 +4573,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4586,7 +4588,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4601,7 +4603,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4616,7 +4618,7 @@ const showsDataArray = [
     "venueid": 79,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4631,7 +4633,7 @@ const showsDataArray = [
     "venueid": 48,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4646,7 +4648,7 @@ const showsDataArray = [
     "venueid": 347,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4661,7 +4663,7 @@ const showsDataArray = [
     "venueid": 1371,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4676,7 +4678,7 @@ const showsDataArray = [
     "venueid": 20,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4691,7 +4693,7 @@ const showsDataArray = [
     "venueid": 645,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4706,7 +4708,7 @@ const showsDataArray = [
     "venueid": 646,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4721,7 +4723,7 @@ const showsDataArray = [
     "venueid": 595,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4736,7 +4738,7 @@ const showsDataArray = [
     "venueid": 277,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4751,7 +4753,7 @@ const showsDataArray = [
     "venueid": 233,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4766,7 +4768,7 @@ const showsDataArray = [
     "venueid": 29,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4781,7 +4783,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4796,7 +4798,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4811,7 +4813,7 @@ const showsDataArray = [
     "venueid": 1255,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4826,7 +4828,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4841,7 +4843,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4856,7 +4858,7 @@ const showsDataArray = [
     "venueid": 648,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4871,7 +4873,7 @@ const showsDataArray = [
     "venueid": 45,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4886,7 +4888,7 @@ const showsDataArray = [
     "venueid": 649,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4901,7 +4903,7 @@ const showsDataArray = [
     "venueid": 650,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4916,7 +4918,7 @@ const showsDataArray = [
     "venueid": 651,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4931,7 +4933,7 @@ const showsDataArray = [
     "venueid": 652,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4946,7 +4948,7 @@ const showsDataArray = [
     "venueid": 29,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4961,7 +4963,7 @@ const showsDataArray = [
     "venueid": 79,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4976,7 +4978,7 @@ const showsDataArray = [
     "venueid": 151,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -4991,7 +4993,7 @@ const showsDataArray = [
     "venueid": 782,
     "tourid": null,
     "tourname": null,
-    "tour_when": null,
+    "tour_year": null,
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5006,7 +5008,7 @@ const showsDataArray = [
     "venueid": 14,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5021,7 +5023,7 @@ const showsDataArray = [
     "venueid": 52,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5036,7 +5038,7 @@ const showsDataArray = [
     "venueid": 15,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5051,7 +5053,7 @@ const showsDataArray = [
     "venueid": 579,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5066,7 +5068,7 @@ const showsDataArray = [
     "venueid": 20,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5081,7 +5083,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5096,7 +5098,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5111,7 +5113,7 @@ const showsDataArray = [
     "venueid": 24,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5126,7 +5128,7 @@ const showsDataArray = [
     "venueid": 27,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5141,7 +5143,7 @@ const showsDataArray = [
     "venueid": 25,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5156,7 +5158,7 @@ const showsDataArray = [
     "venueid": 25,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5171,7 +5173,7 @@ const showsDataArray = [
     "venueid": 326,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5186,7 +5188,7 @@ const showsDataArray = [
     "venueid": 55,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5201,7 +5203,7 @@ const showsDataArray = [
     "venueid": 27,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5216,7 +5218,7 @@ const showsDataArray = [
     "venueid": 49,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5231,7 +5233,7 @@ const showsDataArray = [
     "venueid": 56,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5246,7 +5248,7 @@ const showsDataArray = [
     "venueid": 28,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5261,7 +5263,7 @@ const showsDataArray = [
     "venueid": 29,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5276,7 +5278,7 @@ const showsDataArray = [
     "venueid": 32,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5291,7 +5293,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5306,7 +5308,7 @@ const showsDataArray = [
     "venueid": 41,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5321,7 +5323,7 @@ const showsDataArray = [
     "venueid": 42,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5336,7 +5338,7 @@ const showsDataArray = [
     "venueid": 43,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5351,7 +5353,7 @@ const showsDataArray = [
     "venueid": 44,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5366,7 +5368,7 @@ const showsDataArray = [
     "venueid": 45,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5381,7 +5383,7 @@ const showsDataArray = [
     "venueid": 47,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5396,7 +5398,7 @@ const showsDataArray = [
     "venueid": 48,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5411,7 +5413,7 @@ const showsDataArray = [
     "venueid": 79,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5426,7 +5428,7 @@ const showsDataArray = [
     "venueid": 24,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5441,7 +5443,7 @@ const showsDataArray = [
     "venueid": 80,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5456,7 +5458,7 @@ const showsDataArray = [
     "venueid": 81,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5471,7 +5473,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5486,7 +5488,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5501,7 +5503,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5516,7 +5518,7 @@ const showsDataArray = [
     "venueid": 29,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5531,7 +5533,7 @@ const showsDataArray = [
     "venueid": 29,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5546,7 +5548,7 @@ const showsDataArray = [
     "venueid": 57,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5561,7 +5563,7 @@ const showsDataArray = [
     "venueid": 170,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5576,7 +5578,7 @@ const showsDataArray = [
     "venueid": 58,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5591,7 +5593,7 @@ const showsDataArray = [
     "venueid": 75,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5606,7 +5608,7 @@ const showsDataArray = [
     "venueid": 59,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5621,7 +5623,7 @@ const showsDataArray = [
     "venueid": 783,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5636,7 +5638,7 @@ const showsDataArray = [
     "venueid": 148,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5651,7 +5653,7 @@ const showsDataArray = [
     "venueid": 179,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5666,7 +5668,7 @@ const showsDataArray = [
     "venueid": 180,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5681,7 +5683,7 @@ const showsDataArray = [
     "venueid": 180,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5696,7 +5698,7 @@ const showsDataArray = [
     "venueid": 60,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5711,7 +5713,7 @@ const showsDataArray = [
     "venueid": 60,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5726,7 +5728,7 @@ const showsDataArray = [
     "venueid": 60,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5741,7 +5743,7 @@ const showsDataArray = [
     "venueid": 76,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5756,7 +5758,7 @@ const showsDataArray = [
     "venueid": 76,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5771,7 +5773,7 @@ const showsDataArray = [
     "venueid": 76,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5786,7 +5788,7 @@ const showsDataArray = [
     "venueid": 188,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5801,7 +5803,7 @@ const showsDataArray = [
     "venueid": 199,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5816,7 +5818,7 @@ const showsDataArray = [
     "venueid": 200,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5831,7 +5833,7 @@ const showsDataArray = [
     "venueid": 201,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5846,7 +5848,7 @@ const showsDataArray = [
     "venueid": 207,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5861,7 +5863,7 @@ const showsDataArray = [
     "venueid": 202,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5876,7 +5878,7 @@ const showsDataArray = [
     "venueid": 149,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5891,7 +5893,7 @@ const showsDataArray = [
     "venueid": 231,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5906,7 +5908,7 @@ const showsDataArray = [
     "venueid": 232,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5921,7 +5923,7 @@ const showsDataArray = [
     "venueid": 150,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5936,7 +5938,7 @@ const showsDataArray = [
     "venueid": 61,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5951,7 +5953,7 @@ const showsDataArray = [
     "venueid": 78,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5966,7 +5968,7 @@ const showsDataArray = [
     "venueid": 43,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5981,7 +5983,7 @@ const showsDataArray = [
     "venueid": 47,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -5996,7 +5998,7 @@ const showsDataArray = [
     "venueid": 24,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6011,7 +6013,7 @@ const showsDataArray = [
     "venueid": 62,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6026,7 +6028,7 @@ const showsDataArray = [
     "venueid": 233,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6041,7 +6043,7 @@ const showsDataArray = [
     "venueid": 32,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6056,7 +6058,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6071,7 +6073,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6086,7 +6088,7 @@ const showsDataArray = [
     "venueid": 323,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6101,7 +6103,7 @@ const showsDataArray = [
     "venueid": 324,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6116,7 +6118,7 @@ const showsDataArray = [
     "venueid": 182,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6131,7 +6133,7 @@ const showsDataArray = [
     "venueid": 325,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6146,7 +6148,7 @@ const showsDataArray = [
     "venueid": 63,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6161,7 +6163,7 @@ const showsDataArray = [
     "venueid": 63,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6176,7 +6178,7 @@ const showsDataArray = [
     "venueid": 183,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6191,7 +6193,7 @@ const showsDataArray = [
     "venueid": 68,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6206,7 +6208,7 @@ const showsDataArray = [
     "venueid": 25,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6221,7 +6223,7 @@ const showsDataArray = [
     "venueid": 326,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6236,7 +6238,7 @@ const showsDataArray = [
     "venueid": 55,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6251,7 +6253,7 @@ const showsDataArray = [
     "venueid": 49,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6266,7 +6268,7 @@ const showsDataArray = [
     "venueid": 64,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6281,7 +6283,7 @@ const showsDataArray = [
     "venueid": 44,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6296,7 +6298,7 @@ const showsDataArray = [
     "venueid": 29,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6311,7 +6313,7 @@ const showsDataArray = [
     "venueid": 79,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6326,7 +6328,7 @@ const showsDataArray = [
     "venueid": 330,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6341,7 +6343,7 @@ const showsDataArray = [
     "venueid": 331,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6356,7 +6358,7 @@ const showsDataArray = [
     "venueid": 29,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6371,7 +6373,7 @@ const showsDataArray = [
     "venueid": 66,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6386,7 +6388,7 @@ const showsDataArray = [
     "venueid": 65,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6401,7 +6403,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -6416,7 +6418,7 @@ const showsDataArray = [
     "venueid": 79,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6431,7 +6433,7 @@ const showsDataArray = [
     "venueid": 32,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6446,7 +6448,7 @@ const showsDataArray = [
     "venueid": 78,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6461,7 +6463,7 @@ const showsDataArray = [
     "venueid": 332,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6476,7 +6478,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6491,7 +6493,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6506,7 +6508,7 @@ const showsDataArray = [
     "venueid": 203,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6521,7 +6523,7 @@ const showsDataArray = [
     "venueid": 203,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6536,7 +6538,7 @@ const showsDataArray = [
     "venueid": 41,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6551,7 +6553,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6566,7 +6568,7 @@ const showsDataArray = [
     "venueid": 48,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6581,7 +6583,7 @@ const showsDataArray = [
     "venueid": 29,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6596,7 +6598,7 @@ const showsDataArray = [
     "venueid": 54,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6611,7 +6613,7 @@ const showsDataArray = [
     "venueid": 24,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6626,7 +6628,7 @@ const showsDataArray = [
     "venueid": 62,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6641,7 +6643,7 @@ const showsDataArray = [
     "venueid": 80,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6656,7 +6658,7 @@ const showsDataArray = [
     "venueid": 337,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6671,7 +6673,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6686,7 +6688,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -6701,7 +6703,7 @@ const showsDataArray = [
     "venueid": 338,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6716,7 +6718,7 @@ const showsDataArray = [
     "venueid": 44,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6731,7 +6733,7 @@ const showsDataArray = [
     "venueid": 67,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6746,7 +6748,7 @@ const showsDataArray = [
     "venueid": 56,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6761,7 +6763,7 @@ const showsDataArray = [
     "venueid": 49,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6776,7 +6778,7 @@ const showsDataArray = [
     "venueid": 55,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6791,7 +6793,7 @@ const showsDataArray = [
     "venueid": 63,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6806,7 +6808,7 @@ const showsDataArray = [
     "venueid": 68,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6821,7 +6823,7 @@ const showsDataArray = [
     "venueid": 25,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6836,7 +6838,7 @@ const showsDataArray = [
     "venueid": 326,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6851,7 +6853,7 @@ const showsDataArray = [
     "venueid": 69,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6866,7 +6868,7 @@ const showsDataArray = [
     "venueid": 70,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6881,7 +6883,7 @@ const showsDataArray = [
     "venueid": 72,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6896,7 +6898,7 @@ const showsDataArray = [
     "venueid": 778,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6911,7 +6913,7 @@ const showsDataArray = [
     "venueid": 73,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6926,7 +6928,7 @@ const showsDataArray = [
     "venueid": 180,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6941,7 +6943,7 @@ const showsDataArray = [
     "venueid": 340,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6956,7 +6958,7 @@ const showsDataArray = [
     "venueid": 341,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6971,7 +6973,7 @@ const showsDataArray = [
     "venueid": 199,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -6986,7 +6988,7 @@ const showsDataArray = [
     "venueid": 342,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7001,7 +7003,7 @@ const showsDataArray = [
     "venueid": 74,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7016,7 +7018,7 @@ const showsDataArray = [
     "venueid": 146,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -7031,7 +7033,7 @@ const showsDataArray = [
     "venueid": 343,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7046,7 +7048,7 @@ const showsDataArray = [
     "venueid": 75,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7061,7 +7063,7 @@ const showsDataArray = [
     "venueid": 202,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7076,7 +7078,7 @@ const showsDataArray = [
     "venueid": 94,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7091,7 +7093,7 @@ const showsDataArray = [
     "venueid": 95,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7106,7 +7108,7 @@ const showsDataArray = [
     "venueid": 203,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7121,7 +7123,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7136,7 +7138,7 @@ const showsDataArray = [
     "venueid": 24,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7151,7 +7153,7 @@ const showsDataArray = [
     "venueid": 204,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7166,7 +7168,7 @@ const showsDataArray = [
     "venueid": 78,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7181,7 +7183,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7196,7 +7198,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7211,7 +7213,7 @@ const showsDataArray = [
     "venueid": 334,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7226,7 +7228,7 @@ const showsDataArray = [
     "venueid": 48,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7241,7 +7243,7 @@ const showsDataArray = [
     "venueid": 335,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7256,7 +7258,7 @@ const showsDataArray = [
     "venueid": 95,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7271,7 +7273,7 @@ const showsDataArray = [
     "venueid": 151,
     "tourid": 60,
     "tourname": "1990 Tour",
-    "tour_when": "1990",
+    "tour_year": "1990",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7286,7 +7288,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -7301,7 +7303,7 @@ const showsDataArray = [
     "venueid": 825,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -7316,7 +7318,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -7331,7 +7333,7 @@ const showsDataArray = [
     "venueid": 535,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7346,7 +7348,7 @@ const showsDataArray = [
     "venueid": 536,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7361,7 +7363,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7376,7 +7378,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7391,7 +7393,7 @@ const showsDataArray = [
     "venueid": 537,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7406,7 +7408,7 @@ const showsDataArray = [
     "venueid": 77,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7421,7 +7423,7 @@ const showsDataArray = [
     "venueid": 538,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7436,7 +7438,7 @@ const showsDataArray = [
     "venueid": 539,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7451,7 +7453,7 @@ const showsDataArray = [
     "venueid": 78,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7466,7 +7468,7 @@ const showsDataArray = [
     "venueid": 335,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7481,7 +7483,7 @@ const showsDataArray = [
     "venueid": 44,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7496,7 +7498,7 @@ const showsDataArray = [
     "venueid": 540,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7511,7 +7513,7 @@ const showsDataArray = [
     "venueid": 67,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7526,7 +7528,7 @@ const showsDataArray = [
     "venueid": 49,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7541,7 +7543,7 @@ const showsDataArray = [
     "venueid": 1346,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7556,7 +7558,7 @@ const showsDataArray = [
     "venueid": 64,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7571,7 +7573,7 @@ const showsDataArray = [
     "venueid": 541,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7586,7 +7588,7 @@ const showsDataArray = [
     "venueid": 542,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7601,7 +7603,7 @@ const showsDataArray = [
     "venueid": 25,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7616,7 +7618,7 @@ const showsDataArray = [
     "venueid": 326,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7631,7 +7633,7 @@ const showsDataArray = [
     "venueid": 543,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7646,7 +7648,7 @@ const showsDataArray = [
     "venueid": 544,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7661,7 +7663,7 @@ const showsDataArray = [
     "venueid": 545,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7676,7 +7678,7 @@ const showsDataArray = [
     "venueid": 70,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7691,7 +7693,7 @@ const showsDataArray = [
     "venueid": 199,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7706,7 +7708,7 @@ const showsDataArray = [
     "venueid": 546,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7721,7 +7723,7 @@ const showsDataArray = [
     "venueid": 547,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7736,7 +7738,7 @@ const showsDataArray = [
     "venueid": 546,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7751,7 +7753,7 @@ const showsDataArray = [
     "venueid": 549,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7766,7 +7768,7 @@ const showsDataArray = [
     "venueid": 119,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7781,7 +7783,7 @@ const showsDataArray = [
     "venueid": 76,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7796,7 +7798,7 @@ const showsDataArray = [
     "venueid": 76,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7811,7 +7813,7 @@ const showsDataArray = [
     "venueid": 119,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7826,7 +7828,7 @@ const showsDataArray = [
     "venueid": 139,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7841,7 +7843,7 @@ const showsDataArray = [
     "venueid": 550,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7856,7 +7858,7 @@ const showsDataArray = [
     "venueid": 551,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7871,7 +7873,7 @@ const showsDataArray = [
     "venueid": 552,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7886,7 +7888,7 @@ const showsDataArray = [
     "venueid": 553,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7901,7 +7903,7 @@ const showsDataArray = [
     "venueid": 562,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7916,7 +7918,7 @@ const showsDataArray = [
     "venueid": 563,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7931,7 +7933,7 @@ const showsDataArray = [
     "venueid": 144,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7946,7 +7948,7 @@ const showsDataArray = [
     "venueid": 564,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7961,7 +7963,7 @@ const showsDataArray = [
     "venueid": 146,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7976,7 +7978,7 @@ const showsDataArray = [
     "venueid": 565,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -7991,7 +7993,7 @@ const showsDataArray = [
     "venueid": 566,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8006,7 +8008,7 @@ const showsDataArray = [
     "venueid": 567,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8021,7 +8023,7 @@ const showsDataArray = [
     "venueid": 567,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -8036,7 +8038,7 @@ const showsDataArray = [
     "venueid": 231,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8051,7 +8053,7 @@ const showsDataArray = [
     "venueid": 568,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8066,7 +8068,7 @@ const showsDataArray = [
     "venueid": 569,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8081,7 +8083,7 @@ const showsDataArray = [
     "venueid": 571,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8096,7 +8098,7 @@ const showsDataArray = [
     "venueid": 434,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8111,7 +8113,7 @@ const showsDataArray = [
     "venueid": 80,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8126,7 +8128,7 @@ const showsDataArray = [
     "venueid": 602,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8141,7 +8143,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8156,7 +8158,7 @@ const showsDataArray = [
     "venueid": 48,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8171,7 +8173,7 @@ const showsDataArray = [
     "venueid": 203,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8186,7 +8188,7 @@ const showsDataArray = [
     "venueid": 203,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8201,7 +8203,7 @@ const showsDataArray = [
     "venueid": 603,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8216,7 +8218,7 @@ const showsDataArray = [
     "venueid": 604,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8231,7 +8233,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8246,7 +8248,7 @@ const showsDataArray = [
     "venueid": 21,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8261,7 +8263,7 @@ const showsDataArray = [
     "venueid": 605,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8276,7 +8278,7 @@ const showsDataArray = [
     "venueid": 95,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8291,7 +8293,7 @@ const showsDataArray = [
     "venueid": 335,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8306,7 +8308,7 @@ const showsDataArray = [
     "venueid": 606,
     "tourid": 8,
     "tourname": "1991 Winter/Spring Tour",
-    "tour_when": "1991 Winter",
+    "tour_year": "1991 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8321,7 +8323,7 @@ const showsDataArray = [
     "venueid": 607,
     "tourid": 9,
     "tourname": "1991 Giant Country Horns Summer Tour",
-    "tour_when": "1991 Summer",
+    "tour_year": "1991 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8336,7 +8338,7 @@ const showsDataArray = [
     "venueid": 78,
     "tourid": 9,
     "tourname": "1991 Giant Country Horns Summer Tour",
-    "tour_when": "1991 Summer",
+    "tour_year": "1991 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8351,7 +8353,7 @@ const showsDataArray = [
     "venueid": 608,
     "tourid": 9,
     "tourname": "1991 Giant Country Horns Summer Tour",
-    "tour_when": "1991 Summer",
+    "tour_year": "1991 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8366,7 +8368,7 @@ const showsDataArray = [
     "venueid": 330,
     "tourid": 9,
     "tourname": "1991 Giant Country Horns Summer Tour",
-    "tour_when": "1991 Summer",
+    "tour_year": "1991 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8381,7 +8383,7 @@ const showsDataArray = [
     "venueid": 629,
     "tourid": 9,
     "tourname": "1991 Giant Country Horns Summer Tour",
-    "tour_when": "1991 Summer",
+    "tour_year": "1991 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8396,7 +8398,7 @@ const showsDataArray = [
     "venueid": 632,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8411,7 +8413,7 @@ const showsDataArray = [
     "venueid": 633,
     "tourid": 9,
     "tourname": "1991 Giant Country Horns Summer Tour",
-    "tour_when": "1991 Summer",
+    "tour_year": "1991 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8426,7 +8428,7 @@ const showsDataArray = [
     "venueid": 203,
     "tourid": 9,
     "tourname": "1991 Giant Country Horns Summer Tour",
-    "tour_when": "1991 Summer",
+    "tour_year": "1991 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8441,7 +8443,7 @@ const showsDataArray = [
     "venueid": 635,
     "tourid": 9,
     "tourname": "1991 Giant Country Horns Summer Tour",
-    "tour_when": "1991 Summer",
+    "tour_year": "1991 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8456,7 +8458,7 @@ const showsDataArray = [
     "venueid": 635,
     "tourid": 9,
     "tourname": "1991 Giant Country Horns Summer Tour",
-    "tour_when": "1991 Summer",
+    "tour_year": "1991 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8471,7 +8473,7 @@ const showsDataArray = [
     "venueid": 44,
     "tourid": 9,
     "tourname": "1991 Giant Country Horns Summer Tour",
-    "tour_when": "1991 Summer",
+    "tour_year": "1991 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8486,7 +8488,7 @@ const showsDataArray = [
     "venueid": 67,
     "tourid": 9,
     "tourname": "1991 Giant Country Horns Summer Tour",
-    "tour_when": "1991 Summer",
+    "tour_year": "1991 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8501,7 +8503,7 @@ const showsDataArray = [
     "venueid": 49,
     "tourid": 9,
     "tourname": "1991 Giant Country Horns Summer Tour",
-    "tour_when": "1991 Summer",
+    "tour_year": "1991 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8516,7 +8518,7 @@ const showsDataArray = [
     "venueid": 25,
     "tourid": 9,
     "tourname": "1991 Giant Country Horns Summer Tour",
-    "tour_when": "1991 Summer",
+    "tour_year": "1991 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8531,7 +8533,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 9,
     "tourname": "1991 Giant Country Horns Summer Tour",
-    "tour_when": "1991 Summer",
+    "tour_year": "1991 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8546,7 +8548,7 @@ const showsDataArray = [
     "venueid": 640,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8561,7 +8563,7 @@ const showsDataArray = [
     "venueid": 780,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8576,7 +8578,7 @@ const showsDataArray = [
     "venueid": 78,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8591,7 +8593,7 @@ const showsDataArray = [
     "venueid": 539,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8606,7 +8608,7 @@ const showsDataArray = [
     "venueid": 641,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8621,7 +8623,7 @@ const showsDataArray = [
     "venueid": 642,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8636,7 +8638,7 @@ const showsDataArray = [
     "venueid": 643,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8651,7 +8653,7 @@ const showsDataArray = [
     "venueid": 644,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8666,7 +8668,7 @@ const showsDataArray = [
     "venueid": 664,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8681,7 +8683,7 @@ const showsDataArray = [
     "venueid": 665,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8696,7 +8698,7 @@ const showsDataArray = [
     "venueid": 146,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8711,7 +8713,7 @@ const showsDataArray = [
     "venueid": 74,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8726,7 +8728,7 @@ const showsDataArray = [
     "venueid": 666,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8741,7 +8743,7 @@ const showsDataArray = [
     "venueid": 667,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8756,7 +8758,7 @@ const showsDataArray = [
     "venueid": 668,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8771,7 +8773,7 @@ const showsDataArray = [
     "venueid": 143,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8786,7 +8788,7 @@ const showsDataArray = [
     "venueid": 669,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8801,7 +8803,7 @@ const showsDataArray = [
     "venueid": 552,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8816,7 +8818,7 @@ const showsDataArray = [
     "venueid": 670,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8831,7 +8833,7 @@ const showsDataArray = [
     "venueid": 670,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8846,7 +8848,7 @@ const showsDataArray = [
     "venueid": 139,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8861,7 +8863,7 @@ const showsDataArray = [
     "venueid": 671,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8876,7 +8878,7 @@ const showsDataArray = [
     "venueid": 672,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8891,7 +8893,7 @@ const showsDataArray = [
     "venueid": 673,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8906,7 +8908,7 @@ const showsDataArray = [
     "venueid": 674,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8921,7 +8923,7 @@ const showsDataArray = [
     "venueid": 674,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8936,7 +8938,7 @@ const showsDataArray = [
     "venueid": 199,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8951,7 +8953,7 @@ const showsDataArray = [
     "venueid": 340,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8966,7 +8968,7 @@ const showsDataArray = [
     "venueid": 547,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8981,7 +8983,7 @@ const showsDataArray = [
     "venueid": 675,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -8996,7 +8998,7 @@ const showsDataArray = [
     "venueid": 73,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9011,7 +9013,7 @@ const showsDataArray = [
     "venueid": 71,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9026,7 +9028,7 @@ const showsDataArray = [
     "venueid": 70,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9041,7 +9043,7 @@ const showsDataArray = [
     "venueid": 676,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9056,7 +9058,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9071,7 +9073,7 @@ const showsDataArray = [
     "venueid": 677,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9086,7 +9088,7 @@ const showsDataArray = [
     "venueid": 25,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9101,7 +9103,7 @@ const showsDataArray = [
     "venueid": 678,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9116,7 +9118,7 @@ const showsDataArray = [
     "venueid": 49,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9131,7 +9133,7 @@ const showsDataArray = [
     "venueid": 67,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9146,7 +9148,7 @@ const showsDataArray = [
     "venueid": 44,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9161,7 +9163,7 @@ const showsDataArray = [
     "venueid": 605,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9176,7 +9178,7 @@ const showsDataArray = [
     "venueid": 95,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9191,7 +9193,7 @@ const showsDataArray = [
     "venueid": 203,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9206,7 +9208,7 @@ const showsDataArray = [
     "venueid": 679,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9221,7 +9223,7 @@ const showsDataArray = [
     "venueid": 680,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9236,7 +9238,7 @@ const showsDataArray = [
     "venueid": 15,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9251,7 +9253,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -9266,7 +9268,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9281,7 +9283,7 @@ const showsDataArray = [
     "venueid": 681,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9296,7 +9298,7 @@ const showsDataArray = [
     "venueid": 682,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9311,7 +9313,7 @@ const showsDataArray = [
     "venueid": 683,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9326,7 +9328,7 @@ const showsDataArray = [
     "venueid": 77,
     "tourid": 10,
     "tourname": "1991 Fall Tour",
-    "tour_when": "1991 Fall",
+    "tour_year": "1991 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9341,7 +9343,7 @@ const showsDataArray = [
     "venueid": 684,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9356,7 +9358,7 @@ const showsDataArray = [
     "venueid": 216,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9371,7 +9373,7 @@ const showsDataArray = [
     "venueid": 1143,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -9386,7 +9388,7 @@ const showsDataArray = [
     "venueid": 1219,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -9401,7 +9403,7 @@ const showsDataArray = [
     "venueid": 77,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9416,7 +9418,7 @@ const showsDataArray = [
     "venueid": 77,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9431,7 +9433,7 @@ const showsDataArray = [
     "venueid": 78,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9446,7 +9448,7 @@ const showsDataArray = [
     "venueid": 16,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9461,7 +9463,7 @@ const showsDataArray = [
     "venueid": 95,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9476,7 +9478,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9491,7 +9493,7 @@ const showsDataArray = [
     "venueid": 97,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9506,7 +9508,7 @@ const showsDataArray = [
     "venueid": 98,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9521,7 +9523,7 @@ const showsDataArray = [
     "venueid": 99,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9536,7 +9538,7 @@ const showsDataArray = [
     "venueid": 100,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9551,7 +9553,7 @@ const showsDataArray = [
     "venueid": 101,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9566,7 +9568,7 @@ const showsDataArray = [
     "venueid": 101,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -9581,7 +9583,7 @@ const showsDataArray = [
     "venueid": 102,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9596,7 +9598,7 @@ const showsDataArray = [
     "venueid": 67,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9611,7 +9613,7 @@ const showsDataArray = [
     "venueid": 103,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -9626,7 +9628,7 @@ const showsDataArray = [
     "venueid": 103,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9641,7 +9643,7 @@ const showsDataArray = [
     "venueid": 104,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9656,7 +9658,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9671,7 +9673,7 @@ const showsDataArray = [
     "venueid": 106,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9686,7 +9688,7 @@ const showsDataArray = [
     "venueid": 107,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9701,7 +9703,7 @@ const showsDataArray = [
     "venueid": 108,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9716,7 +9718,7 @@ const showsDataArray = [
     "venueid": 109,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9731,7 +9733,7 @@ const showsDataArray = [
     "venueid": 110,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9746,7 +9748,7 @@ const showsDataArray = [
     "venueid": 111,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9761,7 +9763,7 @@ const showsDataArray = [
     "venueid": 112,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9776,7 +9778,7 @@ const showsDataArray = [
     "venueid": 119,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9791,7 +9793,7 @@ const showsDataArray = [
     "venueid": 120,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9806,7 +9808,7 @@ const showsDataArray = [
     "venueid": 121,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9821,7 +9823,7 @@ const showsDataArray = [
     "venueid": 122,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9836,7 +9838,7 @@ const showsDataArray = [
     "venueid": 123,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9851,7 +9853,7 @@ const showsDataArray = [
     "venueid": 124,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9866,7 +9868,7 @@ const showsDataArray = [
     "venueid": 137,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9881,7 +9883,7 @@ const showsDataArray = [
     "venueid": 138,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9896,7 +9898,7 @@ const showsDataArray = [
     "venueid": 139,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9911,7 +9913,7 @@ const showsDataArray = [
     "venueid": 140,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9926,7 +9928,7 @@ const showsDataArray = [
     "venueid": 141,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9941,7 +9943,7 @@ const showsDataArray = [
     "venueid": 142,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9956,7 +9958,7 @@ const showsDataArray = [
     "venueid": 143,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9971,7 +9973,7 @@ const showsDataArray = [
     "venueid": 144,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -9986,7 +9988,7 @@ const showsDataArray = [
     "venueid": 145,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10001,7 +10003,7 @@ const showsDataArray = [
     "venueid": 146,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10016,7 +10018,7 @@ const showsDataArray = [
     "venueid": 147,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10031,7 +10033,7 @@ const showsDataArray = [
     "venueid": 152,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10046,7 +10048,7 @@ const showsDataArray = [
     "venueid": 159,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10061,7 +10063,7 @@ const showsDataArray = [
     "venueid": 160,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10076,7 +10078,7 @@ const showsDataArray = [
     "venueid": 161,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10091,7 +10093,7 @@ const showsDataArray = [
     "venueid": 162,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10106,7 +10108,7 @@ const showsDataArray = [
     "venueid": 163,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10121,7 +10123,7 @@ const showsDataArray = [
     "venueid": 164,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10136,7 +10138,7 @@ const showsDataArray = [
     "venueid": 165,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10151,7 +10153,7 @@ const showsDataArray = [
     "venueid": 166,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10166,7 +10168,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10181,7 +10183,7 @@ const showsDataArray = [
     "venueid": 189,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10196,7 +10198,7 @@ const showsDataArray = [
     "venueid": 190,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10211,7 +10213,7 @@ const showsDataArray = [
     "venueid": 191,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10226,7 +10228,7 @@ const showsDataArray = [
     "venueid": 16,
     "tourid": 11,
     "tourname": "1992 Spring Tour",
-    "tour_when": "1992 Spring",
+    "tour_year": "1992 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10241,7 +10243,7 @@ const showsDataArray = [
     "venueid": 93,
     "tourid": 12,
     "tourname": "1992 Summer European Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10256,7 +10258,7 @@ const showsDataArray = [
     "venueid": 192,
     "tourid": 12,
     "tourname": "1992 Summer European Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10271,7 +10273,7 @@ const showsDataArray = [
     "venueid": 193,
     "tourid": 12,
     "tourname": "1992 Summer European Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10286,7 +10288,7 @@ const showsDataArray = [
     "venueid": 194,
     "tourid": 12,
     "tourname": "1992 Summer European Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10301,7 +10303,7 @@ const showsDataArray = [
     "venueid": 195,
     "tourid": 12,
     "tourname": "1992 Summer European Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10316,7 +10318,7 @@ const showsDataArray = [
     "venueid": 196,
     "tourid": 12,
     "tourname": "1992 Summer European Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10331,7 +10333,7 @@ const showsDataArray = [
     "venueid": 197,
     "tourid": 12,
     "tourname": "1992 Summer European Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10346,7 +10348,7 @@ const showsDataArray = [
     "venueid": 198,
     "tourid": 12,
     "tourname": "1992 Summer European Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10361,7 +10363,7 @@ const showsDataArray = [
     "venueid": 1143,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -10376,7 +10378,7 @@ const showsDataArray = [
     "venueid": 208,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10391,7 +10393,7 @@ const showsDataArray = [
     "venueid": 209,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10406,7 +10408,7 @@ const showsDataArray = [
     "venueid": 210,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10421,7 +10423,7 @@ const showsDataArray = [
     "venueid": 211,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10436,7 +10438,7 @@ const showsDataArray = [
     "venueid": 212,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10451,7 +10453,7 @@ const showsDataArray = [
     "venueid": 67,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10466,7 +10468,7 @@ const showsDataArray = [
     "venueid": 102,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10481,7 +10483,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10496,7 +10498,7 @@ const showsDataArray = [
     "venueid": 213,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10511,7 +10513,7 @@ const showsDataArray = [
     "venueid": 210,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -10526,7 +10528,7 @@ const showsDataArray = [
     "venueid": 210,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10541,7 +10543,7 @@ const showsDataArray = [
     "venueid": 214,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10556,7 +10558,7 @@ const showsDataArray = [
     "venueid": 215,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -10571,7 +10573,7 @@ const showsDataArray = [
     "venueid": 215,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10586,7 +10588,7 @@ const showsDataArray = [
     "venueid": 217,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10601,7 +10603,7 @@ const showsDataArray = [
     "venueid": 211,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -10616,7 +10618,7 @@ const showsDataArray = [
     "venueid": 211,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10631,7 +10633,7 @@ const showsDataArray = [
     "venueid": 218,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10646,7 +10648,7 @@ const showsDataArray = [
     "venueid": 218,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -10661,7 +10663,7 @@ const showsDataArray = [
     "venueid": 219,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -10676,7 +10678,7 @@ const showsDataArray = [
     "venueid": 219,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10691,7 +10693,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10706,7 +10708,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -10721,7 +10723,7 @@ const showsDataArray = [
     "venueid": 221,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -10736,7 +10738,7 @@ const showsDataArray = [
     "venueid": 221,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10751,7 +10753,7 @@ const showsDataArray = [
     "venueid": 222,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10766,7 +10768,7 @@ const showsDataArray = [
     "venueid": 222,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -10781,7 +10783,7 @@ const showsDataArray = [
     "venueid": 223,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -10796,7 +10798,7 @@ const showsDataArray = [
     "venueid": 223,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10811,7 +10813,7 @@ const showsDataArray = [
     "venueid": 224,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10826,7 +10828,7 @@ const showsDataArray = [
     "venueid": 224,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -10841,7 +10843,7 @@ const showsDataArray = [
     "venueid": 225,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10856,7 +10858,7 @@ const showsDataArray = [
     "venueid": 289,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10871,7 +10873,7 @@ const showsDataArray = [
     "venueid": 289,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10886,7 +10888,7 @@ const showsDataArray = [
     "venueid": 289,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10901,7 +10903,7 @@ const showsDataArray = [
     "venueid": 290,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10916,7 +10918,7 @@ const showsDataArray = [
     "venueid": 291,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10931,7 +10933,7 @@ const showsDataArray = [
     "venueid": 291,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -10946,7 +10948,7 @@ const showsDataArray = [
     "venueid": 292,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -10961,7 +10963,7 @@ const showsDataArray = [
     "venueid": 292,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -10976,7 +10978,7 @@ const showsDataArray = [
     "venueid": 293,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -10991,7 +10993,7 @@ const showsDataArray = [
     "venueid": 293,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11006,7 +11008,7 @@ const showsDataArray = [
     "venueid": 294,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11021,7 +11023,7 @@ const showsDataArray = [
     "venueid": 294,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -11036,7 +11038,7 @@ const showsDataArray = [
     "venueid": 295,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -11051,7 +11053,7 @@ const showsDataArray = [
     "venueid": 295,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11066,7 +11068,7 @@ const showsDataArray = [
     "venueid": 296,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -11081,7 +11083,7 @@ const showsDataArray = [
     "venueid": 296,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11096,7 +11098,7 @@ const showsDataArray = [
     "venueid": 297,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11111,7 +11113,7 @@ const showsDataArray = [
     "venueid": 297,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -11126,7 +11128,7 @@ const showsDataArray = [
     "venueid": 247,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -11141,7 +11143,7 @@ const showsDataArray = [
     "venueid": 247,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11156,7 +11158,7 @@ const showsDataArray = [
     "venueid": 298,
     "tourid": 17,
     "tourname": "1992 Summer U.S. Tour",
-    "tour_when": "1992 Summer",
+    "tour_year": "1992 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11171,7 +11173,7 @@ const showsDataArray = [
     "venueid": 298,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -11186,7 +11188,7 @@ const showsDataArray = [
     "venueid": 1143,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -11201,7 +11203,7 @@ const showsDataArray = [
     "venueid": 299,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11216,7 +11218,7 @@ const showsDataArray = [
     "venueid": 300,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11231,7 +11233,7 @@ const showsDataArray = [
     "venueid": 302,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11246,7 +11248,7 @@ const showsDataArray = [
     "venueid": 304,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11261,7 +11263,7 @@ const showsDataArray = [
     "venueid": 306,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11276,7 +11278,7 @@ const showsDataArray = [
     "venueid": 99,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11291,7 +11293,7 @@ const showsDataArray = [
     "venueid": 308,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11306,7 +11308,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11321,7 +11323,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11336,7 +11338,7 @@ const showsDataArray = [
     "venueid": 320,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11351,7 +11353,7 @@ const showsDataArray = [
     "venueid": 321,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11366,7 +11368,7 @@ const showsDataArray = [
     "venueid": 311,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11381,7 +11383,7 @@ const showsDataArray = [
     "venueid": 160,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11396,7 +11398,7 @@ const showsDataArray = [
     "venueid": 106,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11411,7 +11413,7 @@ const showsDataArray = [
     "venueid": 322,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11426,7 +11428,7 @@ const showsDataArray = [
     "venueid": 322,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11441,7 +11443,7 @@ const showsDataArray = [
     "venueid": 145,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11456,7 +11458,7 @@ const showsDataArray = [
     "venueid": 146,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11471,7 +11473,7 @@ const showsDataArray = [
     "venueid": 451,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11486,7 +11488,7 @@ const showsDataArray = [
     "venueid": 310,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11501,7 +11503,7 @@ const showsDataArray = [
     "venueid": 474,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11516,7 +11518,7 @@ const showsDataArray = [
     "venueid": 315,
     "tourid": 18,
     "tourname": "1992 Fall Tour",
-    "tour_when": "1992 Fall",
+    "tour_year": "1992 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11531,7 +11533,7 @@ const showsDataArray = [
     "venueid": 98,
     "tourid": 19,
     "tourname": "1992 NYE Run",
-    "tour_when": "1992 NYE",
+    "tour_year": "1992 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11546,7 +11548,7 @@ const showsDataArray = [
     "venueid": 98,
     "tourid": 19,
     "tourname": "1992 NYE Run",
-    "tour_when": "1992 NYE",
+    "tour_year": "1992 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11561,7 +11563,7 @@ const showsDataArray = [
     "venueid": 475,
     "tourid": 19,
     "tourname": "1992 NYE Run",
-    "tour_when": "1992 NYE",
+    "tour_year": "1992 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11576,7 +11578,7 @@ const showsDataArray = [
     "venueid": 476,
     "tourid": 19,
     "tourname": "1992 NYE Run",
-    "tour_when": "1992 NYE",
+    "tour_year": "1992 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11591,7 +11593,7 @@ const showsDataArray = [
     "venueid": 1143,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -11606,7 +11608,7 @@ const showsDataArray = [
     "venueid": 279,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11621,7 +11623,7 @@ const showsDataArray = [
     "venueid": 168,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11636,7 +11638,7 @@ const showsDataArray = [
     "venueid": 169,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11651,7 +11653,7 @@ const showsDataArray = [
     "venueid": 1175,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -11666,7 +11668,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11681,7 +11683,7 @@ const showsDataArray = [
     "venueid": 79,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -11696,7 +11698,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11711,7 +11713,7 @@ const showsDataArray = [
     "venueid": 97,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11726,7 +11728,7 @@ const showsDataArray = [
     "venueid": 174,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11741,7 +11743,7 @@ const showsDataArray = [
     "venueid": 175,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11756,7 +11758,7 @@ const showsDataArray = [
     "venueid": 176,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11771,7 +11773,7 @@ const showsDataArray = [
     "venueid": 177,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11786,7 +11788,7 @@ const showsDataArray = [
     "venueid": 36,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11801,7 +11803,7 @@ const showsDataArray = [
     "venueid": 178,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11816,7 +11818,7 @@ const showsDataArray = [
     "venueid": 187,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11831,7 +11833,7 @@ const showsDataArray = [
     "venueid": 234,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11846,7 +11848,7 @@ const showsDataArray = [
     "venueid": 235,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11861,7 +11863,7 @@ const showsDataArray = [
     "venueid": 235,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11876,7 +11878,7 @@ const showsDataArray = [
     "venueid": 235,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11891,7 +11893,7 @@ const showsDataArray = [
     "venueid": 249,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11906,7 +11908,7 @@ const showsDataArray = [
     "venueid": 763,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11921,7 +11923,7 @@ const showsDataArray = [
     "venueid": 251,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11936,7 +11938,7 @@ const showsDataArray = [
     "venueid": 253,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11951,7 +11953,7 @@ const showsDataArray = [
     "venueid": 254,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11966,7 +11968,7 @@ const showsDataArray = [
     "venueid": 70,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11981,7 +11983,7 @@ const showsDataArray = [
     "venueid": 70,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -11996,7 +11998,7 @@ const showsDataArray = [
     "venueid": 255,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12011,7 +12013,7 @@ const showsDataArray = [
     "venueid": 71,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12026,7 +12028,7 @@ const showsDataArray = [
     "venueid": 256,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12041,7 +12043,7 @@ const showsDataArray = [
     "venueid": 257,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12056,7 +12058,7 @@ const showsDataArray = [
     "venueid": 258,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12071,7 +12073,7 @@ const showsDataArray = [
     "venueid": 110,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12086,7 +12088,7 @@ const showsDataArray = [
     "venueid": 112,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12101,7 +12103,7 @@ const showsDataArray = [
     "venueid": 259,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12116,7 +12118,7 @@ const showsDataArray = [
     "venueid": 260,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12131,7 +12133,7 @@ const showsDataArray = [
     "venueid": 260,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12146,7 +12148,7 @@ const showsDataArray = [
     "venueid": 263,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12161,7 +12163,7 @@ const showsDataArray = [
     "venueid": 264,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12176,7 +12178,7 @@ const showsDataArray = [
     "venueid": 265,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12191,7 +12193,7 @@ const showsDataArray = [
     "venueid": 266,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12206,7 +12208,7 @@ const showsDataArray = [
     "venueid": 276,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12221,7 +12223,7 @@ const showsDataArray = [
     "venueid": 137,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12236,7 +12238,7 @@ const showsDataArray = [
     "venueid": 137,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12251,7 +12253,7 @@ const showsDataArray = [
     "venueid": 280,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12266,7 +12268,7 @@ const showsDataArray = [
     "venueid": 141,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12281,7 +12283,7 @@ const showsDataArray = [
     "venueid": 143,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12296,7 +12298,7 @@ const showsDataArray = [
     "venueid": 301,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12311,7 +12313,7 @@ const showsDataArray = [
     "venueid": 143,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12326,7 +12328,7 @@ const showsDataArray = [
     "venueid": 281,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12341,7 +12343,7 @@ const showsDataArray = [
     "venueid": 282,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12356,7 +12358,7 @@ const showsDataArray = [
     "venueid": 283,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12371,7 +12373,7 @@ const showsDataArray = [
     "venueid": 284,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12386,7 +12388,7 @@ const showsDataArray = [
     "venueid": 285,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12401,7 +12403,7 @@ const showsDataArray = [
     "venueid": 286,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12416,7 +12418,7 @@ const showsDataArray = [
     "venueid": 303,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12431,7 +12433,7 @@ const showsDataArray = [
     "venueid": 305,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12446,7 +12448,7 @@ const showsDataArray = [
     "venueid": 307,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12461,7 +12463,7 @@ const showsDataArray = [
     "venueid": 309,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12476,7 +12478,7 @@ const showsDataArray = [
     "venueid": 1231,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -12491,7 +12493,7 @@ const showsDataArray = [
     "venueid": 310,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12506,7 +12508,7 @@ const showsDataArray = [
     "venueid": 310,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12521,7 +12523,7 @@ const showsDataArray = [
     "venueid": 311,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12536,7 +12538,7 @@ const showsDataArray = [
     "venueid": 311,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12551,7 +12553,7 @@ const showsDataArray = [
     "venueid": 162,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12566,7 +12568,7 @@ const showsDataArray = [
     "venueid": 312,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12581,7 +12583,7 @@ const showsDataArray = [
     "venueid": 313,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12596,7 +12598,7 @@ const showsDataArray = [
     "venueid": 314,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12611,7 +12613,7 @@ const showsDataArray = [
     "venueid": 18,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12626,7 +12628,7 @@ const showsDataArray = [
     "venueid": 315,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12641,7 +12643,7 @@ const showsDataArray = [
     "venueid": 316,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12656,7 +12658,7 @@ const showsDataArray = [
     "venueid": 317,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12671,7 +12673,7 @@ const showsDataArray = [
     "venueid": 317,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12686,7 +12688,7 @@ const showsDataArray = [
     "venueid": 318,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12701,7 +12703,7 @@ const showsDataArray = [
     "venueid": 302,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12716,7 +12718,7 @@ const showsDataArray = [
     "venueid": 302,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12731,7 +12733,7 @@ const showsDataArray = [
     "venueid": 319,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12746,7 +12748,7 @@ const showsDataArray = [
     "venueid": 80,
     "tourid": 20,
     "tourname": "1993 Winter/Spring Tour",
-    "tour_when": "1993 Winter",
+    "tour_year": "1993 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12761,7 +12763,7 @@ const showsDataArray = [
     "venueid": 333,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12776,7 +12778,7 @@ const showsDataArray = [
     "venueid": 333,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -12791,7 +12793,7 @@ const showsDataArray = [
     "venueid": 333,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12806,7 +12808,7 @@ const showsDataArray = [
     "venueid": 1199,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -12821,7 +12823,7 @@ const showsDataArray = [
     "venueid": 1031,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -12836,7 +12838,7 @@ const showsDataArray = [
     "venueid": 1218,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -12851,7 +12853,7 @@ const showsDataArray = [
     "venueid": 1032,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -12866,7 +12868,7 @@ const showsDataArray = [
     "venueid": 5,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12881,7 +12883,7 @@ const showsDataArray = [
     "venueid": 213,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12896,7 +12898,7 @@ const showsDataArray = [
     "venueid": 351,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12911,7 +12913,7 @@ const showsDataArray = [
     "venueid": 352,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12926,7 +12928,7 @@ const showsDataArray = [
     "venueid": 353,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12941,7 +12943,7 @@ const showsDataArray = [
     "venueid": 51,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12956,7 +12958,7 @@ const showsDataArray = [
     "venueid": 218,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12971,7 +12973,7 @@ const showsDataArray = [
     "venueid": 211,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -12986,7 +12988,7 @@ const showsDataArray = [
     "venueid": 214,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13001,7 +13003,7 @@ const showsDataArray = [
     "venueid": 354,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13016,7 +13018,7 @@ const showsDataArray = [
     "venueid": 355,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13031,7 +13033,7 @@ const showsDataArray = [
     "venueid": 113,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13046,7 +13048,7 @@ const showsDataArray = [
     "venueid": 356,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13061,7 +13063,7 @@ const showsDataArray = [
     "venueid": 357,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13076,7 +13078,7 @@ const showsDataArray = [
     "venueid": 358,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13091,7 +13093,7 @@ const showsDataArray = [
     "venueid": 253,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13106,7 +13108,7 @@ const showsDataArray = [
     "venueid": 359,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13121,7 +13123,7 @@ const showsDataArray = [
     "venueid": 360,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13136,7 +13138,7 @@ const showsDataArray = [
     "venueid": 361,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13151,7 +13153,7 @@ const showsDataArray = [
     "venueid": 362,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13166,7 +13168,7 @@ const showsDataArray = [
     "venueid": 18,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13181,7 +13183,7 @@ const showsDataArray = [
     "venueid": 363,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13196,7 +13198,7 @@ const showsDataArray = [
     "venueid": 222,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13211,7 +13213,7 @@ const showsDataArray = [
     "venueid": 364,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13226,7 +13228,7 @@ const showsDataArray = [
     "venueid": 365,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13241,7 +13243,7 @@ const showsDataArray = [
     "venueid": 309,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13256,7 +13258,7 @@ const showsDataArray = [
     "venueid": 307,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13271,7 +13273,7 @@ const showsDataArray = [
     "venueid": 305,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13286,7 +13288,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13301,7 +13303,7 @@ const showsDataArray = [
     "venueid": 369,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13316,7 +13318,7 @@ const showsDataArray = [
     "venueid": 287,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13331,7 +13333,7 @@ const showsDataArray = [
     "venueid": 370,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13346,7 +13348,7 @@ const showsDataArray = [
     "venueid": 371,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13361,7 +13363,7 @@ const showsDataArray = [
     "venueid": 372,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -13376,7 +13378,7 @@ const showsDataArray = [
     "venueid": 372,
     "tourid": 21,
     "tourname": "1993 Summer Tour",
-    "tour_when": "1993 Summer",
+    "tour_year": "1993 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13391,7 +13393,7 @@ const showsDataArray = [
     "venueid": 1032,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -13406,7 +13408,7 @@ const showsDataArray = [
     "venueid": 879,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -13421,7 +13423,7 @@ const showsDataArray = [
     "venueid": 373,
     "tourid": 22,
     "tourname": "1993 NYE Run",
-    "tour_when": "1993 NYE",
+    "tour_year": "1993 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13436,7 +13438,7 @@ const showsDataArray = [
     "venueid": 374,
     "tourid": 22,
     "tourname": "1993 NYE Run",
-    "tour_when": "1993 NYE",
+    "tour_year": "1993 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13451,7 +13453,7 @@ const showsDataArray = [
     "venueid": 208,
     "tourid": 22,
     "tourname": "1993 NYE Run",
-    "tour_when": "1993 NYE",
+    "tour_year": "1993 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13466,7 +13468,7 @@ const showsDataArray = [
     "venueid": 241,
     "tourid": 22,
     "tourname": "1993 NYE Run",
-    "tour_when": "1993 NYE",
+    "tour_year": "1993 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13481,7 +13483,7 @@ const showsDataArray = [
     "venueid": 1402,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -13496,7 +13498,7 @@ const showsDataArray = [
     "venueid": 1031,
     "tourid": 148,
     "tourname": "Fish - Bad Hat Winter 1994 Tour",
-    "tour_when": "1994 Winter",
+    "tour_year": "1994 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -13511,7 +13513,7 @@ const showsDataArray = [
     "venueid": 1134,
     "tourid": 148,
     "tourname": "Fish - Bad Hat Winter 1994 Tour",
-    "tour_when": "1994 Winter",
+    "tour_year": "1994 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -13526,7 +13528,7 @@ const showsDataArray = [
     "venueid": 1032,
     "tourid": 148,
     "tourname": "Fish - Bad Hat Winter 1994 Tour",
-    "tour_when": "1994 Winter",
+    "tour_year": "1994 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -13541,7 +13543,7 @@ const showsDataArray = [
     "venueid": 1134,
     "tourid": 149,
     "tourname": "Fish - The Dude of Life Band Winter 1994 Tour",
-    "tour_when": "1994 Winter",
+    "tour_year": "1994 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -13556,7 +13558,7 @@ const showsDataArray = [
     "venueid": 1172,
     "tourid": 149,
     "tourname": "Fish - The Dude of Life Band Winter 1994 Tour",
-    "tour_when": "1994 Winter",
+    "tour_year": "1994 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -13571,7 +13573,7 @@ const showsDataArray = [
     "venueid": 866,
     "tourid": 149,
     "tourname": "Fish - The Dude of Life Band Winter 1994 Tour",
-    "tour_when": "1994 Winter",
+    "tour_year": "1994 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -13586,7 +13588,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -13601,7 +13603,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 149,
     "tourname": "Fish - The Dude of Life Band Winter 1994 Tour",
-    "tour_when": "1994 Winter",
+    "tour_year": "1994 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -13616,7 +13618,7 @@ const showsDataArray = [
     "venueid": 1173,
     "tourid": 149,
     "tourname": "Fish - The Dude of Life Band Winter 1994 Tour",
-    "tour_when": "1994 Winter",
+    "tour_year": "1994 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -13631,7 +13633,7 @@ const showsDataArray = [
     "venueid": 79,
     "tourid": 149,
     "tourname": "Fish - The Dude of Life Band Winter 1994 Tour",
-    "tour_when": "1994 Winter",
+    "tour_year": "1994 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -13646,7 +13648,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 149,
     "tourname": "Fish - The Dude of Life Band Winter 1994 Tour",
-    "tour_when": "1994 Winter",
+    "tour_year": "1994 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -13661,7 +13663,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 149,
     "tourname": "Fish - The Dude of Life Band Winter 1994 Tour",
-    "tour_when": "1994 Winter",
+    "tour_year": "1994 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -13676,7 +13678,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -13691,7 +13693,7 @@ const showsDataArray = [
     "venueid": 1135,
     "tourid": 148,
     "tourname": "Fish - Bad Hat Winter 1994 Tour",
-    "tour_when": "1994 Winter",
+    "tour_year": "1994 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -13706,7 +13708,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -13721,7 +13723,7 @@ const showsDataArray = [
     "venueid": 1136,
     "tourid": 148,
     "tourname": "Fish - Bad Hat Winter 1994 Tour",
-    "tour_when": "1994 Winter",
+    "tour_year": "1994 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -13736,7 +13738,7 @@ const showsDataArray = [
     "venueid": 1031,
     "tourid": 148,
     "tourname": "Fish - Bad Hat Winter 1994 Tour",
-    "tour_when": "1994 Winter",
+    "tour_year": "1994 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -13751,7 +13753,7 @@ const showsDataArray = [
     "venueid": 1032,
     "tourid": 148,
     "tourname": "Fish - Bad Hat Winter 1994 Tour",
-    "tour_when": "1994 Winter",
+    "tour_year": "1994 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -13766,7 +13768,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 148,
     "tourname": "Fish - Bad Hat Winter 1994 Tour",
-    "tour_when": "1994 Winter",
+    "tour_year": "1994 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -13781,7 +13783,7 @@ const showsDataArray = [
     "venueid": 1154,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -13796,7 +13798,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -13811,7 +13813,7 @@ const showsDataArray = [
     "venueid": 1005,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -13826,7 +13828,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -13841,7 +13843,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -13856,7 +13858,7 @@ const showsDataArray = [
     "venueid": 1144,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -13871,7 +13873,7 @@ const showsDataArray = [
     "venueid": 16,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13886,7 +13888,7 @@ const showsDataArray = [
     "venueid": 17,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13901,7 +13903,7 @@ const showsDataArray = [
     "venueid": 18,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13916,7 +13918,7 @@ const showsDataArray = [
     "venueid": 19,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13931,7 +13933,7 @@ const showsDataArray = [
     "venueid": 22,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13946,7 +13948,7 @@ const showsDataArray = [
     "venueid": 23,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13961,7 +13963,7 @@ const showsDataArray = [
     "venueid": 26,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13976,7 +13978,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -13991,7 +13993,7 @@ const showsDataArray = [
     "venueid": 30,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14006,7 +14008,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14021,7 +14023,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14036,7 +14038,7 @@ const showsDataArray = [
     "venueid": 34,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14051,7 +14053,7 @@ const showsDataArray = [
     "venueid": 35,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14066,7 +14068,7 @@ const showsDataArray = [
     "venueid": 36,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14081,7 +14083,7 @@ const showsDataArray = [
     "venueid": 37,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14096,7 +14098,7 @@ const showsDataArray = [
     "venueid": 38,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14111,7 +14113,7 @@ const showsDataArray = [
     "venueid": 1145,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -14126,7 +14128,7 @@ const showsDataArray = [
     "venueid": 39,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14141,7 +14143,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -14156,7 +14158,7 @@ const showsDataArray = [
     "venueid": 40,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14171,7 +14173,7 @@ const showsDataArray = [
     "venueid": 113,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14186,7 +14188,7 @@ const showsDataArray = [
     "venueid": 114,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14201,7 +14203,7 @@ const showsDataArray = [
     "venueid": 115,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14216,7 +14218,7 @@ const showsDataArray = [
     "venueid": 116,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14231,7 +14233,7 @@ const showsDataArray = [
     "venueid": 116,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -14246,7 +14248,7 @@ const showsDataArray = [
     "venueid": 117,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14261,7 +14263,7 @@ const showsDataArray = [
     "venueid": 763,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14276,7 +14278,7 @@ const showsDataArray = [
     "venueid": 125,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14291,7 +14293,7 @@ const showsDataArray = [
     "venueid": 126,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14306,7 +14308,7 @@ const showsDataArray = [
     "venueid": 127,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14321,7 +14323,7 @@ const showsDataArray = [
     "venueid": 128,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14336,7 +14338,7 @@ const showsDataArray = [
     "venueid": 129,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14351,7 +14353,7 @@ const showsDataArray = [
     "venueid": 130,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14366,7 +14368,7 @@ const showsDataArray = [
     "venueid": 131,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14381,7 +14383,7 @@ const showsDataArray = [
     "venueid": 132,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14396,7 +14398,7 @@ const showsDataArray = [
     "venueid": 133,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14411,7 +14413,7 @@ const showsDataArray = [
     "venueid": 134,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14426,7 +14428,7 @@ const showsDataArray = [
     "venueid": 135,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14441,7 +14443,7 @@ const showsDataArray = [
     "venueid": 136,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14456,7 +14458,7 @@ const showsDataArray = [
     "venueid": 185,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14471,7 +14473,7 @@ const showsDataArray = [
     "venueid": 144,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14486,7 +14488,7 @@ const showsDataArray = [
     "venueid": 327,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14501,7 +14503,7 @@ const showsDataArray = [
     "venueid": 328,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14516,7 +14518,7 @@ const showsDataArray = [
     "venueid": 329,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14531,7 +14533,7 @@ const showsDataArray = [
     "venueid": 137,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14546,7 +14548,7 @@ const showsDataArray = [
     "venueid": 137,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14561,7 +14563,7 @@ const showsDataArray = [
     "venueid": 137,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14576,7 +14578,7 @@ const showsDataArray = [
     "venueid": 333,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14591,7 +14593,7 @@ const showsDataArray = [
     "venueid": 333,
     "tourid": 23,
     "tourname": "1994 Spring Tour",
-    "tour_when": "1994 Spring",
+    "tour_year": "1994 Spring",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14606,7 +14608,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -14621,7 +14623,7 @@ const showsDataArray = [
     "venueid": 336,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14636,7 +14638,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14651,7 +14653,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14666,7 +14668,7 @@ const showsDataArray = [
     "venueid": 305,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14681,7 +14683,7 @@ const showsDataArray = [
     "venueid": 366,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14696,7 +14698,7 @@ const showsDataArray = [
     "venueid": 285,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14711,7 +14713,7 @@ const showsDataArray = [
     "venueid": 367,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14726,7 +14728,7 @@ const showsDataArray = [
     "venueid": 1197,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -14741,7 +14743,7 @@ const showsDataArray = [
     "venueid": 368,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14756,7 +14758,7 @@ const showsDataArray = [
     "venueid": 1190,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14771,7 +14773,7 @@ const showsDataArray = [
     "venueid": 451,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14786,7 +14788,7 @@ const showsDataArray = [
     "venueid": 452,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14801,7 +14803,7 @@ const showsDataArray = [
     "venueid": 453,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14816,7 +14818,7 @@ const showsDataArray = [
     "venueid": 454,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14831,7 +14833,7 @@ const showsDataArray = [
     "venueid": 364,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14846,7 +14848,7 @@ const showsDataArray = [
     "venueid": 362,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14861,7 +14863,7 @@ const showsDataArray = [
     "venueid": 455,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14876,7 +14878,7 @@ const showsDataArray = [
     "venueid": 456,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14891,7 +14893,7 @@ const showsDataArray = [
     "venueid": 355,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14906,7 +14908,7 @@ const showsDataArray = [
     "venueid": 213,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14921,7 +14923,7 @@ const showsDataArray = [
     "venueid": 210,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14936,7 +14938,7 @@ const showsDataArray = [
     "venueid": 457,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14951,7 +14953,7 @@ const showsDataArray = [
     "venueid": 458,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14966,7 +14968,7 @@ const showsDataArray = [
     "venueid": 459,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14981,7 +14983,7 @@ const showsDataArray = [
     "venueid": 214,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -14996,7 +14998,7 @@ const showsDataArray = [
     "venueid": 214,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15011,7 +15013,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15026,7 +15028,7 @@ const showsDataArray = [
     "venueid": 219,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15041,7 +15043,7 @@ const showsDataArray = [
     "venueid": 221,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15056,7 +15058,7 @@ const showsDataArray = [
     "venueid": 211,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15071,7 +15073,7 @@ const showsDataArray = [
     "venueid": 460,
     "tourid": 24,
     "tourname": "1994 Summer Tour",
-    "tour_when": "1994 Summer",
+    "tour_year": "1994 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15086,7 +15088,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -15101,7 +15103,7 @@ const showsDataArray = [
     "venueid": 1196,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -15116,7 +15118,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -15131,7 +15133,7 @@ const showsDataArray = [
     "venueid": 603,
     "tourid": 150,
     "tourname": "Fish - Bad Hat Fall 1994 Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -15146,7 +15148,7 @@ const showsDataArray = [
     "venueid": 866,
     "tourid": 150,
     "tourname": "Fish - Bad Hat Fall 1994 Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -15161,7 +15163,7 @@ const showsDataArray = [
     "venueid": 16,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -15176,7 +15178,7 @@ const showsDataArray = [
     "venueid": 16,
     "tourid": 150,
     "tourname": "Fish - Bad Hat Fall 1994 Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -15191,7 +15193,7 @@ const showsDataArray = [
     "venueid": 554,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15206,7 +15208,7 @@ const showsDataArray = [
     "venueid": 35,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15221,7 +15223,7 @@ const showsDataArray = [
     "venueid": 555,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15236,7 +15238,7 @@ const showsDataArray = [
     "venueid": 556,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15251,7 +15253,7 @@ const showsDataArray = [
     "venueid": 557,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15266,7 +15268,7 @@ const showsDataArray = [
     "venueid": 558,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15281,7 +15283,7 @@ const showsDataArray = [
     "venueid": 559,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15296,7 +15298,7 @@ const showsDataArray = [
     "venueid": 418,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15311,7 +15313,7 @@ const showsDataArray = [
     "venueid": 732,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15326,7 +15328,7 @@ const showsDataArray = [
     "venueid": 733,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15341,7 +15343,7 @@ const showsDataArray = [
     "venueid": 734,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15356,7 +15358,7 @@ const showsDataArray = [
     "venueid": 735,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15371,7 +15373,7 @@ const showsDataArray = [
     "venueid": 118,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15386,7 +15388,7 @@ const showsDataArray = [
     "venueid": 736,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15401,7 +15403,7 @@ const showsDataArray = [
     "venueid": 737,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15416,7 +15418,7 @@ const showsDataArray = [
     "venueid": 738,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15431,7 +15433,7 @@ const showsDataArray = [
     "venueid": 739,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15446,7 +15448,7 @@ const showsDataArray = [
     "venueid": 740,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15461,7 +15463,7 @@ const showsDataArray = [
     "venueid": 741,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15476,7 +15478,7 @@ const showsDataArray = [
     "venueid": 742,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15491,7 +15493,7 @@ const showsDataArray = [
     "venueid": 319,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15506,7 +15508,7 @@ const showsDataArray = [
     "venueid": 34,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15521,7 +15523,7 @@ const showsDataArray = [
     "venueid": 743,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15536,7 +15538,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -15551,7 +15553,7 @@ const showsDataArray = [
     "venueid": 754,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15566,7 +15568,7 @@ const showsDataArray = [
     "venueid": 753,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15581,7 +15583,7 @@ const showsDataArray = [
     "venueid": 752,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15596,7 +15598,7 @@ const showsDataArray = [
     "venueid": 751,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15611,7 +15613,7 @@ const showsDataArray = [
     "venueid": 750,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15626,7 +15628,7 @@ const showsDataArray = [
     "venueid": 749,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15641,7 +15643,7 @@ const showsDataArray = [
     "venueid": 748,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15656,7 +15658,7 @@ const showsDataArray = [
     "venueid": 747,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15671,7 +15673,7 @@ const showsDataArray = [
     "venueid": 690,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15686,7 +15688,7 @@ const showsDataArray = [
     "venueid": 745,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15701,7 +15703,7 @@ const showsDataArray = [
     "venueid": 510,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15716,7 +15718,7 @@ const showsDataArray = [
     "venueid": 368,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15731,7 +15733,7 @@ const showsDataArray = [
     "venueid": 744,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15746,7 +15748,7 @@ const showsDataArray = [
     "venueid": 731,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15761,7 +15763,7 @@ const showsDataArray = [
     "venueid": 144,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15776,7 +15778,7 @@ const showsDataArray = [
     "venueid": 730,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15791,7 +15793,7 @@ const showsDataArray = [
     "venueid": 729,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15806,7 +15808,7 @@ const showsDataArray = [
     "venueid": 728,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15821,7 +15823,7 @@ const showsDataArray = [
     "venueid": 722,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15836,7 +15838,7 @@ const showsDataArray = [
     "venueid": 720,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15851,7 +15853,7 @@ const showsDataArray = [
     "venueid": 717,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15866,7 +15868,7 @@ const showsDataArray = [
     "venueid": 717,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15881,7 +15883,7 @@ const showsDataArray = [
     "venueid": 716,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15896,7 +15898,7 @@ const showsDataArray = [
     "venueid": 714,
     "tourid": 25,
     "tourname": "1994 Fall Tour",
-    "tour_when": "1994 Fall",
+    "tour_year": "1994 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15911,7 +15913,7 @@ const showsDataArray = [
     "venueid": 713,
     "tourid": 26,
     "tourname": "1994 NYE Run",
-    "tour_when": "1994 NYE",
+    "tour_year": "1994 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15926,7 +15928,7 @@ const showsDataArray = [
     "venueid": 440,
     "tourid": 26,
     "tourname": "1994 NYE Run",
-    "tour_when": "1994 NYE",
+    "tour_year": "1994 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15941,7 +15943,7 @@ const showsDataArray = [
     "venueid": 228,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15956,7 +15958,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 26,
     "tourname": "1994 NYE Run",
-    "tour_when": "1994 NYE",
+    "tour_year": "1994 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15971,7 +15973,7 @@ const showsDataArray = [
     "venueid": 299,
     "tourid": 26,
     "tourname": "1994 NYE Run",
-    "tour_when": "1994 NYE",
+    "tour_year": "1994 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -15986,7 +15988,7 @@ const showsDataArray = [
     "venueid": 825,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -16001,7 +16003,7 @@ const showsDataArray = [
     "venueid": 1186,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -16016,7 +16018,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -16031,7 +16033,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -16046,7 +16048,7 @@ const showsDataArray = [
     "venueid": 1179,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -16061,7 +16063,7 @@ const showsDataArray = [
     "venueid": 1178,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -16076,7 +16078,7 @@ const showsDataArray = [
     "venueid": 1171,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -16091,7 +16093,7 @@ const showsDataArray = [
     "venueid": 1256,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -16106,7 +16108,7 @@ const showsDataArray = [
     "venueid": 513,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16121,7 +16123,7 @@ const showsDataArray = [
     "venueid": 514,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16136,7 +16138,7 @@ const showsDataArray = [
     "venueid": 413,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16151,7 +16153,7 @@ const showsDataArray = [
     "venueid": 515,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16166,7 +16168,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16181,7 +16183,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16196,7 +16198,7 @@ const showsDataArray = [
     "venueid": 225,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16211,7 +16213,7 @@ const showsDataArray = [
     "venueid": 533,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16226,7 +16228,7 @@ const showsDataArray = [
     "venueid": 396,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16241,7 +16243,7 @@ const showsDataArray = [
     "venueid": 456,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16256,7 +16258,7 @@ const showsDataArray = [
     "venueid": 534,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16271,7 +16273,7 @@ const showsDataArray = [
     "venueid": 401,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16286,7 +16288,7 @@ const showsDataArray = [
     "venueid": 223,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16301,7 +16303,7 @@ const showsDataArray = [
     "venueid": 221,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16316,7 +16318,7 @@ const showsDataArray = [
     "venueid": 354,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16331,7 +16333,7 @@ const showsDataArray = [
     "venueid": 213,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16346,7 +16348,7 @@ const showsDataArray = [
     "venueid": 213,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16361,7 +16363,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16376,7 +16378,7 @@ const showsDataArray = [
     "venueid": 211,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16391,7 +16393,7 @@ const showsDataArray = [
     "venueid": 211,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16406,7 +16408,7 @@ const showsDataArray = [
     "venueid": 214,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16421,7 +16423,7 @@ const showsDataArray = [
     "venueid": 214,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16436,7 +16438,7 @@ const showsDataArray = [
     "venueid": 460,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16451,7 +16453,7 @@ const showsDataArray = [
     "venueid": 460,
     "tourid": 27,
     "tourname": "1995 Summer Tour",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16466,7 +16468,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 151,
     "tourname": "Fish - Pork Tornado Summer 1995",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -16481,7 +16483,7 @@ const showsDataArray = [
     "venueid": 228,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16496,7 +16498,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 151,
     "tourname": "Fish - Pork Tornado Summer 1995",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -16511,7 +16513,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 151,
     "tourname": "Fish - Pork Tornado Summer 1995",
-    "tour_when": "1995 Summer",
+    "tour_year": "1995 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -16526,7 +16528,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -16541,7 +16543,7 @@ const showsDataArray = [
     "venueid": 1053,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -16556,7 +16558,7 @@ const showsDataArray = [
     "venueid": 1260,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -16571,7 +16573,7 @@ const showsDataArray = [
     "venueid": 298,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16586,7 +16588,7 @@ const showsDataArray = [
     "venueid": 654,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16601,7 +16603,7 @@ const showsDataArray = [
     "venueid": 289,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16616,7 +16618,7 @@ const showsDataArray = [
     "venueid": 247,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16631,7 +16633,7 @@ const showsDataArray = [
     "venueid": 655,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16646,7 +16648,7 @@ const showsDataArray = [
     "venueid": 655,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16661,7 +16663,7 @@ const showsDataArray = [
     "venueid": 657,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16676,7 +16678,7 @@ const showsDataArray = [
     "venueid": 658,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16691,7 +16693,7 @@ const showsDataArray = [
     "venueid": 659,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16706,7 +16708,7 @@ const showsDataArray = [
     "venueid": 660,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16721,7 +16723,7 @@ const showsDataArray = [
     "venueid": 661,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16736,7 +16738,7 @@ const showsDataArray = [
     "venueid": 662,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16751,7 +16753,7 @@ const showsDataArray = [
     "venueid": 663,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16766,7 +16768,7 @@ const showsDataArray = [
     "venueid": 1174,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -16781,7 +16783,7 @@ const showsDataArray = [
     "venueid": 663,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16796,7 +16798,7 @@ const showsDataArray = [
     "venueid": 127,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16811,7 +16813,7 @@ const showsDataArray = [
     "venueid": 687,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16826,7 +16828,7 @@ const showsDataArray = [
     "venueid": 688,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16841,7 +16843,7 @@ const showsDataArray = [
     "venueid": 689,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16856,7 +16858,7 @@ const showsDataArray = [
     "venueid": 522,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16871,7 +16873,7 @@ const showsDataArray = [
     "venueid": 690,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16886,7 +16888,7 @@ const showsDataArray = [
     "venueid": 691,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16901,7 +16903,7 @@ const showsDataArray = [
     "venueid": 692,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16916,7 +16918,7 @@ const showsDataArray = [
     "venueid": 421,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16931,7 +16933,7 @@ const showsDataArray = [
     "venueid": 693,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16946,7 +16948,7 @@ const showsDataArray = [
     "venueid": 288,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16961,7 +16963,7 @@ const showsDataArray = [
     "venueid": 40,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16976,7 +16978,7 @@ const showsDataArray = [
     "venueid": 40,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -16991,7 +16993,7 @@ const showsDataArray = [
     "venueid": 40,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17006,7 +17008,7 @@ const showsDataArray = [
     "venueid": 694,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17021,7 +17023,7 @@ const showsDataArray = [
     "venueid": 695,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17036,7 +17038,7 @@ const showsDataArray = [
     "venueid": 696,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17051,7 +17053,7 @@ const showsDataArray = [
     "venueid": 697,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17066,7 +17068,7 @@ const showsDataArray = [
     "venueid": 698,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17081,7 +17083,7 @@ const showsDataArray = [
     "venueid": 699,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17096,7 +17098,7 @@ const showsDataArray = [
     "venueid": 38,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17111,7 +17113,7 @@ const showsDataArray = [
     "venueid": 529,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17126,7 +17128,7 @@ const showsDataArray = [
     "venueid": 700,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17141,7 +17143,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17156,7 +17158,7 @@ const showsDataArray = [
     "venueid": 709,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17171,7 +17173,7 @@ const showsDataArray = [
     "venueid": 702,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17186,7 +17188,7 @@ const showsDataArray = [
     "venueid": 526,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17201,7 +17203,7 @@ const showsDataArray = [
     "venueid": 761,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17216,7 +17218,7 @@ const showsDataArray = [
     "venueid": 374,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17231,7 +17233,7 @@ const showsDataArray = [
     "venueid": 34,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17246,7 +17248,7 @@ const showsDataArray = [
     "venueid": 34,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17261,7 +17263,7 @@ const showsDataArray = [
     "venueid": 704,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17276,7 +17278,7 @@ const showsDataArray = [
     "venueid": 525,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17291,7 +17293,7 @@ const showsDataArray = [
     "venueid": 705,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17306,7 +17308,7 @@ const showsDataArray = [
     "venueid": 208,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17321,7 +17323,7 @@ const showsDataArray = [
     "venueid": 440,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17336,7 +17338,7 @@ const showsDataArray = [
     "venueid": 22,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17351,7 +17353,7 @@ const showsDataArray = [
     "venueid": 524,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17366,7 +17368,7 @@ const showsDataArray = [
     "venueid": 703,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17381,7 +17383,7 @@ const showsDataArray = [
     "venueid": 703,
     "tourid": 28,
     "tourname": "1995 Fall Tour",
-    "tour_when": "1995 Fall",
+    "tour_year": "1995 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17396,7 +17398,7 @@ const showsDataArray = [
     "venueid": 241,
     "tourid": 29,
     "tourname": "1995 NYE Run",
-    "tour_when": "1995 NYE",
+    "tour_year": "1995 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17411,7 +17413,7 @@ const showsDataArray = [
     "venueid": 241,
     "tourid": 29,
     "tourname": "1995 NYE Run",
-    "tour_when": "1995 NYE",
+    "tour_year": "1995 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17426,7 +17428,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 29,
     "tourname": "1995 NYE Run",
-    "tour_when": "1995 NYE",
+    "tour_year": "1995 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17441,7 +17443,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 29,
     "tourname": "1995 NYE Run",
-    "tour_when": "1995 NYE",
+    "tour_year": "1995 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17456,7 +17458,7 @@ const showsDataArray = [
     "venueid": 1133,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -17471,7 +17473,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -17486,7 +17488,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -17501,7 +17503,7 @@ const showsDataArray = [
     "venueid": 629,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -17516,7 +17518,7 @@ const showsDataArray = [
     "venueid": 629,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -17531,7 +17533,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -17546,7 +17548,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -17561,7 +17563,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -17576,7 +17578,7 @@ const showsDataArray = [
     "venueid": 1272,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17591,7 +17593,7 @@ const showsDataArray = [
     "venueid": 1171,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -17606,7 +17608,7 @@ const showsDataArray = [
     "venueid": 1272,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -17621,7 +17623,7 @@ const showsDataArray = [
     "venueid": 685,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17636,7 +17638,7 @@ const showsDataArray = [
     "venueid": 184,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -17651,7 +17653,7 @@ const showsDataArray = [
     "venueid": 184,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17666,7 +17668,7 @@ const showsDataArray = [
     "venueid": 82,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17681,7 +17683,7 @@ const showsDataArray = [
     "venueid": 83,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17696,7 +17698,7 @@ const showsDataArray = [
     "venueid": 84,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17711,7 +17713,7 @@ const showsDataArray = [
     "venueid": 85,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17726,7 +17728,7 @@ const showsDataArray = [
     "venueid": 86,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17741,7 +17743,7 @@ const showsDataArray = [
     "venueid": 87,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17756,7 +17758,7 @@ const showsDataArray = [
     "venueid": 205,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17771,7 +17773,7 @@ const showsDataArray = [
     "venueid": 171,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17786,7 +17788,7 @@ const showsDataArray = [
     "venueid": 88,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17801,7 +17803,7 @@ const showsDataArray = [
     "venueid": 206,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17816,7 +17818,7 @@ const showsDataArray = [
     "venueid": 89,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17831,7 +17833,7 @@ const showsDataArray = [
     "venueid": 153,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17846,7 +17848,7 @@ const showsDataArray = [
     "venueid": 90,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17861,7 +17863,7 @@ const showsDataArray = [
     "venueid": 90,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -17876,7 +17878,7 @@ const showsDataArray = [
     "venueid": 154,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17891,7 +17893,7 @@ const showsDataArray = [
     "venueid": 91,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17906,7 +17908,7 @@ const showsDataArray = [
     "venueid": 155,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17921,7 +17923,7 @@ const showsDataArray = [
     "venueid": 92,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17936,7 +17938,7 @@ const showsDataArray = [
     "venueid": 93,
     "tourid": 30,
     "tourname": "1996 Summer European Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17951,7 +17953,7 @@ const showsDataArray = [
     "venueid": 686,
     "tourid": 31,
     "tourname": "1996 Summer U.S. Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17966,7 +17968,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 31,
     "tourname": "1996 Summer U.S. Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17981,7 +17983,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 31,
     "tourname": "1996 Summer U.S. Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -17996,7 +17998,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 31,
     "tourname": "1996 Summer U.S. Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18011,7 +18013,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 31,
     "tourname": "1996 Summer U.S. Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18026,7 +18028,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 31,
     "tourname": "1996 Summer U.S. Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18041,7 +18043,7 @@ const showsDataArray = [
     "venueid": 401,
     "tourid": 31,
     "tourname": "1996 Summer U.S. Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18056,7 +18058,7 @@ const showsDataArray = [
     "venueid": 401,
     "tourid": 31,
     "tourname": "1996 Summer U.S. Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18071,7 +18073,7 @@ const showsDataArray = [
     "venueid": 389,
     "tourid": 31,
     "tourname": "1996 Summer U.S. Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18086,7 +18088,7 @@ const showsDataArray = [
     "venueid": 339,
     "tourid": 31,
     "tourname": "1996 Summer U.S. Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18101,7 +18103,7 @@ const showsDataArray = [
     "venueid": 339,
     "tourid": 31,
     "tourname": "1996 Summer U.S. Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18116,7 +18118,7 @@ const showsDataArray = [
     "venueid": 339,
     "tourid": 31,
     "tourname": "1996 Summer U.S. Tour",
-    "tour_when": "1996 Summer",
+    "tour_year": "1996 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18131,7 +18133,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -18146,7 +18148,7 @@ const showsDataArray = [
     "venueid": 246,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -18161,7 +18163,7 @@ const showsDataArray = [
     "venueid": 1031,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -18176,7 +18178,7 @@ const showsDataArray = [
     "venueid": 703,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18191,7 +18193,7 @@ const showsDataArray = [
     "venueid": 527,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18206,7 +18208,7 @@ const showsDataArray = [
     "venueid": 700,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18221,7 +18223,7 @@ const showsDataArray = [
     "venueid": 156,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18236,7 +18238,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18251,7 +18253,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18266,7 +18268,7 @@ const showsDataArray = [
     "venueid": 439,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18281,7 +18283,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18296,7 +18298,7 @@ const showsDataArray = [
     "venueid": 699,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18311,7 +18313,7 @@ const showsDataArray = [
     "venueid": 698,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18326,7 +18328,7 @@ const showsDataArray = [
     "venueid": 706,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18341,7 +18343,7 @@ const showsDataArray = [
     "venueid": 1146,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -18356,7 +18358,7 @@ const showsDataArray = [
     "venueid": 707,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18371,7 +18373,7 @@ const showsDataArray = [
     "venueid": 708,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18386,7 +18388,7 @@ const showsDataArray = [
     "venueid": 694,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18401,7 +18403,7 @@ const showsDataArray = [
     "venueid": 709,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18416,7 +18418,7 @@ const showsDataArray = [
     "venueid": 710,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18431,7 +18433,7 @@ const showsDataArray = [
     "venueid": 522,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18446,7 +18448,7 @@ const showsDataArray = [
     "venueid": 421,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18461,7 +18463,7 @@ const showsDataArray = [
     "venueid": 573,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18476,7 +18478,7 @@ const showsDataArray = [
     "venueid": 158,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18491,7 +18493,7 @@ const showsDataArray = [
     "venueid": 158,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18506,7 +18508,7 @@ const showsDataArray = [
     "venueid": 172,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18521,7 +18523,7 @@ const showsDataArray = [
     "venueid": 711,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18536,7 +18538,7 @@ const showsDataArray = [
     "venueid": 712,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18551,7 +18553,7 @@ const showsDataArray = [
     "venueid": 1176,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -18566,7 +18568,7 @@ const showsDataArray = [
     "venueid": 715,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18581,7 +18583,7 @@ const showsDataArray = [
     "venueid": 687,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18596,7 +18598,7 @@ const showsDataArray = [
     "venueid": 718,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18611,7 +18613,7 @@ const showsDataArray = [
     "venueid": 719,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18626,7 +18628,7 @@ const showsDataArray = [
     "venueid": 657,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18641,7 +18643,7 @@ const showsDataArray = [
     "venueid": 721,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18656,7 +18658,7 @@ const showsDataArray = [
     "venueid": 173,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18671,7 +18673,7 @@ const showsDataArray = [
     "venueid": 723,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18686,7 +18688,7 @@ const showsDataArray = [
     "venueid": 724,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18701,7 +18703,7 @@ const showsDataArray = [
     "venueid": 725,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18716,7 +18718,7 @@ const showsDataArray = [
     "venueid": 229,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18731,7 +18733,7 @@ const showsDataArray = [
     "venueid": 726,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18746,7 +18748,7 @@ const showsDataArray = [
     "venueid": 727,
     "tourid": 32,
     "tourname": "1996 Fall Tour",
-    "tour_when": "1996 Fall",
+    "tour_year": "1996 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18761,7 +18763,7 @@ const showsDataArray = [
     "venueid": 524,
     "tourid": 33,
     "tourname": "1996 NYE Run",
-    "tour_when": "1996 NYE",
+    "tour_year": "1996 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18776,7 +18778,7 @@ const showsDataArray = [
     "venueid": 524,
     "tourid": 33,
     "tourname": "1996 NYE Run",
-    "tour_when": "1996 NYE",
+    "tour_year": "1996 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18791,7 +18793,7 @@ const showsDataArray = [
     "venueid": 186,
     "tourid": 33,
     "tourname": "1996 NYE Run",
-    "tour_when": "1996 NYE",
+    "tour_year": "1996 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18806,7 +18808,7 @@ const showsDataArray = [
     "venueid": 186,
     "tourid": 33,
     "tourname": "1996 NYE Run",
-    "tour_when": "1996 NYE",
+    "tour_year": "1996 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18821,7 +18823,7 @@ const showsDataArray = [
     "venueid": 751,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -18836,7 +18838,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -18851,7 +18853,7 @@ const showsDataArray = [
     "venueid": 205,
     "tourid": 34,
     "tourname": "1997 Winter European Tour",
-    "tour_when": "1997 Winter",
+    "tour_year": "1997 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18866,7 +18868,7 @@ const showsDataArray = [
     "venueid": 444,
     "tourid": 34,
     "tourname": "1997 Winter European Tour",
-    "tour_when": "1997 Winter",
+    "tour_year": "1997 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18881,7 +18883,7 @@ const showsDataArray = [
     "venueid": 445,
     "tourid": 34,
     "tourname": "1997 Winter European Tour",
-    "tour_when": "1997 Winter",
+    "tour_year": "1997 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18896,7 +18898,7 @@ const showsDataArray = [
     "venueid": 446,
     "tourid": 34,
     "tourname": "1997 Winter European Tour",
-    "tour_when": "1997 Winter",
+    "tour_year": "1997 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18911,7 +18913,7 @@ const showsDataArray = [
     "venueid": 447,
     "tourid": 34,
     "tourname": "1997 Winter European Tour",
-    "tour_when": "1997 Winter",
+    "tour_year": "1997 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18926,7 +18928,7 @@ const showsDataArray = [
     "venueid": 448,
     "tourid": 34,
     "tourname": "1997 Winter European Tour",
-    "tour_when": "1997 Winter",
+    "tour_year": "1997 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18941,7 +18943,7 @@ const showsDataArray = [
     "venueid": 449,
     "tourid": 34,
     "tourname": "1997 Winter European Tour",
-    "tour_when": "1997 Winter",
+    "tour_year": "1997 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18956,7 +18958,7 @@ const showsDataArray = [
     "venueid": 462,
     "tourid": 34,
     "tourname": "1997 Winter European Tour",
-    "tour_when": "1997 Winter",
+    "tour_year": "1997 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18971,7 +18973,7 @@ const showsDataArray = [
     "venueid": 463,
     "tourid": 34,
     "tourname": "1997 Winter European Tour",
-    "tour_when": "1997 Winter",
+    "tour_year": "1997 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -18986,7 +18988,7 @@ const showsDataArray = [
     "venueid": 464,
     "tourid": 34,
     "tourname": "1997 Winter European Tour",
-    "tour_when": "1997 Winter",
+    "tour_year": "1997 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19001,7 +19003,7 @@ const showsDataArray = [
     "venueid": 465,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19016,7 +19018,7 @@ const showsDataArray = [
     "venueid": 466,
     "tourid": 34,
     "tourname": "1997 Winter European Tour",
-    "tour_when": "1997 Winter",
+    "tour_year": "1997 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19031,7 +19033,7 @@ const showsDataArray = [
     "venueid": 469,
     "tourid": 34,
     "tourname": "1997 Winter European Tour",
-    "tour_when": "1997 Winter",
+    "tour_year": "1997 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19046,7 +19048,7 @@ const showsDataArray = [
     "venueid": 155,
     "tourid": 34,
     "tourname": "1997 Winter European Tour",
-    "tour_when": "1997 Winter",
+    "tour_year": "1997 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19061,7 +19063,7 @@ const showsDataArray = [
     "venueid": 471,
     "tourid": 34,
     "tourname": "1997 Winter European Tour",
-    "tour_when": "1997 Winter",
+    "tour_year": "1997 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19076,7 +19078,7 @@ const showsDataArray = [
     "venueid": 228,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19091,7 +19093,7 @@ const showsDataArray = [
     "venueid": 16,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19106,7 +19108,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -19121,7 +19123,7 @@ const showsDataArray = [
     "venueid": 1162,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -19136,7 +19138,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -19151,7 +19153,7 @@ const showsDataArray = [
     "venueid": 1161,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -19166,7 +19168,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 152,
     "tourname": "Fish - Pork Tornado Summer 1997",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -19181,7 +19183,7 @@ const showsDataArray = [
     "venueid": 866,
     "tourid": 152,
     "tourname": "Fish - Pork Tornado Summer 1997",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -19196,7 +19198,7 @@ const showsDataArray = [
     "venueid": 762,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19211,7 +19213,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 152,
     "tourname": "Fish - Pork Tornado Summer 1997",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -19226,7 +19228,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -19241,7 +19243,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 152,
     "tourname": "Fish - Pork Tornado Summer 1997",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -19256,7 +19258,7 @@ const showsDataArray = [
     "venueid": 477,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19271,7 +19273,7 @@ const showsDataArray = [
     "venueid": 478,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19286,7 +19288,7 @@ const showsDataArray = [
     "venueid": 478,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19301,7 +19303,7 @@ const showsDataArray = [
     "venueid": 479,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19316,7 +19318,7 @@ const showsDataArray = [
     "venueid": 480,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19331,7 +19333,7 @@ const showsDataArray = [
     "venueid": 481,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19346,7 +19348,7 @@ const showsDataArray = [
     "venueid": 482,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19361,7 +19363,7 @@ const showsDataArray = [
     "venueid": 483,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19376,7 +19378,7 @@ const showsDataArray = [
     "venueid": 484,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19391,7 +19393,7 @@ const showsDataArray = [
     "venueid": 485,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19406,7 +19408,7 @@ const showsDataArray = [
     "venueid": 487,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19421,7 +19423,7 @@ const showsDataArray = [
     "venueid": 195,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19436,7 +19438,7 @@ const showsDataArray = [
     "venueid": 446,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19451,7 +19453,7 @@ const showsDataArray = [
     "venueid": 446,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19466,7 +19468,7 @@ const showsDataArray = [
     "venueid": 494,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19481,7 +19483,7 @@ const showsDataArray = [
     "venueid": 495,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19496,7 +19498,7 @@ const showsDataArray = [
     "venueid": 505,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19511,7 +19513,7 @@ const showsDataArray = [
     "venueid": 507,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19526,7 +19528,7 @@ const showsDataArray = [
     "venueid": 508,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19541,7 +19543,7 @@ const showsDataArray = [
     "venueid": 509,
     "tourid": 35,
     "tourname": "1997 Summer European Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19556,7 +19558,7 @@ const showsDataArray = [
     "venueid": 876,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -19571,7 +19573,7 @@ const showsDataArray = [
     "venueid": 407,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19586,7 +19588,7 @@ const showsDataArray = [
     "venueid": 456,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19601,7 +19603,7 @@ const showsDataArray = [
     "venueid": 396,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19616,7 +19618,7 @@ const showsDataArray = [
     "venueid": 516,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19631,7 +19633,7 @@ const showsDataArray = [
     "venueid": 415,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19646,7 +19648,7 @@ const showsDataArray = [
     "venueid": 404,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19661,7 +19663,7 @@ const showsDataArray = [
     "venueid": 517,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19676,7 +19678,7 @@ const showsDataArray = [
     "venueid": 247,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19691,7 +19693,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19706,7 +19708,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19721,7 +19723,7 @@ const showsDataArray = [
     "venueid": 1185,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -19736,7 +19738,7 @@ const showsDataArray = [
     "venueid": 1184,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -19751,7 +19753,7 @@ const showsDataArray = [
     "venueid": 225,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19766,7 +19768,7 @@ const showsDataArray = [
     "venueid": 518,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19781,7 +19783,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19796,7 +19798,7 @@ const showsDataArray = [
     "venueid": 401,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19811,7 +19813,7 @@ const showsDataArray = [
     "venueid": 401,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19826,7 +19828,7 @@ const showsDataArray = [
     "venueid": 400,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19841,7 +19843,7 @@ const showsDataArray = [
     "venueid": 361,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19856,7 +19858,7 @@ const showsDataArray = [
     "venueid": 270,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19871,7 +19873,7 @@ const showsDataArray = [
     "venueid": 270,
     "tourid": 36,
     "tourname": "1997 Summer U.S. Tour",
-    "tour_when": "1997 Summer",
+    "tour_year": "1997 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19886,7 +19888,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -19901,7 +19903,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -19916,7 +19918,7 @@ const showsDataArray = [
     "venueid": 246,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -19931,7 +19933,7 @@ const showsDataArray = [
     "venueid": 16,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -19946,7 +19948,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -19961,7 +19963,7 @@ const showsDataArray = [
     "venueid": 385,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -19976,7 +19978,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -19991,7 +19993,7 @@ const showsDataArray = [
     "venueid": 230,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20006,7 +20008,7 @@ const showsDataArray = [
     "venueid": 520,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20021,7 +20023,7 @@ const showsDataArray = [
     "venueid": 521,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20036,7 +20038,7 @@ const showsDataArray = [
     "venueid": 521,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20051,7 +20053,7 @@ const showsDataArray = [
     "venueid": 522,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20066,7 +20068,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20081,7 +20083,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20096,7 +20098,7 @@ const showsDataArray = [
     "venueid": 38,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20111,7 +20113,7 @@ const showsDataArray = [
     "venueid": 439,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20126,7 +20128,7 @@ const showsDataArray = [
     "venueid": 241,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20141,7 +20143,7 @@ const showsDataArray = [
     "venueid": 241,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20156,7 +20158,7 @@ const showsDataArray = [
     "venueid": 241,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20171,7 +20173,7 @@ const showsDataArray = [
     "venueid": 762,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20186,7 +20188,7 @@ const showsDataArray = [
     "venueid": 524,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20201,7 +20203,7 @@ const showsDataArray = [
     "venueid": 524,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20216,7 +20218,7 @@ const showsDataArray = [
     "venueid": 525,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20231,7 +20233,7 @@ const showsDataArray = [
     "venueid": 421,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20246,7 +20248,7 @@ const showsDataArray = [
     "venueid": 526,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20261,7 +20263,7 @@ const showsDataArray = [
     "venueid": 527,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20276,7 +20278,7 @@ const showsDataArray = [
     "venueid": 528,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20291,7 +20293,7 @@ const showsDataArray = [
     "venueid": 273,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20306,7 +20308,7 @@ const showsDataArray = [
     "venueid": 273,
     "tourid": 37,
     "tourname": "1997 Fall Tour (a.k.a. Phish Destroys America)",
-    "tour_when": "1997 Fall",
+    "tour_year": "1997 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20321,7 +20323,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -20336,7 +20338,7 @@ const showsDataArray = [
     "venueid": 529,
     "tourid": 38,
     "tourname": "1997 NYE Run",
-    "tour_when": "1997 NYE",
+    "tour_year": "1997 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20351,7 +20353,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 38,
     "tourname": "1997 NYE Run",
-    "tour_when": "1997 NYE",
+    "tour_year": "1997 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20366,7 +20368,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 38,
     "tourname": "1997 NYE Run",
-    "tour_when": "1997 NYE",
+    "tour_year": "1997 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20381,7 +20383,7 @@ const showsDataArray = [
     "venueid": 1204,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -20396,7 +20398,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 38,
     "tourname": "1997 NYE Run",
-    "tour_when": "1997 NYE",
+    "tour_year": "1997 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20411,7 +20413,7 @@ const showsDataArray = [
     "venueid": 866,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -20426,7 +20428,7 @@ const showsDataArray = [
     "venueid": 846,
     "tourid": 153,
     "tourname": "Fish - Jazz Mandolin Project Winter 1998 Tour",
-    "tour_when": "1998 Winter",
+    "tour_year": "1998 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -20441,7 +20443,7 @@ const showsDataArray = [
     "venueid": 1033,
     "tourid": 153,
     "tourname": "Fish - Jazz Mandolin Project Winter 1998 Tour",
-    "tour_when": "1998 Winter",
+    "tour_year": "1998 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -20456,7 +20458,7 @@ const showsDataArray = [
     "venueid": 1034,
     "tourid": 153,
     "tourname": "Fish - Jazz Mandolin Project Winter 1998 Tour",
-    "tour_when": "1998 Winter",
+    "tour_year": "1998 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -20471,7 +20473,7 @@ const showsDataArray = [
     "venueid": 1153,
     "tourid": 153,
     "tourname": "Fish - Jazz Mandolin Project Winter 1998 Tour",
-    "tour_when": "1998 Winter",
+    "tour_year": "1998 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -20486,7 +20488,7 @@ const showsDataArray = [
     "venueid": 1035,
     "tourid": 153,
     "tourname": "Fish - Jazz Mandolin Project Winter 1998 Tour",
-    "tour_when": "1998 Winter",
+    "tour_year": "1998 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -20501,7 +20503,7 @@ const showsDataArray = [
     "venueid": 1036,
     "tourid": 153,
     "tourname": "Fish - Jazz Mandolin Project Winter 1998 Tour",
-    "tour_when": "1998 Winter",
+    "tour_year": "1998 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -20516,7 +20518,7 @@ const showsDataArray = [
     "venueid": 49,
     "tourid": 153,
     "tourname": "Fish - Jazz Mandolin Project Winter 1998 Tour",
-    "tour_when": "1998 Winter",
+    "tour_year": "1998 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -20531,7 +20533,7 @@ const showsDataArray = [
     "venueid": 25,
     "tourid": 153,
     "tourname": "Fish - Jazz Mandolin Project Winter 1998 Tour",
-    "tour_when": "1998 Winter",
+    "tour_year": "1998 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -20546,7 +20548,7 @@ const showsDataArray = [
     "venueid": 1037,
     "tourid": 153,
     "tourname": "Fish - Jazz Mandolin Project Winter 1998 Tour",
-    "tour_when": "1998 Winter",
+    "tour_year": "1998 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -20561,7 +20563,7 @@ const showsDataArray = [
     "venueid": 1038,
     "tourid": 153,
     "tourname": "Fish - Jazz Mandolin Project Winter 1998 Tour",
-    "tour_when": "1998 Winter",
+    "tour_year": "1998 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -20576,7 +20578,7 @@ const showsDataArray = [
     "venueid": 918,
     "tourid": 153,
     "tourname": "Fish - Jazz Mandolin Project Winter 1998 Tour",
-    "tour_when": "1998 Winter",
+    "tour_year": "1998 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -20591,7 +20593,7 @@ const showsDataArray = [
     "venueid": 918,
     "tourid": 153,
     "tourname": "Fish - Jazz Mandolin Project Winter 1998 Tour",
-    "tour_when": "1998 Winter",
+    "tour_year": "1998 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -20606,7 +20608,7 @@ const showsDataArray = [
     "venueid": 1039,
     "tourid": 153,
     "tourname": "Fish - Jazz Mandolin Project Winter 1998 Tour",
-    "tour_when": "1998 Winter",
+    "tour_year": "1998 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -20621,7 +20623,7 @@ const showsDataArray = [
     "venueid": 1040,
     "tourid": 153,
     "tourname": "Fish - Jazz Mandolin Project Winter 1998 Tour",
-    "tour_when": "1998 Winter",
+    "tour_year": "1998 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -20636,7 +20638,7 @@ const showsDataArray = [
     "venueid": 1041,
     "tourid": 153,
     "tourname": "Fish - Jazz Mandolin Project Winter 1998 Tour",
-    "tour_when": "1998 Winter",
+    "tour_year": "1998 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -20651,7 +20653,7 @@ const showsDataArray = [
     "venueid": 1042,
     "tourid": 153,
     "tourname": "Fish - Jazz Mandolin Project Winter 1998 Tour",
-    "tour_when": "1998 Winter",
+    "tour_year": "1998 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -20666,7 +20668,7 @@ const showsDataArray = [
     "venueid": 1258,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -20681,7 +20683,7 @@ const showsDataArray = [
     "venueid": 16,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -20696,7 +20698,7 @@ const showsDataArray = [
     "venueid": 242,
     "tourid": 39,
     "tourname": "1998 Island Tour",
-    "tour_when": "1998 Island",
+    "tour_year": "1998 Island",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20711,7 +20713,7 @@ const showsDataArray = [
     "venueid": 242,
     "tourid": 39,
     "tourname": "1998 Island Tour",
-    "tour_when": "1998 Island",
+    "tour_year": "1998 Island",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20726,7 +20728,7 @@ const showsDataArray = [
     "venueid": 440,
     "tourid": 39,
     "tourname": "1998 Island Tour",
-    "tour_when": "1998 Island",
+    "tour_year": "1998 Island",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20741,7 +20743,7 @@ const showsDataArray = [
     "venueid": 440,
     "tourid": 39,
     "tourname": "1998 Island Tour",
-    "tour_when": "1998 Island",
+    "tour_year": "1998 Island",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20756,7 +20758,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -20771,7 +20773,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -20786,7 +20788,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -20801,7 +20803,7 @@ const showsDataArray = [
     "venueid": 11,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20816,7 +20818,7 @@ const showsDataArray = [
     "venueid": 11,
     "tourid": 40,
     "tourname": "1998 Summer European Tour",
-    "tour_when": "1998 Summer Europe",
+    "tour_year": "1998 Summer Europe",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20831,7 +20833,7 @@ const showsDataArray = [
     "venueid": 11,
     "tourid": 40,
     "tourname": "1998 Summer European Tour",
-    "tour_when": "1998 Summer Europe",
+    "tour_year": "1998 Summer Europe",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20846,7 +20848,7 @@ const showsDataArray = [
     "venueid": 11,
     "tourid": 40,
     "tourname": "1998 Summer European Tour",
-    "tour_when": "1998 Summer Europe",
+    "tour_year": "1998 Summer Europe",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20861,7 +20863,7 @@ const showsDataArray = [
     "venueid": 530,
     "tourid": 40,
     "tourname": "1998 Summer European Tour",
-    "tour_when": "1998 Summer Europe",
+    "tour_year": "1998 Summer Europe",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20876,7 +20878,7 @@ const showsDataArray = [
     "venueid": 531,
     "tourid": 40,
     "tourname": "1998 Summer European Tour",
-    "tour_when": "1998 Summer Europe",
+    "tour_year": "1998 Summer Europe",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20891,7 +20893,7 @@ const showsDataArray = [
     "venueid": 531,
     "tourid": 40,
     "tourname": "1998 Summer European Tour",
-    "tour_when": "1998 Summer Europe",
+    "tour_year": "1998 Summer Europe",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20906,7 +20908,7 @@ const showsDataArray = [
     "venueid": 12,
     "tourid": 40,
     "tourname": "1998 Summer European Tour",
-    "tour_when": "1998 Summer Europe",
+    "tour_year": "1998 Summer Europe",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20921,7 +20923,7 @@ const showsDataArray = [
     "venueid": 12,
     "tourid": 40,
     "tourname": "1998 Summer European Tour",
-    "tour_when": "1998 Summer Europe",
+    "tour_year": "1998 Summer Europe",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20936,7 +20938,7 @@ const showsDataArray = [
     "venueid": 12,
     "tourid": 40,
     "tourname": "1998 Summer European Tour",
-    "tour_when": "1998 Summer Europe",
+    "tour_year": "1998 Summer Europe",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20951,7 +20953,7 @@ const showsDataArray = [
     "venueid": 412,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20966,7 +20968,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20981,7 +20983,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -20996,7 +20998,7 @@ const showsDataArray = [
     "venueid": 247,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21011,7 +21013,7 @@ const showsDataArray = [
     "venueid": 517,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21026,7 +21028,7 @@ const showsDataArray = [
     "venueid": 404,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21041,7 +21043,7 @@ const showsDataArray = [
     "venueid": 416,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21056,7 +21058,7 @@ const showsDataArray = [
     "venueid": 415,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21071,7 +21073,7 @@ const showsDataArray = [
     "venueid": 516,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21086,7 +21088,7 @@ const showsDataArray = [
     "venueid": 403,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21101,7 +21103,7 @@ const showsDataArray = [
     "venueid": 225,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21116,7 +21118,7 @@ const showsDataArray = [
     "venueid": 387,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21131,7 +21133,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21146,7 +21148,7 @@ const showsDataArray = [
     "venueid": 401,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21161,7 +21163,7 @@ const showsDataArray = [
     "venueid": 401,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21176,7 +21178,7 @@ const showsDataArray = [
     "venueid": 396,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21191,7 +21193,7 @@ const showsDataArray = [
     "venueid": 456,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21206,7 +21208,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21221,7 +21223,7 @@ const showsDataArray = [
     "venueid": 407,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21236,7 +21238,7 @@ const showsDataArray = [
     "venueid": 400,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21251,7 +21253,7 @@ const showsDataArray = [
     "venueid": 548,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21266,7 +21268,7 @@ const showsDataArray = [
     "venueid": 270,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21281,7 +21283,7 @@ const showsDataArray = [
     "venueid": 270,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21296,7 +21298,7 @@ const showsDataArray = [
     "venueid": 270,
     "tourid": 41,
     "tourname": "1998 Summer U.S. Tour",
-    "tour_when": "1998 Summer",
+    "tour_year": "1998 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21311,7 +21313,7 @@ const showsDataArray = [
     "venueid": 518,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21326,7 +21328,7 @@ const showsDataArray = [
     "venueid": 560,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21341,7 +21343,7 @@ const showsDataArray = [
     "venueid": 247,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21356,7 +21358,7 @@ const showsDataArray = [
     "venueid": 247,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21371,7 +21373,7 @@ const showsDataArray = [
     "venueid": 561,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21386,7 +21388,7 @@ const showsDataArray = [
     "venueid": 228,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21401,7 +21403,7 @@ const showsDataArray = [
     "venueid": 289,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21416,7 +21418,7 @@ const showsDataArray = [
     "venueid": 230,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21431,7 +21433,7 @@ const showsDataArray = [
     "venueid": 230,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21446,7 +21448,7 @@ const showsDataArray = [
     "venueid": 988,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -21461,7 +21463,7 @@ const showsDataArray = [
     "venueid": 520,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21476,7 +21478,7 @@ const showsDataArray = [
     "venueid": 570,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21491,7 +21493,7 @@ const showsDataArray = [
     "venueid": 521,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21506,7 +21508,7 @@ const showsDataArray = [
     "venueid": 572,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21521,7 +21523,7 @@ const showsDataArray = [
     "venueid": 368,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21536,7 +21538,7 @@ const showsDataArray = [
     "venueid": 368,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21551,7 +21553,7 @@ const showsDataArray = [
     "venueid": 368,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21566,7 +21568,7 @@ const showsDataArray = [
     "venueid": 1158,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -21581,7 +21583,7 @@ const showsDataArray = [
     "venueid": 573,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21596,7 +21598,7 @@ const showsDataArray = [
     "venueid": 525,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21611,7 +21613,7 @@ const showsDataArray = [
     "venueid": 574,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21626,7 +21628,7 @@ const showsDataArray = [
     "venueid": 575,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21641,7 +21643,7 @@ const showsDataArray = [
     "venueid": 576,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21656,7 +21658,7 @@ const showsDataArray = [
     "venueid": 38,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21671,7 +21673,7 @@ const showsDataArray = [
     "venueid": 103,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -21686,7 +21688,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21701,7 +21703,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21716,7 +21718,7 @@ const showsDataArray = [
     "venueid": 374,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21731,7 +21733,7 @@ const showsDataArray = [
     "venueid": 273,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21746,7 +21748,7 @@ const showsDataArray = [
     "venueid": 241,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21761,7 +21763,7 @@ const showsDataArray = [
     "venueid": 241,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21776,7 +21778,7 @@ const showsDataArray = [
     "venueid": 241,
     "tourid": 42,
     "tourname": "1998 Fall Tour",
-    "tour_when": "1998 Fall",
+    "tour_year": "1998 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21791,7 +21793,7 @@ const showsDataArray = [
     "venueid": 1159,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -21806,7 +21808,7 @@ const showsDataArray = [
     "venueid": 1091,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -21821,7 +21823,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 43,
     "tourname": "1998 NYE Run",
-    "tour_when": "1998 NYE",
+    "tour_year": "1998 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21836,7 +21838,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 43,
     "tourname": "1998 NYE Run",
-    "tour_when": "1998 NYE",
+    "tour_year": "1998 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21851,7 +21853,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 43,
     "tourname": "1998 NYE Run",
-    "tour_when": "1998 NYE",
+    "tour_year": "1998 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21866,7 +21868,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 43,
     "tourname": "1998 NYE Run",
-    "tour_when": "1998 NYE",
+    "tour_year": "1998 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -21881,7 +21883,7 @@ const showsDataArray = [
     "venueid": 1244,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -21896,7 +21898,7 @@ const showsDataArray = [
     "venueid": 1024,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -21911,7 +21913,7 @@ const showsDataArray = [
     "venueid": 246,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -21926,7 +21928,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 154,
     "tourname": "Fish - Jazz Mandolin Project Winter 1999 Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -21941,7 +21943,7 @@ const showsDataArray = [
     "venueid": 203,
     "tourid": 154,
     "tourname": "Fish - Jazz Mandolin Project Winter 1999 Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -21956,7 +21958,7 @@ const showsDataArray = [
     "venueid": 944,
     "tourid": 154,
     "tourname": "Fish - Jazz Mandolin Project Winter 1999 Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -21971,7 +21973,7 @@ const showsDataArray = [
     "venueid": 787,
     "tourid": 154,
     "tourname": "Fish - Jazz Mandolin Project Winter 1999 Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -21986,7 +21988,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22001,7 +22003,7 @@ const showsDataArray = [
     "venueid": 969,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22016,7 +22018,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -22031,7 +22033,7 @@ const showsDataArray = [
     "venueid": 1229,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -22046,7 +22048,7 @@ const showsDataArray = [
     "venueid": 1198,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -22061,7 +22063,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -22076,7 +22078,7 @@ const showsDataArray = [
     "venueid": 1243,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22091,7 +22093,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 155,
     "tourname": "Fish - Pork Tornado Spring 1999",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -22106,7 +22108,7 @@ const showsDataArray = [
     "venueid": 537,
     "tourid": 155,
     "tourname": "Fish - Pork Tornado Spring 1999",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -22121,7 +22123,7 @@ const showsDataArray = [
     "venueid": 233,
     "tourid": 155,
     "tourname": "Fish - Pork Tornado Spring 1999",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -22136,7 +22138,7 @@ const showsDataArray = [
     "venueid": 1092,
     "tourid": 155,
     "tourname": "Fish - Pork Tornado Spring 1999",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -22151,7 +22153,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 155,
     "tourname": "Fish - Pork Tornado Spring 1999",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -22166,7 +22168,7 @@ const showsDataArray = [
     "venueid": 884,
     "tourid": 155,
     "tourname": "Fish - Pork Tornado Spring 1999",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -22181,7 +22183,7 @@ const showsDataArray = [
     "venueid": 47,
     "tourid": 155,
     "tourname": "Fish - Pork Tornado Spring 1999",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -22196,7 +22198,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -22211,7 +22213,7 @@ const showsDataArray = [
     "venueid": 491,
     "tourid": 155,
     "tourname": "Fish - Pork Tornado Spring 1999",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -22226,7 +22228,7 @@ const showsDataArray = [
     "venueid": 1093,
     "tourid": 155,
     "tourname": "Fish - Pork Tornado Spring 1999",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -22241,7 +22243,7 @@ const showsDataArray = [
     "venueid": 1147,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -22256,7 +22258,7 @@ const showsDataArray = [
     "venueid": 970,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22271,7 +22273,7 @@ const showsDataArray = [
     "venueid": 1094,
     "tourid": 155,
     "tourname": "Fish - Pork Tornado Spring 1999",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -22286,7 +22288,7 @@ const showsDataArray = [
     "venueid": 787,
     "tourid": 155,
     "tourname": "Fish - Pork Tornado Spring 1999",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -22301,7 +22303,7 @@ const showsDataArray = [
     "venueid": 137,
     "tourid": 135,
     "tourname": "Page and Trey - Phil and Phriends ",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22316,7 +22318,7 @@ const showsDataArray = [
     "venueid": 137,
     "tourid": 135,
     "tourname": "Page and Trey - Phil and Phriends ",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22331,7 +22333,7 @@ const showsDataArray = [
     "venueid": 137,
     "tourid": 135,
     "tourname": "Page and Trey - Phil and Phriends ",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22346,7 +22348,7 @@ const showsDataArray = [
     "venueid": 560,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -22361,7 +22363,7 @@ const showsDataArray = [
     "venueid": 1065,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -22376,7 +22378,7 @@ const showsDataArray = [
     "venueid": 310,
     "tourid": 95,
     "tourname": "TAB - The Trio",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22391,7 +22393,7 @@ const showsDataArray = [
     "venueid": 364,
     "tourid": 95,
     "tourname": "TAB - The Trio",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22406,7 +22408,7 @@ const showsDataArray = [
     "venueid": 788,
     "tourid": 95,
     "tourname": "TAB - The Trio",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22421,7 +22423,7 @@ const showsDataArray = [
     "venueid": 307,
     "tourid": 95,
     "tourname": "TAB - The Trio",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22436,7 +22438,7 @@ const showsDataArray = [
     "venueid": 789,
     "tourid": 95,
     "tourname": "TAB - The Trio",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22451,7 +22453,7 @@ const showsDataArray = [
     "venueid": 790,
     "tourid": 95,
     "tourname": "TAB - The Trio",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22466,7 +22468,7 @@ const showsDataArray = [
     "venueid": 787,
     "tourid": 95,
     "tourname": "TAB - The Trio",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22481,7 +22483,7 @@ const showsDataArray = [
     "venueid": 1042,
     "tourid": 156,
     "tourname": "Fish - Jazz Mandolin Project Spring 1999 Tour",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -22496,7 +22498,7 @@ const showsDataArray = [
     "venueid": 800,
     "tourid": 95,
     "tourname": "TAB - The Trio",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22511,7 +22513,7 @@ const showsDataArray = [
     "venueid": 1043,
     "tourid": 156,
     "tourname": "Fish - Jazz Mandolin Project Spring 1999 Tour",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -22526,7 +22528,7 @@ const showsDataArray = [
     "venueid": 1044,
     "tourid": 156,
     "tourname": "Fish - Jazz Mandolin Project Spring 1999 Tour",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -22541,7 +22543,7 @@ const showsDataArray = [
     "venueid": 791,
     "tourid": 95,
     "tourname": "TAB - The Trio",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22556,7 +22558,7 @@ const showsDataArray = [
     "venueid": 610,
     "tourid": 156,
     "tourname": "Fish - Jazz Mandolin Project Spring 1999 Tour",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -22571,7 +22573,7 @@ const showsDataArray = [
     "venueid": 302,
     "tourid": 95,
     "tourname": "TAB - The Trio",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22586,7 +22588,7 @@ const showsDataArray = [
     "venueid": 16,
     "tourid": 95,
     "tourname": "TAB - The Trio",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22601,7 +22603,7 @@ const showsDataArray = [
     "venueid": 16,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -22616,7 +22618,7 @@ const showsDataArray = [
     "venueid": 1244,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -22631,7 +22633,7 @@ const showsDataArray = [
     "venueid": 808,
     "tourid": 95,
     "tourname": "TAB - The Trio",
-    "tour_when": "1999 Spring",
+    "tour_year": "1999 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22646,7 +22648,7 @@ const showsDataArray = [
     "venueid": 199,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -22661,7 +22663,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -22676,7 +22678,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -22691,7 +22693,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -22706,7 +22708,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -22721,7 +22723,7 @@ const showsDataArray = [
     "venueid": 394,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -22736,7 +22738,7 @@ const showsDataArray = [
     "venueid": 403,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -22751,7 +22753,7 @@ const showsDataArray = [
     "venueid": 405,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -22766,7 +22768,7 @@ const showsDataArray = [
     "venueid": 1207,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -22781,7 +22783,7 @@ const showsDataArray = [
     "venueid": 396,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -22796,7 +22798,7 @@ const showsDataArray = [
     "venueid": 396,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -22811,7 +22813,7 @@ const showsDataArray = [
     "venueid": 1189,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -22826,7 +22828,7 @@ const showsDataArray = [
     "venueid": 406,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -22841,7 +22843,7 @@ const showsDataArray = [
     "venueid": 407,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -22856,7 +22858,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -22871,7 +22873,7 @@ const showsDataArray = [
     "venueid": 399,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -22886,7 +22888,7 @@ const showsDataArray = [
     "venueid": 402,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -22901,7 +22903,7 @@ const showsDataArray = [
     "venueid": 402,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -22916,7 +22918,7 @@ const showsDataArray = [
     "venueid": 398,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -22931,7 +22933,7 @@ const showsDataArray = [
     "venueid": 398,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -22946,7 +22948,7 @@ const showsDataArray = [
     "venueid": 408,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -22961,7 +22963,7 @@ const showsDataArray = [
     "venueid": 408,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -22976,7 +22978,7 @@ const showsDataArray = [
     "venueid": 386,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -22991,7 +22993,7 @@ const showsDataArray = [
     "venueid": 400,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23006,7 +23008,7 @@ const showsDataArray = [
     "venueid": 387,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23021,7 +23023,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23036,7 +23038,7 @@ const showsDataArray = [
     "venueid": 401,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23051,7 +23053,7 @@ const showsDataArray = [
     "venueid": 401,
     "tourid": 44,
     "tourname": "1999 Summer U.S. Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23066,7 +23068,7 @@ const showsDataArray = [
     "venueid": 409,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23081,7 +23083,7 @@ const showsDataArray = [
     "venueid": 409,
     "tourid": 64,
     "tourname": "1999 Summer Japan Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23096,7 +23098,7 @@ const showsDataArray = [
     "venueid": 409,
     "tourid": 64,
     "tourname": "1999 Summer Japan Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23111,7 +23113,7 @@ const showsDataArray = [
     "venueid": 409,
     "tourid": 64,
     "tourname": "1999 Summer Japan Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23126,7 +23128,7 @@ const showsDataArray = [
     "venueid": 409,
     "tourid": 64,
     "tourname": "1999 Summer Japan Tour",
-    "tour_when": "1999 Summer",
+    "tour_year": "1999 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23141,7 +23143,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -23156,7 +23158,7 @@ const showsDataArray = [
     "venueid": 410,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23171,7 +23173,7 @@ const showsDataArray = [
     "venueid": 411,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23186,7 +23188,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23201,7 +23203,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23216,7 +23218,7 @@ const showsDataArray = [
     "venueid": 412,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23231,7 +23233,7 @@ const showsDataArray = [
     "venueid": 413,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23246,7 +23248,7 @@ const showsDataArray = [
     "venueid": 1141,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -23261,7 +23263,7 @@ const showsDataArray = [
     "venueid": 247,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23276,7 +23278,7 @@ const showsDataArray = [
     "venueid": 247,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23291,7 +23293,7 @@ const showsDataArray = [
     "venueid": 245,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23306,7 +23308,7 @@ const showsDataArray = [
     "venueid": 414,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23321,7 +23323,7 @@ const showsDataArray = [
     "venueid": 1013,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -23336,7 +23338,7 @@ const showsDataArray = [
     "venueid": 291,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23351,7 +23353,7 @@ const showsDataArray = [
     "venueid": 292,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23366,7 +23368,7 @@ const showsDataArray = [
     "venueid": 415,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23381,7 +23383,7 @@ const showsDataArray = [
     "venueid": 416,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23396,7 +23398,7 @@ const showsDataArray = [
     "venueid": 417,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23411,7 +23413,7 @@ const showsDataArray = [
     "venueid": 418,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23426,7 +23428,7 @@ const showsDataArray = [
     "venueid": 419,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23441,7 +23443,7 @@ const showsDataArray = [
     "venueid": 172,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23456,7 +23458,7 @@ const showsDataArray = [
     "venueid": 158,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23471,7 +23473,7 @@ const showsDataArray = [
     "venueid": 237,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23486,7 +23488,7 @@ const showsDataArray = [
     "venueid": 420,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23501,7 +23503,7 @@ const showsDataArray = [
     "venueid": 242,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23516,7 +23518,7 @@ const showsDataArray = [
     "venueid": 242,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23531,7 +23533,7 @@ const showsDataArray = [
     "venueid": 273,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23546,7 +23548,7 @@ const showsDataArray = [
     "venueid": 273,
     "tourid": 45,
     "tourname": "1999 Fall Tour",
-    "tour_when": "1999 Fall",
+    "tour_year": "1999 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23561,7 +23563,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -23576,7 +23578,7 @@ const showsDataArray = [
     "venueid": 421,
     "tourid": 46,
     "tourname": "1999 Winter Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23591,7 +23593,7 @@ const showsDataArray = [
     "venueid": 425,
     "tourid": 46,
     "tourname": "1999 Winter Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23606,7 +23608,7 @@ const showsDataArray = [
     "venueid": 425,
     "tourid": 46,
     "tourname": "1999 Winter Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23621,7 +23623,7 @@ const showsDataArray = [
     "venueid": 429,
     "tourid": 46,
     "tourname": "1999 Winter Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23636,7 +23638,7 @@ const showsDataArray = [
     "venueid": 208,
     "tourid": 46,
     "tourname": "1999 Winter Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23651,7 +23653,7 @@ const showsDataArray = [
     "venueid": 208,
     "tourid": 46,
     "tourname": "1999 Winter Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23666,7 +23668,7 @@ const showsDataArray = [
     "venueid": 240,
     "tourid": 46,
     "tourname": "1999 Winter Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23681,7 +23683,7 @@ const showsDataArray = [
     "venueid": 240,
     "tourid": 46,
     "tourname": "1999 Winter Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23696,7 +23698,7 @@ const showsDataArray = [
     "venueid": 439,
     "tourid": 46,
     "tourname": "1999 Winter Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23711,7 +23713,7 @@ const showsDataArray = [
     "venueid": 440,
     "tourid": 46,
     "tourname": "1999 Winter Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23726,7 +23728,7 @@ const showsDataArray = [
     "venueid": 441,
     "tourid": 46,
     "tourname": "1999 Winter Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23741,7 +23743,7 @@ const showsDataArray = [
     "venueid": 442,
     "tourid": 46,
     "tourname": "1999 Winter Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23756,7 +23758,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 46,
     "tourname": "1999 Winter Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23771,7 +23773,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 46,
     "tourname": "1999 Winter Tour",
-    "tour_when": "1999 Winter",
+    "tour_year": "1999 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23786,7 +23788,7 @@ const showsDataArray = [
     "venueid": 443,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23801,7 +23803,7 @@ const showsDataArray = [
     "venueid": 443,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23816,7 +23818,7 @@ const showsDataArray = [
     "venueid": 443,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -23831,7 +23833,7 @@ const showsDataArray = [
     "venueid": 1023,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -23846,7 +23848,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -23861,7 +23863,7 @@ const showsDataArray = [
     "venueid": 1302,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -23876,7 +23878,7 @@ const showsDataArray = [
     "venueid": 1045,
     "tourid": 157,
     "tourname": "Fish - Jazz Mandolin Project Winter 2000 Tour",
-    "tour_when": "2000 Winter",
+    "tour_year": "2000 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -23891,7 +23893,7 @@ const showsDataArray = [
     "venueid": 1046,
     "tourid": 157,
     "tourname": "Fish - Jazz Mandolin Project Winter 2000 Tour",
-    "tour_when": "2000 Winter",
+    "tour_year": "2000 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -23906,7 +23908,7 @@ const showsDataArray = [
     "venueid": 311,
     "tourid": 157,
     "tourname": "Fish - Jazz Mandolin Project Winter 2000 Tour",
-    "tour_when": "2000 Winter",
+    "tour_year": "2000 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -23921,7 +23923,7 @@ const showsDataArray = [
     "venueid": 106,
     "tourid": 157,
     "tourname": "Fish - Jazz Mandolin Project Winter 2000 Tour",
-    "tour_when": "2000 Winter",
+    "tour_year": "2000 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -23936,7 +23938,7 @@ const showsDataArray = [
     "venueid": 969,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -23951,7 +23953,7 @@ const showsDataArray = [
     "venueid": 969,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -23966,7 +23968,7 @@ const showsDataArray = [
     "venueid": 969,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -23981,7 +23983,7 @@ const showsDataArray = [
     "venueid": 969,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -23996,7 +23998,7 @@ const showsDataArray = [
     "venueid": 969,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -24011,7 +24013,7 @@ const showsDataArray = [
     "venueid": 108,
     "tourid": 157,
     "tourname": "Fish - Jazz Mandolin Project Winter 2000 Tour",
-    "tour_when": "2000 Winter",
+    "tour_year": "2000 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24026,7 +24028,7 @@ const showsDataArray = [
     "venueid": 1047,
     "tourid": 157,
     "tourname": "Fish - Jazz Mandolin Project Winter 2000 Tour",
-    "tour_when": "2000 Winter",
+    "tour_year": "2000 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24041,7 +24043,7 @@ const showsDataArray = [
     "venueid": 74,
     "tourid": 157,
     "tourname": "Fish - Jazz Mandolin Project Winter 2000 Tour",
-    "tour_when": "2000 Winter",
+    "tour_year": "2000 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24056,7 +24058,7 @@ const showsDataArray = [
     "venueid": 343,
     "tourid": 157,
     "tourname": "Fish - Jazz Mandolin Project Winter 2000 Tour",
-    "tour_when": "2000 Winter",
+    "tour_year": "2000 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24071,7 +24073,7 @@ const showsDataArray = [
     "venueid": 1048,
     "tourid": 157,
     "tourname": "Fish - Jazz Mandolin Project Winter 2000 Tour",
-    "tour_when": "2000 Winter",
+    "tour_year": "2000 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24086,7 +24088,7 @@ const showsDataArray = [
     "venueid": 1049,
     "tourid": 157,
     "tourname": "Fish - Jazz Mandolin Project Winter 2000 Tour",
-    "tour_when": "2000 Winter",
+    "tour_year": "2000 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24101,7 +24103,7 @@ const showsDataArray = [
     "venueid": 1050,
     "tourid": 157,
     "tourname": "Fish - Jazz Mandolin Project Winter 2000 Tour",
-    "tour_when": "2000 Winter",
+    "tour_year": "2000 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24116,7 +24118,7 @@ const showsDataArray = [
     "venueid": 857,
     "tourid": 157,
     "tourname": "Fish - Jazz Mandolin Project Winter 2000 Tour",
-    "tour_when": "2000 Winter",
+    "tour_year": "2000 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24131,7 +24133,7 @@ const showsDataArray = [
     "venueid": 1051,
     "tourid": 157,
     "tourname": "Fish - Jazz Mandolin Project Winter 2000 Tour",
-    "tour_when": "2000 Winter",
+    "tour_year": "2000 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24146,7 +24148,7 @@ const showsDataArray = [
     "venueid": 1051,
     "tourid": 157,
     "tourname": "Fish - Jazz Mandolin Project Winter 2000 Tour",
-    "tour_when": "2000 Winter",
+    "tour_year": "2000 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24161,7 +24163,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -24176,7 +24178,7 @@ const showsDataArray = [
     "venueid": 1052,
     "tourid": 157,
     "tourname": "Fish - Jazz Mandolin Project Winter 2000 Tour",
-    "tour_when": "2000 Winter",
+    "tour_year": "2000 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24191,7 +24193,7 @@ const showsDataArray = [
     "venueid": 175,
     "tourid": 157,
     "tourname": "Fish - Jazz Mandolin Project Winter 2000 Tour",
-    "tour_when": "2000 Winter",
+    "tour_year": "2000 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24206,7 +24208,7 @@ const showsDataArray = [
     "venueid": 277,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -24221,7 +24223,7 @@ const showsDataArray = [
     "venueid": 1203,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -24236,7 +24238,7 @@ const showsDataArray = [
     "venueid": 1207,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -24251,7 +24253,7 @@ const showsDataArray = [
     "venueid": 1148,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -24266,7 +24268,7 @@ const showsDataArray = [
     "venueid": 1098,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24281,7 +24283,7 @@ const showsDataArray = [
     "venueid": 233,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24296,7 +24298,7 @@ const showsDataArray = [
     "venueid": 1092,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24311,7 +24313,7 @@ const showsDataArray = [
     "venueid": 1099,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24326,7 +24328,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24341,7 +24343,7 @@ const showsDataArray = [
     "venueid": 537,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24356,7 +24358,7 @@ const showsDataArray = [
     "venueid": 846,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24371,7 +24373,7 @@ const showsDataArray = [
     "venueid": 1095,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24386,7 +24388,7 @@ const showsDataArray = [
     "venueid": 47,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24401,7 +24403,7 @@ const showsDataArray = [
     "venueid": 79,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24416,7 +24418,7 @@ const showsDataArray = [
     "venueid": 1097,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24431,7 +24433,7 @@ const showsDataArray = [
     "venueid": 1044,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24446,7 +24448,7 @@ const showsDataArray = [
     "venueid": 1046,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24461,7 +24463,7 @@ const showsDataArray = [
     "venueid": 311,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24476,7 +24478,7 @@ const showsDataArray = [
     "venueid": 190,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -24491,7 +24493,7 @@ const showsDataArray = [
     "venueid": 854,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24506,7 +24508,7 @@ const showsDataArray = [
     "venueid": 833,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24521,7 +24523,7 @@ const showsDataArray = [
     "venueid": 107,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24536,7 +24538,7 @@ const showsDataArray = [
     "venueid": 1100,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24551,7 +24553,7 @@ const showsDataArray = [
     "venueid": 147,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24566,7 +24568,7 @@ const showsDataArray = [
     "venueid": 1101,
     "tourid": 158,
     "tourname": "Fish - Pork Tornado Spring 2000",
-    "tour_when": "2000 Spring",
+    "tour_year": "2000 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -24581,7 +24583,7 @@ const showsDataArray = [
     "venueid": 1128,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -24596,7 +24598,7 @@ const showsDataArray = [
     "venueid": 802,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -24611,7 +24613,7 @@ const showsDataArray = [
     "venueid": 1065,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -24626,7 +24628,7 @@ const showsDataArray = [
     "venueid": 1241,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -24641,7 +24643,7 @@ const showsDataArray = [
     "venueid": 375,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24656,7 +24658,7 @@ const showsDataArray = [
     "venueid": 375,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24671,7 +24673,7 @@ const showsDataArray = [
     "venueid": 228,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24686,7 +24688,7 @@ const showsDataArray = [
     "venueid": 376,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24701,7 +24703,7 @@ const showsDataArray = [
     "venueid": 377,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24716,7 +24718,7 @@ const showsDataArray = [
     "venueid": 377,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24731,7 +24733,7 @@ const showsDataArray = [
     "venueid": 227,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -24746,7 +24748,7 @@ const showsDataArray = [
     "venueid": 275,
     "tourid": 47,
     "tourname": "2000 NYC Tour",
-    "tour_when": "2000 NYC",
+    "tour_year": "2000 NYC",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24761,7 +24763,7 @@ const showsDataArray = [
     "venueid": 275,
     "tourid": 47,
     "tourname": "2000 NYC Tour",
-    "tour_when": "2000 NYC",
+    "tour_year": "2000 NYC",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24776,7 +24778,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 47,
     "tourname": "2000 NYC Tour",
-    "tour_when": "2000 NYC",
+    "tour_year": "2000 NYC",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24791,7 +24793,7 @@ const showsDataArray = [
     "venueid": 378,
     "tourid": 48,
     "tourname": "2000 Summer Japan Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24806,7 +24808,7 @@ const showsDataArray = [
     "venueid": 379,
     "tourid": 48,
     "tourname": "2000 Summer Japan Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24821,7 +24823,7 @@ const showsDataArray = [
     "venueid": 380,
     "tourid": 48,
     "tourname": "2000 Summer Japan Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24836,7 +24838,7 @@ const showsDataArray = [
     "venueid": 381,
     "tourid": 48,
     "tourname": "2000 Summer Japan Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24851,7 +24853,7 @@ const showsDataArray = [
     "venueid": 382,
     "tourid": 48,
     "tourname": "2000 Summer Japan Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24866,7 +24868,7 @@ const showsDataArray = [
     "venueid": 383,
     "tourid": 48,
     "tourname": "2000 Summer Japan Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24881,7 +24883,7 @@ const showsDataArray = [
     "venueid": 384,
     "tourid": 48,
     "tourname": "2000 Summer Japan Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24896,7 +24898,7 @@ const showsDataArray = [
     "venueid": 395,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24911,7 +24913,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -24926,7 +24928,7 @@ const showsDataArray = [
     "venueid": 396,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24941,7 +24943,7 @@ const showsDataArray = [
     "venueid": 396,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24956,7 +24958,7 @@ const showsDataArray = [
     "venueid": 397,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24971,7 +24973,7 @@ const showsDataArray = [
     "venueid": 385,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -24986,7 +24988,7 @@ const showsDataArray = [
     "venueid": 398,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25001,7 +25003,7 @@ const showsDataArray = [
     "venueid": 398,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25016,7 +25018,7 @@ const showsDataArray = [
     "venueid": 1,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25031,7 +25033,7 @@ const showsDataArray = [
     "venueid": 1,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25046,7 +25048,7 @@ const showsDataArray = [
     "venueid": 399,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25061,7 +25063,7 @@ const showsDataArray = [
     "venueid": 399,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25076,7 +25078,7 @@ const showsDataArray = [
     "venueid": 386,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25091,7 +25093,7 @@ const showsDataArray = [
     "venueid": 400,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25106,7 +25108,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25121,7 +25123,7 @@ const showsDataArray = [
     "venueid": 1230,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -25136,7 +25138,7 @@ const showsDataArray = [
     "venueid": 401,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25151,7 +25153,7 @@ const showsDataArray = [
     "venueid": 401,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25166,7 +25168,7 @@ const showsDataArray = [
     "venueid": 401,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25181,7 +25183,7 @@ const showsDataArray = [
     "venueid": 387,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25196,7 +25198,7 @@ const showsDataArray = [
     "venueid": 387,
     "tourid": 49,
     "tourname": "2000 Summer U.S. Tour",
-    "tour_when": "2000 Summer",
+    "tour_year": "2000 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25211,7 +25213,7 @@ const showsDataArray = [
     "venueid": 388,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25226,7 +25228,7 @@ const showsDataArray = [
     "venueid": 1096,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -25241,7 +25243,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -25256,7 +25258,7 @@ const showsDataArray = [
     "venueid": 273,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25271,7 +25273,7 @@ const showsDataArray = [
     "venueid": 273,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25286,7 +25288,7 @@ const showsDataArray = [
     "venueid": 402,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25301,7 +25303,7 @@ const showsDataArray = [
     "venueid": 402,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25316,7 +25318,7 @@ const showsDataArray = [
     "venueid": 361,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25331,7 +25333,7 @@ const showsDataArray = [
     "venueid": 389,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25346,7 +25348,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25361,7 +25363,7 @@ const showsDataArray = [
     "venueid": 223,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25376,7 +25378,7 @@ const showsDataArray = [
     "venueid": 390,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25391,7 +25393,7 @@ const showsDataArray = [
     "venueid": 237,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25406,7 +25408,7 @@ const showsDataArray = [
     "venueid": 237,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25421,7 +25423,7 @@ const showsDataArray = [
     "venueid": 158,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25436,7 +25438,7 @@ const showsDataArray = [
     "venueid": 403,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25451,7 +25453,7 @@ const showsDataArray = [
     "venueid": 391,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25466,7 +25468,7 @@ const showsDataArray = [
     "venueid": 230,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25481,7 +25483,7 @@ const showsDataArray = [
     "venueid": 1109,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -25496,7 +25498,7 @@ const showsDataArray = [
     "venueid": 230,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25511,7 +25513,7 @@ const showsDataArray = [
     "venueid": 404,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25526,7 +25528,7 @@ const showsDataArray = [
     "venueid": 392,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25541,7 +25543,7 @@ const showsDataArray = [
     "venueid": 245,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25556,7 +25558,7 @@ const showsDataArray = [
     "venueid": 393,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25571,7 +25573,7 @@ const showsDataArray = [
     "venueid": 247,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25586,7 +25588,7 @@ const showsDataArray = [
     "venueid": 247,
     "tourid": 50,
     "tourname": "2000 Fall Tour",
-    "tour_when": "2000 Fall",
+    "tour_year": "2000 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -25601,7 +25603,7 @@ const showsDataArray = [
     "venueid": 1244,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -25616,7 +25618,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -25631,7 +25633,7 @@ const showsDataArray = [
     "venueid": 1243,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -25646,7 +25648,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -25661,7 +25663,7 @@ const showsDataArray = [
     "venueid": 32,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -25676,7 +25678,7 @@ const showsDataArray = [
     "venueid": 302,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -25691,7 +25693,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -25706,7 +25708,7 @@ const showsDataArray = [
     "venueid": 1205,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -25721,7 +25723,7 @@ const showsDataArray = [
     "venueid": 944,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -25736,7 +25738,7 @@ const showsDataArray = [
     "venueid": 1046,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -25751,7 +25753,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -25766,7 +25768,7 @@ const showsDataArray = [
     "venueid": 1148,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -25781,7 +25783,7 @@ const showsDataArray = [
     "venueid": 1148,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -25796,7 +25798,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -25811,7 +25813,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -25826,7 +25828,7 @@ const showsDataArray = [
     "venueid": 995,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -25841,7 +25843,7 @@ const showsDataArray = [
     "venueid": 16,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -25856,7 +25858,7 @@ const showsDataArray = [
     "venueid": 190,
     "tourid": 96,
     "tourname": "TAB - The Sextet",
-    "tour_when": "2001 Winter",
+    "tour_year": "2001 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -25871,7 +25873,7 @@ const showsDataArray = [
     "venueid": 1102,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -25886,7 +25888,7 @@ const showsDataArray = [
     "venueid": 811,
     "tourid": 96,
     "tourname": "TAB - The Sextet",
-    "tour_when": "2001 Winter",
+    "tour_year": "2001 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -25901,7 +25903,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 96,
     "tourname": "TAB - The Sextet",
-    "tour_when": "2001 Winter",
+    "tour_year": "2001 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -25916,7 +25918,7 @@ const showsDataArray = [
     "venueid": 770,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -25931,7 +25933,7 @@ const showsDataArray = [
     "venueid": 317,
     "tourid": 96,
     "tourname": "TAB - The Sextet",
-    "tour_when": "2001 Winter",
+    "tour_year": "2001 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -25946,7 +25948,7 @@ const showsDataArray = [
     "venueid": 1155,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -25961,7 +25963,7 @@ const showsDataArray = [
     "venueid": 804,
     "tourid": 96,
     "tourname": "TAB - The Sextet",
-    "tour_when": "2001 Winter",
+    "tour_year": "2001 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -25976,7 +25978,7 @@ const showsDataArray = [
     "venueid": 812,
     "tourid": 96,
     "tourname": "TAB - The Sextet",
-    "tour_when": "2001 Winter",
+    "tour_year": "2001 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -25991,7 +25993,7 @@ const showsDataArray = [
     "venueid": 813,
     "tourid": 96,
     "tourname": "TAB - The Sextet",
-    "tour_when": "2001 Winter",
+    "tour_year": "2001 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26006,7 +26008,7 @@ const showsDataArray = [
     "venueid": 790,
     "tourid": 96,
     "tourname": "TAB - The Sextet",
-    "tour_when": "2001 Winter",
+    "tour_year": "2001 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26021,7 +26023,7 @@ const showsDataArray = [
     "venueid": 39,
     "tourid": 96,
     "tourname": "TAB - The Sextet",
-    "tour_when": "2001 Winter",
+    "tour_year": "2001 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26036,7 +26038,7 @@ const showsDataArray = [
     "venueid": 40,
     "tourid": 96,
     "tourname": "TAB - The Sextet",
-    "tour_when": "2001 Winter",
+    "tour_year": "2001 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26051,7 +26053,7 @@ const showsDataArray = [
     "venueid": 40,
     "tourid": 96,
     "tourname": "TAB - The Sextet",
-    "tour_when": "2001 Winter",
+    "tour_year": "2001 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26066,7 +26068,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -26081,7 +26083,7 @@ const showsDataArray = [
     "venueid": 1244,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -26096,7 +26098,7 @@ const showsDataArray = [
     "venueid": 233,
     "tourid": 159,
     "tourname": "Fish - Pork Tornado Spring 2001",
-    "tour_when": "2001 Spring",
+    "tour_year": "2001 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26111,7 +26113,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 159,
     "tourname": "Fish - Pork Tornado Spring 2001",
-    "tour_when": "2001 Spring",
+    "tour_year": "2001 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26126,7 +26128,7 @@ const showsDataArray = [
     "venueid": 1095,
     "tourid": 159,
     "tourname": "Fish - Pork Tornado Spring 2001",
-    "tour_when": "2001 Spring",
+    "tour_year": "2001 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26141,7 +26143,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 116,
     "tourname": "Mike Gordon + Col. Bruce Hampton & The Codetalkers",
-    "tour_when": "2001 Spring",
+    "tour_year": "2001 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -26156,7 +26158,7 @@ const showsDataArray = [
     "venueid": 944,
     "tourid": 116,
     "tourname": "Mike Gordon + Col. Bruce Hampton & The Codetalkers",
-    "tour_when": "2001 Spring",
+    "tour_year": "2001 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -26171,7 +26173,7 @@ const showsDataArray = [
     "venueid": 47,
     "tourid": 159,
     "tourname": "Fish - Pork Tornado Spring 2001",
-    "tour_when": "2001 Spring",
+    "tour_year": "2001 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26186,7 +26188,7 @@ const showsDataArray = [
     "venueid": 203,
     "tourid": 116,
     "tourname": "Mike Gordon + Col. Bruce Hampton & The Codetalkers",
-    "tour_when": "2001 Spring",
+    "tour_year": "2001 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -26201,7 +26203,7 @@ const showsDataArray = [
     "venueid": 1102,
     "tourid": 159,
     "tourname": "Fish - Pork Tornado Spring 2001",
-    "tour_when": "2001 Spring",
+    "tour_year": "2001 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26216,7 +26218,7 @@ const showsDataArray = [
     "venueid": 1025,
     "tourid": 116,
     "tourname": "Mike Gordon + Col. Bruce Hampton & The Codetalkers",
-    "tour_when": "2001 Spring",
+    "tour_year": "2001 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -26231,7 +26233,7 @@ const showsDataArray = [
     "venueid": 1044,
     "tourid": 159,
     "tourname": "Fish - Pork Tornado Spring 2001",
-    "tour_when": "2001 Spring",
+    "tour_year": "2001 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26246,7 +26248,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 159,
     "tourname": "Fish - Pork Tornado Spring 2001",
-    "tour_when": "2001 Spring",
+    "tour_year": "2001 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26261,7 +26263,7 @@ const showsDataArray = [
     "venueid": 1103,
     "tourid": 159,
     "tourname": "Fish - Pork Tornado Spring 2001",
-    "tour_when": "2001 Spring",
+    "tour_year": "2001 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26276,7 +26278,7 @@ const showsDataArray = [
     "venueid": 32,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -26291,7 +26293,7 @@ const showsDataArray = [
     "venueid": 537,
     "tourid": 159,
     "tourname": "Fish - Pork Tornado Spring 2001",
-    "tour_when": "2001 Spring",
+    "tour_year": "2001 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26306,7 +26308,7 @@ const showsDataArray = [
     "venueid": 1007,
     "tourid": 159,
     "tourname": "Fish - Pork Tornado Spring 2001",
-    "tour_when": "2001 Spring",
+    "tour_year": "2001 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26321,7 +26323,7 @@ const showsDataArray = [
     "venueid": 846,
     "tourid": 159,
     "tourname": "Fish - Pork Tornado Spring 2001",
-    "tour_when": "2001 Spring",
+    "tour_year": "2001 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26336,7 +26338,7 @@ const showsDataArray = [
     "venueid": 1093,
     "tourid": 159,
     "tourname": "Fish - Pork Tornado Spring 2001",
-    "tour_when": "2001 Spring",
+    "tour_year": "2001 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26351,7 +26353,7 @@ const showsDataArray = [
     "venueid": 1104,
     "tourid": 159,
     "tourname": "Fish - Pork Tornado Spring 2001",
-    "tour_when": "2001 Spring",
+    "tour_year": "2001 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26366,7 +26368,7 @@ const showsDataArray = [
     "venueid": 1177,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -26381,7 +26383,7 @@ const showsDataArray = [
     "venueid": 1177,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -26396,7 +26398,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -26411,7 +26413,7 @@ const showsDataArray = [
     "venueid": 1163,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -26426,7 +26428,7 @@ const showsDataArray = [
     "venueid": 1259,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -26441,7 +26443,7 @@ const showsDataArray = [
     "venueid": 1244,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -26456,7 +26458,7 @@ const showsDataArray = [
     "venueid": 999,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -26471,7 +26473,7 @@ const showsDataArray = [
     "venueid": 1156,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -26486,7 +26488,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26501,7 +26503,7 @@ const showsDataArray = [
     "venueid": 818,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26516,7 +26518,7 @@ const showsDataArray = [
     "venueid": 289,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26531,7 +26533,7 @@ const showsDataArray = [
     "venueid": 372,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26546,7 +26548,7 @@ const showsDataArray = [
     "venueid": 372,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26561,7 +26563,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26576,7 +26578,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26591,7 +26593,7 @@ const showsDataArray = [
     "venueid": 225,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26606,7 +26608,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26621,7 +26623,7 @@ const showsDataArray = [
     "venueid": 401,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26636,7 +26638,7 @@ const showsDataArray = [
     "venueid": 387,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26651,7 +26653,7 @@ const showsDataArray = [
     "venueid": 262,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26666,7 +26668,7 @@ const showsDataArray = [
     "venueid": 397,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26681,7 +26683,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26696,7 +26698,7 @@ const showsDataArray = [
     "venueid": 398,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26711,7 +26713,7 @@ const showsDataArray = [
     "venueid": 407,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26726,7 +26728,7 @@ const showsDataArray = [
     "venueid": 213,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26741,7 +26743,7 @@ const showsDataArray = [
     "venueid": 79,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -26756,7 +26758,7 @@ const showsDataArray = [
     "venueid": 211,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26771,7 +26773,7 @@ const showsDataArray = [
     "venueid": 402,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26786,7 +26788,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 97,
     "tourname": "TAB - The Octet",
-    "tour_when": "2001 Summer",
+    "tour_year": "2001 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26801,7 +26803,7 @@ const showsDataArray = [
     "venueid": 1053,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26816,7 +26818,7 @@ const showsDataArray = [
     "venueid": 1053,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26831,7 +26833,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -26846,7 +26848,7 @@ const showsDataArray = [
     "venueid": 79,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -26861,7 +26863,7 @@ const showsDataArray = [
     "venueid": 394,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -26876,7 +26878,7 @@ const showsDataArray = [
     "venueid": 1177,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -26891,7 +26893,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -26906,7 +26908,7 @@ const showsDataArray = [
     "venueid": 811,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -26921,7 +26923,7 @@ const showsDataArray = [
     "venueid": 111,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26936,7 +26938,7 @@ const showsDataArray = [
     "venueid": 111,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26951,7 +26953,7 @@ const showsDataArray = [
     "venueid": 1054,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26966,7 +26968,7 @@ const showsDataArray = [
     "venueid": 1055,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26981,7 +26983,7 @@ const showsDataArray = [
     "venueid": 1056,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -26996,7 +26998,7 @@ const showsDataArray = [
     "venueid": 1057,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27011,7 +27013,7 @@ const showsDataArray = [
     "venueid": 949,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27026,7 +27028,7 @@ const showsDataArray = [
     "venueid": 1058,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27041,7 +27043,7 @@ const showsDataArray = [
     "venueid": 1060,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27056,7 +27058,7 @@ const showsDataArray = [
     "venueid": 370,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -27071,7 +27073,7 @@ const showsDataArray = [
     "venueid": 1059,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27086,7 +27088,7 @@ const showsDataArray = [
     "venueid": 670,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27101,7 +27103,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -27116,7 +27118,7 @@ const showsDataArray = [
     "venueid": 670,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27131,7 +27133,7 @@ const showsDataArray = [
     "venueid": 950,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27146,7 +27148,7 @@ const showsDataArray = [
     "venueid": 942,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27161,7 +27163,7 @@ const showsDataArray = [
     "venueid": 370,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27176,7 +27178,7 @@ const showsDataArray = [
     "venueid": 404,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -27191,7 +27193,7 @@ const showsDataArray = [
     "venueid": 658,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27206,7 +27208,7 @@ const showsDataArray = [
     "venueid": 1061,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27221,7 +27223,7 @@ const showsDataArray = [
     "venueid": 730,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27236,7 +27238,7 @@ const showsDataArray = [
     "venueid": 1013,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27251,7 +27253,7 @@ const showsDataArray = [
     "venueid": 372,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27266,7 +27268,7 @@ const showsDataArray = [
     "venueid": 547,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27281,7 +27283,7 @@ const showsDataArray = [
     "venueid": 547,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27296,7 +27298,7 @@ const showsDataArray = [
     "venueid": 807,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27311,7 +27313,7 @@ const showsDataArray = [
     "venueid": 1062,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27326,7 +27328,7 @@ const showsDataArray = [
     "venueid": 108,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27341,7 +27343,7 @@ const showsDataArray = [
     "venueid": 808,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27356,7 +27358,7 @@ const showsDataArray = [
     "venueid": 808,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27371,7 +27373,7 @@ const showsDataArray = [
     "venueid": 1063,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27386,7 +27388,7 @@ const showsDataArray = [
     "venueid": 1064,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27401,7 +27403,7 @@ const showsDataArray = [
     "venueid": 1065,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27416,7 +27418,7 @@ const showsDataArray = [
     "venueid": 286,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27431,7 +27433,7 @@ const showsDataArray = [
     "venueid": 543,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27446,7 +27448,7 @@ const showsDataArray = [
     "venueid": 803,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27461,7 +27463,7 @@ const showsDataArray = [
     "venueid": 751,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27476,7 +27478,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27491,7 +27493,7 @@ const showsDataArray = [
     "venueid": 677,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27506,7 +27508,7 @@ const showsDataArray = [
     "venueid": 804,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27521,7 +27523,7 @@ const showsDataArray = [
     "venueid": 805,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27536,7 +27538,7 @@ const showsDataArray = [
     "venueid": 103,
     "tourid": 160,
     "tourname": "Fish - Jazz Mandolin Project Fall 2001 Tour",
-    "tour_when": "2001 Fall",
+    "tour_year": "2001 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -27551,7 +27553,7 @@ const showsDataArray = [
     "venueid": 1151,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -27566,7 +27568,7 @@ const showsDataArray = [
     "venueid": 774,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27581,7 +27583,7 @@ const showsDataArray = [
     "venueid": 806,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27596,7 +27598,7 @@ const showsDataArray = [
     "venueid": 1151,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -27611,7 +27613,7 @@ const showsDataArray = [
     "venueid": 269,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27626,7 +27628,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27641,7 +27643,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27656,7 +27658,7 @@ const showsDataArray = [
     "venueid": 770,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27671,7 +27673,7 @@ const showsDataArray = [
     "venueid": 825,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -27686,7 +27688,7 @@ const showsDataArray = [
     "venueid": 801,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27701,7 +27703,7 @@ const showsDataArray = [
     "venueid": 502,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27716,7 +27718,7 @@ const showsDataArray = [
     "venueid": 999,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -27731,7 +27733,7 @@ const showsDataArray = [
     "venueid": 694,
     "tourid": 73,
     "tourname": "Oysterhead - The Grand Pecking Order",
-    "tour_when": "2001 November",
+    "tour_year": "2001 November",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27746,7 +27748,7 @@ const showsDataArray = [
     "venueid": 999,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -27761,7 +27763,7 @@ const showsDataArray = [
     "venueid": 971,
     "tourid": 7,
     "tourname": "1989 Tour",
-    "tour_when": "1989",
+    "tour_year": "1989",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -27776,7 +27778,7 @@ const showsDataArray = [
     "venueid": 226,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -27791,7 +27793,7 @@ const showsDataArray = [
     "venueid": 502,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -27806,7 +27808,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -27821,7 +27823,7 @@ const showsDataArray = [
     "venueid": 394,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -27836,7 +27838,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 136,
     "tourname": "Page - Vida Blue NYE Run 2001",
-    "tour_when": "2001 NYE",
+    "tour_year": "2001 NYE",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -27851,7 +27853,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 136,
     "tourname": "Page - Vida Blue NYE Run 2001",
-    "tour_when": "2001 NYE",
+    "tour_year": "2001 NYE",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -27866,7 +27868,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -27881,7 +27883,7 @@ const showsDataArray = [
     "venueid": 1033,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -27896,7 +27898,7 @@ const showsDataArray = [
     "venueid": 1150,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -27911,7 +27913,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -27926,7 +27928,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -27941,7 +27943,7 @@ const showsDataArray = [
     "venueid": 918,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -27956,7 +27958,7 @@ const showsDataArray = [
     "venueid": 1227,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -27971,7 +27973,7 @@ const showsDataArray = [
     "venueid": 1246,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -27986,7 +27988,7 @@ const showsDataArray = [
     "venueid": 945,
     "tourid": 137,
     "tourname": "Page - Vida Blue Spring 2002 Tour",
-    "tour_when": "2002 Spring",
+    "tour_year": "2002 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -28001,7 +28003,7 @@ const showsDataArray = [
     "venueid": 884,
     "tourid": 137,
     "tourname": "Page - Vida Blue Spring 2002 Tour",
-    "tour_when": "2002 Spring",
+    "tour_year": "2002 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -28016,7 +28018,7 @@ const showsDataArray = [
     "venueid": 946,
     "tourid": 137,
     "tourname": "Page - Vida Blue Spring 2002 Tour",
-    "tour_when": "2002 Spring",
+    "tour_year": "2002 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -28031,7 +28033,7 @@ const showsDataArray = [
     "venueid": 946,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -28046,7 +28048,7 @@ const showsDataArray = [
     "venueid": 539,
     "tourid": 137,
     "tourname": "Page - Vida Blue Spring 2002 Tour",
-    "tour_when": "2002 Spring",
+    "tour_year": "2002 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -28061,7 +28063,7 @@ const showsDataArray = [
     "venueid": 787,
     "tourid": 137,
     "tourname": "Page - Vida Blue Spring 2002 Tour",
-    "tour_when": "2002 Spring",
+    "tour_year": "2002 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -28076,7 +28078,7 @@ const showsDataArray = [
     "venueid": 947,
     "tourid": 137,
     "tourname": "Page - Vida Blue Spring 2002 Tour",
-    "tour_when": "2002 Spring",
+    "tour_year": "2002 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -28091,7 +28093,7 @@ const showsDataArray = [
     "venueid": 915,
     "tourid": 137,
     "tourname": "Page - Vida Blue Spring 2002 Tour",
-    "tour_when": "2002 Spring",
+    "tour_year": "2002 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -28106,7 +28108,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 137,
     "tourname": "Page - Vida Blue Spring 2002 Tour",
-    "tour_when": "2002 Spring",
+    "tour_year": "2002 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -28121,7 +28123,7 @@ const showsDataArray = [
     "venueid": 948,
     "tourid": 137,
     "tourname": "Page - Vida Blue Spring 2002 Tour",
-    "tour_when": "2002 Spring",
+    "tour_year": "2002 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -28136,7 +28138,7 @@ const showsDataArray = [
     "venueid": 977,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28151,7 +28153,7 @@ const showsDataArray = [
     "venueid": 978,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28166,7 +28168,7 @@ const showsDataArray = [
     "venueid": 815,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28181,7 +28183,7 @@ const showsDataArray = [
     "venueid": 228,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28196,7 +28198,7 @@ const showsDataArray = [
     "venueid": 979,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28211,7 +28213,7 @@ const showsDataArray = [
     "venueid": 980,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28226,7 +28228,7 @@ const showsDataArray = [
     "venueid": 370,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28241,7 +28243,7 @@ const showsDataArray = [
     "venueid": 981,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28256,7 +28258,7 @@ const showsDataArray = [
     "venueid": 730,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28271,7 +28273,7 @@ const showsDataArray = [
     "venueid": 982,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28286,7 +28288,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -28301,7 +28303,7 @@ const showsDataArray = [
     "venueid": 816,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -28316,7 +28318,7 @@ const showsDataArray = [
     "venueid": 983,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28331,7 +28333,7 @@ const showsDataArray = [
     "venueid": 816,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28346,7 +28348,7 @@ const showsDataArray = [
     "venueid": 817,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28361,7 +28363,7 @@ const showsDataArray = [
     "venueid": 817,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -28376,7 +28378,7 @@ const showsDataArray = [
     "venueid": 817,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28391,7 +28393,7 @@ const showsDataArray = [
     "venueid": 818,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28406,7 +28408,7 @@ const showsDataArray = [
     "venueid": 289,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28421,7 +28423,7 @@ const showsDataArray = [
     "venueid": 1150,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -28436,7 +28438,7 @@ const showsDataArray = [
     "venueid": 230,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28451,7 +28453,7 @@ const showsDataArray = [
     "venueid": 230,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -28466,7 +28468,7 @@ const showsDataArray = [
     "venueid": 230,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -28481,7 +28483,7 @@ const showsDataArray = [
     "venueid": 1150,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -28496,7 +28498,7 @@ const showsDataArray = [
     "venueid": 230,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28511,7 +28513,7 @@ const showsDataArray = [
     "venueid": 984,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28526,7 +28528,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28541,7 +28543,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28556,7 +28558,7 @@ const showsDataArray = [
     "venueid": 368,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28571,7 +28573,7 @@ const showsDataArray = [
     "venueid": 819,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28586,7 +28588,7 @@ const showsDataArray = [
     "venueid": 401,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28601,7 +28603,7 @@ const showsDataArray = [
     "venueid": 820,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28616,7 +28618,7 @@ const showsDataArray = [
     "venueid": 821,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28631,7 +28633,7 @@ const showsDataArray = [
     "venueid": 302,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28646,7 +28648,7 @@ const showsDataArray = [
     "venueid": 1191,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -28661,7 +28663,7 @@ const showsDataArray = [
     "venueid": 402,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28676,7 +28678,7 @@ const showsDataArray = [
     "venueid": 822,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28691,7 +28693,7 @@ const showsDataArray = [
     "venueid": 361,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28706,7 +28708,7 @@ const showsDataArray = [
     "venueid": 275,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28721,7 +28723,7 @@ const showsDataArray = [
     "venueid": 227,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28736,7 +28738,7 @@ const showsDataArray = [
     "venueid": 398,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28751,7 +28753,7 @@ const showsDataArray = [
     "venueid": 269,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28766,7 +28768,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28781,7 +28783,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 98,
     "tourname": "TAB - The Dectet Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28796,7 +28798,7 @@ const showsDataArray = [
     "venueid": 985,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28811,7 +28813,7 @@ const showsDataArray = [
     "venueid": 392,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -28826,7 +28828,7 @@ const showsDataArray = [
     "venueid": 950,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -28841,7 +28843,7 @@ const showsDataArray = [
     "venueid": 1245,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -28856,7 +28858,7 @@ const showsDataArray = [
     "venueid": 327,
     "tourid": 138,
     "tourname": "Page - Vida Blue Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -28871,7 +28873,7 @@ const showsDataArray = [
     "venueid": 949,
     "tourid": 138,
     "tourname": "Page - Vida Blue Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -28886,7 +28888,7 @@ const showsDataArray = [
     "venueid": 1188,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -28901,7 +28903,7 @@ const showsDataArray = [
     "venueid": 560,
     "tourid": 138,
     "tourname": "Page - Vida Blue Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -28916,7 +28918,7 @@ const showsDataArray = [
     "venueid": 950,
     "tourid": 138,
     "tourname": "Page - Vida Blue Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -28931,7 +28933,7 @@ const showsDataArray = [
     "venueid": 111,
     "tourid": 138,
     "tourname": "Page - Vida Blue Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -28946,7 +28948,7 @@ const showsDataArray = [
     "venueid": 111,
     "tourid": 138,
     "tourname": "Page - Vida Blue Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -28961,7 +28963,7 @@ const showsDataArray = [
     "venueid": 106,
     "tourid": 138,
     "tourname": "Page - Vida Blue Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -28976,7 +28978,7 @@ const showsDataArray = [
     "venueid": 322,
     "tourid": 138,
     "tourname": "Page - Vida Blue Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -28991,7 +28993,7 @@ const showsDataArray = [
     "venueid": 1082,
     "tourid": 161,
     "tourname": "Fish - Jazz Mandolin Project Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29006,7 +29008,7 @@ const showsDataArray = [
     "venueid": 1083,
     "tourid": 161,
     "tourname": "Fish - Jazz Mandolin Project Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29021,7 +29023,7 @@ const showsDataArray = [
     "venueid": 951,
     "tourid": 138,
     "tourname": "Page - Vida Blue Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -29036,7 +29038,7 @@ const showsDataArray = [
     "venueid": 160,
     "tourid": 138,
     "tourname": "Page - Vida Blue Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -29051,7 +29053,7 @@ const showsDataArray = [
     "venueid": 320,
     "tourid": 138,
     "tourname": "Page - Vida Blue Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -29066,7 +29068,7 @@ const showsDataArray = [
     "venueid": 944,
     "tourid": 138,
     "tourname": "Page - Vida Blue Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -29081,7 +29083,7 @@ const showsDataArray = [
     "venueid": 791,
     "tourid": 138,
     "tourname": "Page - Vida Blue Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -29096,7 +29098,7 @@ const showsDataArray = [
     "venueid": 1084,
     "tourid": 161,
     "tourname": "Fish - Jazz Mandolin Project Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29111,7 +29113,7 @@ const showsDataArray = [
     "venueid": 944,
     "tourid": 161,
     "tourname": "Fish - Jazz Mandolin Project Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29126,7 +29128,7 @@ const showsDataArray = [
     "venueid": 943,
     "tourid": 138,
     "tourname": "Page - Vida Blue Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -29141,7 +29143,7 @@ const showsDataArray = [
     "venueid": 794,
     "tourid": 161,
     "tourname": "Fish - Jazz Mandolin Project Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29156,7 +29158,7 @@ const showsDataArray = [
     "venueid": 794,
     "tourid": 138,
     "tourname": "Page - Vida Blue Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -29171,7 +29173,7 @@ const showsDataArray = [
     "venueid": 1053,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -29186,7 +29188,7 @@ const showsDataArray = [
     "venueid": 1085,
     "tourid": 161,
     "tourname": "Fish - Jazz Mandolin Project Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29201,7 +29203,7 @@ const showsDataArray = [
     "venueid": 1086,
     "tourid": 161,
     "tourname": "Fish - Jazz Mandolin Project Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29216,7 +29218,7 @@ const showsDataArray = [
     "venueid": 1087,
     "tourid": 161,
     "tourname": "Fish - Jazz Mandolin Project Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29231,7 +29233,7 @@ const showsDataArray = [
     "venueid": 383,
     "tourid": 161,
     "tourname": "Fish - Jazz Mandolin Project Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29246,7 +29248,7 @@ const showsDataArray = [
     "venueid": 1088,
     "tourid": 161,
     "tourname": "Fish - Jazz Mandolin Project Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29261,7 +29263,7 @@ const showsDataArray = [
     "venueid": 1089,
     "tourid": 161,
     "tourname": "Fish - Jazz Mandolin Project Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29276,7 +29278,7 @@ const showsDataArray = [
     "venueid": 1089,
     "tourid": 161,
     "tourname": "Fish - Jazz Mandolin Project Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29291,7 +29293,7 @@ const showsDataArray = [
     "venueid": 1090,
     "tourid": 161,
     "tourname": "Fish - Jazz Mandolin Project Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29306,7 +29308,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -29321,7 +29323,7 @@ const showsDataArray = [
     "venueid": 1244,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -29336,7 +29338,7 @@ const showsDataArray = [
     "venueid": 1180,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -29351,7 +29353,7 @@ const showsDataArray = [
     "venueid": 998,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -29366,7 +29368,7 @@ const showsDataArray = [
     "venueid": 998,
     "tourid": 161,
     "tourname": "Fish - Jazz Mandolin Project Summer 2002 Tour",
-    "tour_when": "2002 Summer",
+    "tour_year": "2002 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29381,7 +29383,7 @@ const showsDataArray = [
     "venueid": 1216,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -29396,7 +29398,7 @@ const showsDataArray = [
     "venueid": 1149,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -29411,7 +29413,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -29426,7 +29428,7 @@ const showsDataArray = [
     "venueid": 1208,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -29441,7 +29443,7 @@ const showsDataArray = [
     "venueid": 1008,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -29456,7 +29458,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -29471,7 +29473,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -29486,7 +29488,7 @@ const showsDataArray = [
     "venueid": 999,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -29501,7 +29503,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -29516,7 +29518,7 @@ const showsDataArray = [
     "venueid": 945,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29531,7 +29533,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29546,7 +29548,7 @@ const showsDataArray = [
     "venueid": 884,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29561,7 +29563,7 @@ const showsDataArray = [
     "venueid": 1007,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29576,7 +29578,7 @@ const showsDataArray = [
     "venueid": 846,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29591,7 +29593,7 @@ const showsDataArray = [
     "venueid": 1105,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29606,7 +29608,7 @@ const showsDataArray = [
     "venueid": 1046,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29621,7 +29623,7 @@ const showsDataArray = [
     "venueid": 160,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29636,7 +29638,7 @@ const showsDataArray = [
     "venueid": 854,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29651,7 +29653,7 @@ const showsDataArray = [
     "venueid": 1101,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29666,7 +29668,7 @@ const showsDataArray = [
     "venueid": 145,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29681,7 +29683,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -29696,7 +29698,7 @@ const showsDataArray = [
     "venueid": 825,
     "tourid": 99,
     "tourname": "TAB - The Dectet Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -29711,7 +29713,7 @@ const showsDataArray = [
     "venueid": 106,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29726,7 +29728,7 @@ const showsDataArray = [
     "venueid": 107,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29741,7 +29743,7 @@ const showsDataArray = [
     "venueid": 168,
     "tourid": 99,
     "tourname": "TAB - The Dectet Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -29756,7 +29758,7 @@ const showsDataArray = [
     "venueid": 824,
     "tourid": 99,
     "tourname": "TAB - The Dectet Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -29771,7 +29773,7 @@ const showsDataArray = [
     "venueid": 893,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29786,7 +29788,7 @@ const showsDataArray = [
     "venueid": 1176,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -29801,7 +29803,7 @@ const showsDataArray = [
     "venueid": 111,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29816,7 +29818,7 @@ const showsDataArray = [
     "venueid": 554,
     "tourid": 99,
     "tourname": "TAB - The Dectet Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -29831,7 +29833,7 @@ const showsDataArray = [
     "venueid": 1106,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29846,7 +29848,7 @@ const showsDataArray = [
     "venueid": 739,
     "tourid": 99,
     "tourname": "TAB - The Dectet Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -29861,7 +29863,7 @@ const showsDataArray = [
     "venueid": 556,
     "tourid": 99,
     "tourname": "TAB - The Dectet Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -29876,7 +29878,7 @@ const showsDataArray = [
     "venueid": 556,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -29891,7 +29893,7 @@ const showsDataArray = [
     "venueid": 1057,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29906,7 +29908,7 @@ const showsDataArray = [
     "venueid": 1107,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29921,7 +29923,7 @@ const showsDataArray = [
     "venueid": 502,
     "tourid": 99,
     "tourname": "TAB - The Dectet Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -29936,7 +29938,7 @@ const showsDataArray = [
     "venueid": 143,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29951,7 +29953,7 @@ const showsDataArray = [
     "venueid": 827,
     "tourid": 99,
     "tourname": "TAB - The Dectet Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -29966,7 +29968,7 @@ const showsDataArray = [
     "venueid": 1108,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29981,7 +29983,7 @@ const showsDataArray = [
     "venueid": 879,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -29996,7 +29998,7 @@ const showsDataArray = [
     "venueid": 828,
     "tourid": 99,
     "tourname": "TAB - The Dectet Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -30011,7 +30013,7 @@ const showsDataArray = [
     "venueid": 1109,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -30026,7 +30028,7 @@ const showsDataArray = [
     "venueid": 1004,
     "tourid": 117,
     "tourname": "Mike Gordon & Leo Kottke Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -30041,7 +30043,7 @@ const showsDataArray = [
     "venueid": 1005,
     "tourid": 117,
     "tourname": "Mike Gordon & Leo Kottke Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -30056,7 +30058,7 @@ const showsDataArray = [
     "venueid": 1110,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -30071,7 +30073,7 @@ const showsDataArray = [
     "venueid": 1006,
     "tourid": 117,
     "tourname": "Mike Gordon & Leo Kottke Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -30086,7 +30088,7 @@ const showsDataArray = [
     "venueid": 1111,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -30101,7 +30103,7 @@ const showsDataArray = [
     "venueid": 1065,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -30116,7 +30118,7 @@ const showsDataArray = [
     "venueid": 1007,
     "tourid": 117,
     "tourname": "Mike Gordon & Leo Kottke Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -30131,7 +30133,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -30146,7 +30148,7 @@ const showsDataArray = [
     "venueid": 846,
     "tourid": 117,
     "tourname": "Mike Gordon & Leo Kottke Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -30161,7 +30163,7 @@ const showsDataArray = [
     "venueid": 787,
     "tourid": 117,
     "tourname": "Mike Gordon & Leo Kottke Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -30176,7 +30178,7 @@ const showsDataArray = [
     "venueid": 862,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -30191,7 +30193,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -30206,7 +30208,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 117,
     "tourname": "Mike Gordon & Leo Kottke Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -30221,7 +30223,7 @@ const showsDataArray = [
     "venueid": 1021,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -30236,7 +30238,7 @@ const showsDataArray = [
     "venueid": 856,
     "tourid": 117,
     "tourname": "Mike Gordon & Leo Kottke Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -30251,7 +30253,7 @@ const showsDataArray = [
     "venueid": 787,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -30266,7 +30268,7 @@ const showsDataArray = [
     "venueid": 1112,
     "tourid": 162,
     "tourname": "Fish - Pork Tornado Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -30281,7 +30283,7 @@ const showsDataArray = [
     "venueid": 106,
     "tourid": 117,
     "tourname": "Mike Gordon & Leo Kottke Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -30296,7 +30298,7 @@ const showsDataArray = [
     "venueid": 879,
     "tourid": 117,
     "tourname": "Mike Gordon & Leo Kottke Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -30311,7 +30313,7 @@ const showsDataArray = [
     "venueid": 560,
     "tourid": 117,
     "tourname": "Mike Gordon & Leo Kottke Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -30326,7 +30328,7 @@ const showsDataArray = [
     "venueid": 199,
     "tourid": 117,
     "tourname": "Mike Gordon & Leo Kottke Fall 2002 Tour",
-    "tour_when": "2002 Fall",
+    "tour_year": "2002 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -30341,7 +30343,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -30356,7 +30358,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -30371,7 +30373,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -30386,7 +30388,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -30401,7 +30403,7 @@ const showsDataArray = [
     "venueid": 1009,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -30416,7 +30418,7 @@ const showsDataArray = [
     "venueid": 101,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -30431,7 +30433,7 @@ const showsDataArray = [
     "venueid": 227,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30446,7 +30448,7 @@ const showsDataArray = [
     "venueid": 228,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30461,7 +30463,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 51,
     "tourname": "2002/2003 Inverted NYE Run",
-    "tour_when": "2002/2003 NYE",
+    "tour_year": "2002/2003 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30476,7 +30478,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 51,
     "tourname": "2002/2003 Inverted NYE Run",
-    "tour_when": "2002/2003 NYE",
+    "tour_year": "2002/2003 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30491,7 +30493,7 @@ const showsDataArray = [
     "venueid": 1228,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -30506,7 +30508,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 51,
     "tourname": "2002/2003 Inverted NYE Run",
-    "tour_when": "2002/2003 NYE",
+    "tour_year": "2002/2003 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30521,7 +30523,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 51,
     "tourname": "2002/2003 Inverted NYE Run",
-    "tour_when": "2002/2003 NYE",
+    "tour_year": "2002/2003 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30536,7 +30538,7 @@ const showsDataArray = [
     "venueid": 1023,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -30551,7 +30553,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -30566,7 +30568,7 @@ const showsDataArray = [
     "venueid": 1202,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -30581,7 +30583,7 @@ const showsDataArray = [
     "venueid": 229,
     "tourid": 52,
     "tourname": "2003 Winter Tour",
-    "tour_when": "2003 Winter",
+    "tour_year": "2003 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30596,7 +30598,7 @@ const showsDataArray = [
     "venueid": 1109,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -30611,7 +30613,7 @@ const showsDataArray = [
     "venueid": 230,
     "tourid": 52,
     "tourname": "2003 Winter Tour",
-    "tour_when": "2003 Winter",
+    "tour_year": "2003 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30626,7 +30628,7 @@ const showsDataArray = [
     "venueid": 230,
     "tourid": 52,
     "tourname": "2003 Winter Tour",
-    "tour_when": "2003 Winter",
+    "tour_year": "2003 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30641,7 +30643,7 @@ const showsDataArray = [
     "venueid": 236,
     "tourid": 52,
     "tourname": "2003 Winter Tour",
-    "tour_when": "2003 Winter",
+    "tour_year": "2003 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30656,7 +30658,7 @@ const showsDataArray = [
     "venueid": 237,
     "tourid": 52,
     "tourname": "2003 Winter Tour",
-    "tour_when": "2003 Winter",
+    "tour_year": "2003 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30671,7 +30673,7 @@ const showsDataArray = [
     "venueid": 238,
     "tourid": 52,
     "tourname": "2003 Winter Tour",
-    "tour_when": "2003 Winter",
+    "tour_year": "2003 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30686,7 +30688,7 @@ const showsDataArray = [
     "venueid": 238,
     "tourid": 52,
     "tourname": "2003 Winter Tour",
-    "tour_when": "2003 Winter",
+    "tour_year": "2003 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30701,7 +30703,7 @@ const showsDataArray = [
     "venueid": 239,
     "tourid": 52,
     "tourname": "2003 Winter Tour",
-    "tour_when": "2003 Winter",
+    "tour_year": "2003 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30716,7 +30718,7 @@ const showsDataArray = [
     "venueid": 240,
     "tourid": 52,
     "tourname": "2003 Winter Tour",
-    "tour_when": "2003 Winter",
+    "tour_year": "2003 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30731,7 +30733,7 @@ const showsDataArray = [
     "venueid": 241,
     "tourid": 52,
     "tourname": "2003 Winter Tour",
-    "tour_when": "2003 Winter",
+    "tour_year": "2003 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30746,7 +30748,7 @@ const showsDataArray = [
     "venueid": 242,
     "tourid": 52,
     "tourname": "2003 Winter Tour",
-    "tour_when": "2003 Winter",
+    "tour_year": "2003 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30761,7 +30763,7 @@ const showsDataArray = [
     "venueid": 243,
     "tourid": 52,
     "tourname": "2003 Winter Tour",
-    "tour_when": "2003 Winter",
+    "tour_year": "2003 Winter",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -30776,7 +30778,7 @@ const showsDataArray = [
     "venueid": 1033,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -30791,7 +30793,7 @@ const showsDataArray = [
     "venueid": 1195,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -30806,7 +30808,7 @@ const showsDataArray = [
     "venueid": 1033,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -30821,7 +30823,7 @@ const showsDataArray = [
     "venueid": 1152,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -30836,7 +30838,7 @@ const showsDataArray = [
     "venueid": 1191,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -30851,7 +30853,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -30866,7 +30868,7 @@ const showsDataArray = [
     "venueid": 322,
     "tourid": 141,
     "tourname": "Page - Vida Blue Spring 2003 Tour",
-    "tour_when": "2003 Spring",
+    "tour_year": "2003 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -30881,7 +30883,7 @@ const showsDataArray = [
     "venueid": 952,
     "tourid": 141,
     "tourname": "Page - Vida Blue Spring 2003 Tour",
-    "tour_when": "2003 Spring",
+    "tour_year": "2003 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -30896,7 +30898,7 @@ const showsDataArray = [
     "venueid": 794,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -30911,7 +30913,7 @@ const showsDataArray = [
     "venueid": 794,
     "tourid": 141,
     "tourname": "Page - Vida Blue Spring 2003 Tour",
-    "tour_when": "2003 Spring",
+    "tour_year": "2003 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -30926,7 +30928,7 @@ const showsDataArray = [
     "venueid": 884,
     "tourid": 141,
     "tourname": "Page - Vida Blue Spring 2003 Tour",
-    "tour_when": "2003 Spring",
+    "tour_year": "2003 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -30941,7 +30943,7 @@ const showsDataArray = [
     "venueid": 47,
     "tourid": 141,
     "tourname": "Page - Vida Blue Spring 2003 Tour",
-    "tour_when": "2003 Spring",
+    "tour_year": "2003 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -30956,7 +30958,7 @@ const showsDataArray = [
     "venueid": 1152,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -30971,7 +30973,7 @@ const showsDataArray = [
     "venueid": 802,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -30986,7 +30988,7 @@ const showsDataArray = [
     "venueid": 70,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31001,7 +31003,7 @@ const showsDataArray = [
     "venueid": 786,
     "tourid": 100,
     "tourname": "TAB - The Dectet Summer 2003 Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -31016,7 +31018,7 @@ const showsDataArray = [
     "venueid": 786,
     "tourid": 100,
     "tourname": "TAB - The Dectet Summer 2003 Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -31031,7 +31033,7 @@ const showsDataArray = [
     "venueid": 794,
     "tourid": 100,
     "tourname": "TAB - The Dectet Summer 2003 Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -31046,7 +31048,7 @@ const showsDataArray = [
     "venueid": 1022,
     "tourid": 118,
     "tourname": "Mike - Grappa Boom",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -31061,7 +31063,7 @@ const showsDataArray = [
     "venueid": 137,
     "tourid": 100,
     "tourname": "TAB - The Dectet Summer 2003 Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -31076,7 +31078,7 @@ const showsDataArray = [
     "venueid": 866,
     "tourid": 118,
     "tourname": "Mike - Grappa Boom",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -31091,7 +31093,7 @@ const showsDataArray = [
     "venueid": 866,
     "tourid": 118,
     "tourname": "Mike - Grappa Boom",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -31106,7 +31108,7 @@ const showsDataArray = [
     "venueid": 137,
     "tourid": 100,
     "tourname": "TAB - The Dectet Summer 2003 Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -31121,7 +31123,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 118,
     "tourname": "Mike - Grappa Boom",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -31136,7 +31138,7 @@ const showsDataArray = [
     "venueid": 808,
     "tourid": 100,
     "tourname": "TAB - The Dectet Summer 2003 Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -31151,7 +31153,7 @@ const showsDataArray = [
     "venueid": 826,
     "tourid": 100,
     "tourname": "TAB - The Dectet Summer 2003 Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -31166,7 +31168,7 @@ const showsDataArray = [
     "venueid": 826,
     "tourid": 100,
     "tourname": "TAB - The Dectet Summer 2003 Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -31181,7 +31183,7 @@ const showsDataArray = [
     "venueid": 825,
     "tourid": 100,
     "tourname": "TAB - The Dectet Summer 2003 Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -31196,7 +31198,7 @@ const showsDataArray = [
     "venueid": 825,
     "tourid": 100,
     "tourname": "TAB - The Dectet Summer 2003 Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -31211,7 +31213,7 @@ const showsDataArray = [
     "venueid": 239,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31226,7 +31228,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31241,7 +31243,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -31256,7 +31258,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31271,7 +31273,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31286,7 +31288,7 @@ const showsDataArray = [
     "venueid": 1244,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31301,7 +31303,7 @@ const showsDataArray = [
     "venueid": 244,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31316,7 +31318,7 @@ const showsDataArray = [
     "venueid": 244,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31331,7 +31333,7 @@ const showsDataArray = [
     "venueid": 245,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31346,7 +31348,7 @@ const showsDataArray = [
     "venueid": 247,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31361,7 +31363,7 @@ const showsDataArray = [
     "venueid": 1201,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31376,7 +31378,7 @@ const showsDataArray = [
     "venueid": 247,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31391,7 +31393,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31406,7 +31408,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31421,7 +31423,7 @@ const showsDataArray = [
     "venueid": 1182,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31436,7 +31438,7 @@ const showsDataArray = [
     "venueid": 250,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31451,7 +31453,7 @@ const showsDataArray = [
     "venueid": 1183,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31466,7 +31468,7 @@ const showsDataArray = [
     "venueid": 252,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31481,7 +31483,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31496,7 +31498,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31511,7 +31513,7 @@ const showsDataArray = [
     "venueid": 4,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31526,7 +31528,7 @@ const showsDataArray = [
     "venueid": 4,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31541,7 +31543,7 @@ const showsDataArray = [
     "venueid": 4,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31556,7 +31558,7 @@ const showsDataArray = [
     "venueid": 261,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31571,7 +31573,7 @@ const showsDataArray = [
     "venueid": 1200,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31586,7 +31588,7 @@ const showsDataArray = [
     "venueid": 262,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31601,7 +31603,7 @@ const showsDataArray = [
     "venueid": 267,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31616,7 +31618,7 @@ const showsDataArray = [
     "venueid": 268,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31631,7 +31633,7 @@ const showsDataArray = [
     "venueid": 269,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31646,7 +31648,7 @@ const showsDataArray = [
     "venueid": 269,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31661,7 +31663,7 @@ const showsDataArray = [
     "venueid": 270,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31676,7 +31678,7 @@ const showsDataArray = [
     "venueid": 270,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31691,7 +31693,7 @@ const showsDataArray = [
     "venueid": 270,
     "tourid": 53,
     "tourname": "2003 Summer Tour",
-    "tour_when": "2003 Summer",
+    "tour_year": "2003 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -31706,7 +31708,7 @@ const showsDataArray = [
     "venueid": 1217,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31721,7 +31723,7 @@ const showsDataArray = [
     "venueid": 1217,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31736,7 +31738,7 @@ const showsDataArray = [
     "venueid": 32,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31751,7 +31753,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31766,7 +31768,7 @@ const showsDataArray = [
     "venueid": 1213,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31781,7 +31783,7 @@ const showsDataArray = [
     "venueid": 560,
     "tourid": 119,
     "tourname": "Mike Gordon - Fall 2003 Tour",
-    "tour_when": "2003 Fall",
+    "tour_year": "2003 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -31796,7 +31798,7 @@ const showsDataArray = [
     "venueid": 1212,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31811,7 +31813,7 @@ const showsDataArray = [
     "venueid": 1214,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31826,7 +31828,7 @@ const showsDataArray = [
     "venueid": 111,
     "tourid": 119,
     "tourname": "Mike Gordon - Fall 2003 Tour",
-    "tour_when": "2003 Fall",
+    "tour_year": "2003 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -31841,7 +31843,7 @@ const showsDataArray = [
     "venueid": 111,
     "tourid": 119,
     "tourname": "Mike Gordon - Fall 2003 Tour",
-    "tour_when": "2003 Fall",
+    "tour_year": "2003 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -31856,7 +31858,7 @@ const showsDataArray = [
     "venueid": 1215,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31871,7 +31873,7 @@ const showsDataArray = [
     "venueid": 322,
     "tourid": 119,
     "tourname": "Mike Gordon - Fall 2003 Tour",
-    "tour_when": "2003 Fall",
+    "tour_year": "2003 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -31886,7 +31888,7 @@ const showsDataArray = [
     "venueid": 160,
     "tourid": 119,
     "tourname": "Mike Gordon - Fall 2003 Tour",
-    "tour_when": "2003 Fall",
+    "tour_year": "2003 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -31901,7 +31903,7 @@ const showsDataArray = [
     "venueid": 846,
     "tourid": 119,
     "tourname": "Mike Gordon - Fall 2003 Tour",
-    "tour_when": "2003 Fall",
+    "tour_year": "2003 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -31916,7 +31918,7 @@ const showsDataArray = [
     "venueid": 47,
     "tourid": 119,
     "tourname": "Mike Gordon - Fall 2003 Tour",
-    "tour_when": "2003 Fall",
+    "tour_year": "2003 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -31931,7 +31933,7 @@ const showsDataArray = [
     "venueid": 943,
     "tourid": 119,
     "tourname": "Mike Gordon - Fall 2003 Tour",
-    "tour_when": "2003 Fall",
+    "tour_year": "2003 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -31946,7 +31948,7 @@ const showsDataArray = [
     "venueid": 944,
     "tourid": 119,
     "tourname": "Mike Gordon - Fall 2003 Tour",
-    "tour_when": "2003 Fall",
+    "tour_year": "2003 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -31961,7 +31963,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -31976,7 +31978,7 @@ const showsDataArray = [
     "venueid": 786,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -31991,7 +31993,7 @@ const showsDataArray = [
     "venueid": 1206,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -32006,7 +32008,7 @@ const showsDataArray = [
     "venueid": 227,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -32021,7 +32023,7 @@ const showsDataArray = [
     "venueid": 825,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -32036,7 +32038,7 @@ const showsDataArray = [
     "venueid": 242,
     "tourid": 54,
     "tourname": "2003 20th Anniversary Run",
-    "tour_when": "2003 Late Fall",
+    "tour_year": "2003 Late Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -32051,7 +32053,7 @@ const showsDataArray = [
     "venueid": 271,
     "tourid": 54,
     "tourname": "2003 20th Anniversary Run",
-    "tour_when": "2003 Late Fall",
+    "tour_year": "2003 Late Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -32066,7 +32068,7 @@ const showsDataArray = [
     "venueid": 273,
     "tourid": 54,
     "tourname": "2003 20th Anniversary Run",
-    "tour_when": "2003 Late Fall",
+    "tour_year": "2003 Late Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -32081,7 +32083,7 @@ const showsDataArray = [
     "venueid": 186,
     "tourid": 54,
     "tourname": "2003 20th Anniversary Run",
-    "tour_when": "2003 Late Fall",
+    "tour_year": "2003 Late Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -32096,7 +32098,7 @@ const showsDataArray = [
     "venueid": 1206,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -32111,7 +32113,7 @@ const showsDataArray = [
     "venueid": 527,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -32126,7 +32128,7 @@ const showsDataArray = [
     "venueid": 440,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -32141,7 +32143,7 @@ const showsDataArray = [
     "venueid": 760,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -32156,7 +32158,7 @@ const showsDataArray = [
     "venueid": 186,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -32171,7 +32173,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -32186,7 +32188,7 @@ const showsDataArray = [
     "venueid": 228,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -32201,7 +32203,7 @@ const showsDataArray = [
     "venueid": 439,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -32216,7 +32218,7 @@ const showsDataArray = [
     "venueid": 429,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -32231,7 +32233,7 @@ const showsDataArray = [
     "venueid": 237,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -32246,7 +32248,7 @@ const showsDataArray = [
     "venueid": 274,
     "tourid": 55,
     "tourname": "2003 NYE Run",
-    "tour_when": "2003 NYE",
+    "tour_year": "2003 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -32261,7 +32263,7 @@ const showsDataArray = [
     "venueid": 274,
     "tourid": 55,
     "tourname": "2003 NYE Run",
-    "tour_when": "2003 NYE",
+    "tour_year": "2003 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -32276,7 +32278,7 @@ const showsDataArray = [
     "venueid": 1211,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -32291,7 +32293,7 @@ const showsDataArray = [
     "venueid": 1209,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -32306,7 +32308,7 @@ const showsDataArray = [
     "venueid": 274,
     "tourid": 55,
     "tourname": "2003 NYE Run",
-    "tour_when": "2003 NYE",
+    "tour_year": "2003 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -32321,7 +32323,7 @@ const showsDataArray = [
     "venueid": 274,
     "tourid": 55,
     "tourname": "2003 NYE Run",
-    "tour_when": "2003 NYE",
+    "tour_year": "2003 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -32336,7 +32338,7 @@ const showsDataArray = [
     "venueid": 953,
     "tourid": 142,
     "tourname": "Page - Vida Blue & Spam Allstars Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -32351,7 +32353,7 @@ const showsDataArray = [
     "venueid": 953,
     "tourid": 163,
     "tourname": "Fish - Jazz Mandolin Project Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -32366,7 +32368,7 @@ const showsDataArray = [
     "venueid": 954,
     "tourid": 142,
     "tourname": "Page - Vida Blue & Spam Allstars Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -32381,7 +32383,7 @@ const showsDataArray = [
     "venueid": 954,
     "tourid": 163,
     "tourname": "Fish - Jazz Mandolin Project Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -32396,7 +32398,7 @@ const showsDataArray = [
     "venueid": 235,
     "tourid": 163,
     "tourname": "Fish - Jazz Mandolin Project Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -32411,7 +32413,7 @@ const showsDataArray = [
     "venueid": 235,
     "tourid": 142,
     "tourname": "Page - Vida Blue & Spam Allstars Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -32426,7 +32428,7 @@ const showsDataArray = [
     "venueid": 862,
     "tourid": 163,
     "tourname": "Fish - Jazz Mandolin Project Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -32441,7 +32443,7 @@ const showsDataArray = [
     "venueid": 862,
     "tourid": 142,
     "tourname": "Page - Vida Blue & Spam Allstars Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -32456,7 +32458,7 @@ const showsDataArray = [
     "venueid": 787,
     "tourid": 142,
     "tourname": "Page - Vida Blue & Spam Allstars Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -32471,7 +32473,7 @@ const showsDataArray = [
     "venueid": 787,
     "tourid": 163,
     "tourname": "Fish - Jazz Mandolin Project Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -32486,7 +32488,7 @@ const showsDataArray = [
     "venueid": 794,
     "tourid": 142,
     "tourname": "Page - Vida Blue & Spam Allstars Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -32501,7 +32503,7 @@ const showsDataArray = [
     "venueid": 794,
     "tourid": 163,
     "tourname": "Fish - Jazz Mandolin Project Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -32516,7 +32518,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 142,
     "tourname": "Page - Vida Blue & Spam Allstars Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -32531,7 +32533,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 163,
     "tourname": "Fish - Jazz Mandolin Project Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -32546,7 +32548,7 @@ const showsDataArray = [
     "venueid": 853,
     "tourid": 163,
     "tourname": "Fish - Jazz Mandolin Project Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -32561,7 +32563,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 142,
     "tourname": "Page - Vida Blue & Spam Allstars Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -32576,7 +32578,7 @@ const showsDataArray = [
     "venueid": 1066,
     "tourid": 163,
     "tourname": "Fish - Jazz Mandolin Project Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -32591,7 +32593,7 @@ const showsDataArray = [
     "venueid": 1066,
     "tourid": 163,
     "tourname": "Fish - Jazz Mandolin Project Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -32606,7 +32608,7 @@ const showsDataArray = [
     "venueid": 721,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -32621,7 +32623,7 @@ const showsDataArray = [
     "venueid": 392,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -32636,7 +32638,7 @@ const showsDataArray = [
     "venueid": 857,
     "tourid": 163,
     "tourname": "Fish - Jazz Mandolin Project Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -32651,7 +32653,7 @@ const showsDataArray = [
     "venueid": 1114,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -32666,7 +32668,7 @@ const showsDataArray = [
     "venueid": 1067,
     "tourid": 163,
     "tourname": "Fish - Jazz Mandolin Project Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -32681,7 +32683,7 @@ const showsDataArray = [
     "venueid": 1115,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -32696,7 +32698,7 @@ const showsDataArray = [
     "venueid": 1049,
     "tourid": 163,
     "tourname": "Fish - Jazz Mandolin Project Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -32711,7 +32713,7 @@ const showsDataArray = [
     "venueid": 1116,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -32726,7 +32728,7 @@ const showsDataArray = [
     "venueid": 1048,
     "tourid": 163,
     "tourname": "Fish - Jazz Mandolin Project Winter 2004 Tour",
-    "tour_when": "2004 Winter",
+    "tour_year": "2004 Winter",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -32741,7 +32743,7 @@ const showsDataArray = [
     "venueid": 1139,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -32756,7 +32758,7 @@ const showsDataArray = [
     "venueid": 1138,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -32771,7 +32773,7 @@ const showsDataArray = [
     "venueid": 1007,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -32786,7 +32788,7 @@ const showsDataArray = [
     "venueid": 1181,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -32801,7 +32803,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -32816,7 +32818,7 @@ const showsDataArray = [
     "venueid": 277,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -32831,7 +32833,7 @@ const showsDataArray = [
     "venueid": 1210,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -32846,7 +32848,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -32861,7 +32863,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -32876,7 +32878,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -32891,7 +32893,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -32906,7 +32908,7 @@ const showsDataArray = [
     "venueid": 230,
     "tourid": 56,
     "tourname": "2004 Vegas Run",
-    "tour_when": "2004 Vegas",
+    "tour_year": "2004 Vegas",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -32921,7 +32923,7 @@ const showsDataArray = [
     "venueid": 230,
     "tourid": 56,
     "tourname": "2004 Vegas Run",
-    "tour_when": "2004 Vegas",
+    "tour_year": "2004 Vegas",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -32936,7 +32938,7 @@ const showsDataArray = [
     "venueid": 230,
     "tourid": 56,
     "tourname": "2004 Vegas Run",
-    "tour_when": "2004 Vegas",
+    "tour_year": "2004 Vegas",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -32951,7 +32953,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -32966,7 +32968,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -32981,7 +32983,7 @@ const showsDataArray = [
     "venueid": 278,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -32996,7 +32998,7 @@ const showsDataArray = [
     "venueid": 885,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -33011,7 +33013,7 @@ const showsDataArray = [
     "venueid": 840,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -33026,7 +33028,7 @@ const showsDataArray = [
     "venueid": 1033,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -33041,7 +33043,7 @@ const showsDataArray = [
     "venueid": 228,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -33056,7 +33058,7 @@ const showsDataArray = [
     "venueid": 955,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -33071,7 +33073,7 @@ const showsDataArray = [
     "venueid": 1025,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33086,7 +33088,7 @@ const showsDataArray = [
     "venueid": 846,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33101,7 +33103,7 @@ const showsDataArray = [
     "venueid": 1068,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33116,7 +33118,7 @@ const showsDataArray = [
     "venueid": 1069,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33131,7 +33133,7 @@ const showsDataArray = [
     "venueid": 1069,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -33146,7 +33148,7 @@ const showsDataArray = [
     "venueid": 1070,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33161,7 +33163,7 @@ const showsDataArray = [
     "venueid": 1071,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33176,7 +33178,7 @@ const showsDataArray = [
     "venueid": 942,
     "tourid": 143,
     "tourname": "Page - Vida Blue & Spam Allstars Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -33191,7 +33193,7 @@ const showsDataArray = [
     "venueid": 942,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33206,7 +33208,7 @@ const showsDataArray = [
     "venueid": 950,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33221,7 +33223,7 @@ const showsDataArray = [
     "venueid": 950,
     "tourid": 143,
     "tourname": "Page - Vida Blue & Spam Allstars Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -33236,7 +33238,7 @@ const showsDataArray = [
     "venueid": 560,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33251,7 +33253,7 @@ const showsDataArray = [
     "venueid": 560,
     "tourid": 143,
     "tourname": "Page - Vida Blue & Spam Allstars Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -33266,7 +33268,7 @@ const showsDataArray = [
     "venueid": 999,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -33281,7 +33283,7 @@ const showsDataArray = [
     "venueid": 111,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33296,7 +33298,7 @@ const showsDataArray = [
     "venueid": 999,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -33311,7 +33313,7 @@ const showsDataArray = [
     "venueid": 111,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33326,7 +33328,7 @@ const showsDataArray = [
     "venueid": 1072,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33341,7 +33343,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 143,
     "tourname": "Page - Vida Blue & Spam Allstars Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -33356,7 +33358,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -33371,7 +33373,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33386,7 +33388,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -33401,7 +33403,7 @@ const showsDataArray = [
     "venueid": 486,
     "tourid": 57,
     "tourname": "2004 Early Summer Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -33416,7 +33418,7 @@ const showsDataArray = [
     "venueid": 486,
     "tourid": 57,
     "tourname": "2004 Early Summer Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -33431,7 +33433,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 57,
     "tourname": "2004 Early Summer Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -33446,7 +33448,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 57,
     "tourname": "2004 Early Summer Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -33461,7 +33463,7 @@ const showsDataArray = [
     "venueid": 228,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -33476,7 +33478,7 @@ const showsDataArray = [
     "venueid": 4,
     "tourid": 57,
     "tourname": "2004 Early Summer Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -33491,7 +33493,7 @@ const showsDataArray = [
     "venueid": 4,
     "tourid": 57,
     "tourname": "2004 Early Summer Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -33506,7 +33508,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 57,
     "tourname": "2004 Early Summer Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -33521,7 +33523,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 57,
     "tourname": "2004 Early Summer Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -33536,7 +33538,7 @@ const showsDataArray = [
     "venueid": 1049,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33551,7 +33553,7 @@ const showsDataArray = [
     "venueid": 1073,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33566,7 +33568,7 @@ const showsDataArray = [
     "venueid": 928,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33581,7 +33583,7 @@ const showsDataArray = [
     "venueid": 928,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33596,7 +33598,7 @@ const showsDataArray = [
     "venueid": 869,
     "tourid": 164,
     "tourname": "Fish - Jazz Mandolin Project Summer 2004 Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33611,7 +33613,7 @@ const showsDataArray = [
     "venueid": 1160,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -33626,7 +33628,7 @@ const showsDataArray = [
     "venueid": 1350,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -33641,7 +33643,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 65,
     "tourname": "2004 Late Summer Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -33656,7 +33658,7 @@ const showsDataArray = [
     "venueid": 402,
     "tourid": 65,
     "tourname": "2004 Late Summer Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -33671,7 +33673,7 @@ const showsDataArray = [
     "venueid": 402,
     "tourid": 65,
     "tourname": "2004 Late Summer Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -33686,7 +33688,7 @@ const showsDataArray = [
     "venueid": 269,
     "tourid": 65,
     "tourname": "2004 Late Summer Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -33701,7 +33703,7 @@ const showsDataArray = [
     "venueid": 496,
     "tourid": 65,
     "tourname": "2004 Late Summer Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -33716,7 +33718,7 @@ const showsDataArray = [
     "venueid": 496,
     "tourid": 65,
     "tourname": "2004 Late Summer Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -33731,7 +33733,7 @@ const showsDataArray = [
     "venueid": 496,
     "tourid": 65,
     "tourname": "2004 Late Summer Tour",
-    "tour_when": "2004 Summer",
+    "tour_year": "2004 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -33746,7 +33748,7 @@ const showsDataArray = [
     "venueid": 998,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -33761,7 +33763,7 @@ const showsDataArray = [
     "venueid": 998,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -33776,7 +33778,7 @@ const showsDataArray = [
     "venueid": 969,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -33791,7 +33793,7 @@ const showsDataArray = [
     "venueid": 771,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -33806,7 +33808,7 @@ const showsDataArray = [
     "venueid": 846,
     "tourid": 120,
     "tourname": "Mike - The Duo Feat. Mike Gordon NYE 2004 Run",
-    "tour_when": "2004 NYE",
+    "tour_year": "2004 NYE",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -33821,7 +33823,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 120,
     "tourname": "Mike - The Duo Feat. Mike Gordon NYE 2004 Run",
-    "tour_when": "2004 NYE",
+    "tour_year": "2004 NYE",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -33836,7 +33838,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 120,
     "tourname": "Mike - The Duo Feat. Mike Gordon NYE 2004 Run",
-    "tour_when": "2004 NYE",
+    "tour_year": "2004 NYE",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -33851,7 +33853,7 @@ const showsDataArray = [
     "venueid": 999,
     "tourid": 120,
     "tourname": "Mike - The Duo Feat. Mike Gordon NYE 2004 Run",
-    "tour_when": "2004 NYE",
+    "tour_year": "2004 NYE",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -33866,7 +33868,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33881,7 +33883,7 @@ const showsDataArray = [
     "venueid": 1033,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -33896,7 +33898,7 @@ const showsDataArray = [
     "venueid": 1074,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33911,7 +33913,7 @@ const showsDataArray = [
     "venueid": 1074,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -33926,7 +33928,7 @@ const showsDataArray = [
     "venueid": 969,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -33941,7 +33943,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -33956,7 +33958,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -33971,7 +33973,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -33986,7 +33988,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 101,
     "tourname": "TAB - 70 Volt Parade Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34001,7 +34003,7 @@ const showsDataArray = [
     "venueid": 949,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -34016,7 +34018,7 @@ const showsDataArray = [
     "venueid": 949,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -34031,7 +34033,7 @@ const showsDataArray = [
     "venueid": 562,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -34046,7 +34048,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -34061,7 +34063,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -34076,7 +34078,7 @@ const showsDataArray = [
     "venueid": 1000,
     "tourid": 121,
     "tourname": "Mike - The Duo Feat. Mike Gordon Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -34091,7 +34093,7 @@ const showsDataArray = [
     "venueid": 813,
     "tourid": 101,
     "tourname": "TAB - 70 Volt Parade Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34106,7 +34108,7 @@ const showsDataArray = [
     "venueid": 25,
     "tourid": 121,
     "tourname": "Mike - The Duo Feat. Mike Gordon Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -34121,7 +34123,7 @@ const showsDataArray = [
     "venueid": 902,
     "tourid": 101,
     "tourname": "TAB - 70 Volt Parade Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34136,7 +34138,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 121,
     "tourname": "Mike - The Duo Feat. Mike Gordon Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -34151,7 +34153,7 @@ const showsDataArray = [
     "venueid": 924,
     "tourid": 101,
     "tourname": "TAB - 70 Volt Parade Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34166,7 +34168,7 @@ const showsDataArray = [
     "venueid": 127,
     "tourid": 101,
     "tourname": "TAB - 70 Volt Parade Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34181,7 +34183,7 @@ const showsDataArray = [
     "venueid": 1001,
     "tourid": 121,
     "tourname": "Mike - The Duo Feat. Mike Gordon Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -34196,7 +34198,7 @@ const showsDataArray = [
     "venueid": 1272,
     "tourid": 101,
     "tourname": "TAB - 70 Volt Parade Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34211,7 +34213,7 @@ const showsDataArray = [
     "venueid": 39,
     "tourid": 101,
     "tourname": "TAB - 70 Volt Parade Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34226,7 +34228,7 @@ const showsDataArray = [
     "venueid": 39,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -34241,7 +34243,7 @@ const showsDataArray = [
     "venueid": 925,
     "tourid": 101,
     "tourname": "TAB - 70 Volt Parade Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34256,7 +34258,7 @@ const showsDataArray = [
     "venueid": 40,
     "tourid": 101,
     "tourname": "TAB - 70 Volt Parade Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34271,7 +34273,7 @@ const showsDataArray = [
     "venueid": 926,
     "tourid": 101,
     "tourname": "TAB - 70 Volt Parade Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34286,7 +34288,7 @@ const showsDataArray = [
     "venueid": 367,
     "tourid": 101,
     "tourname": "TAB - 70 Volt Parade Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34301,7 +34303,7 @@ const showsDataArray = [
     "venueid": 927,
     "tourid": 101,
     "tourname": "TAB - 70 Volt Parade Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34316,7 +34318,7 @@ const showsDataArray = [
     "venueid": 453,
     "tourid": 101,
     "tourname": "TAB - 70 Volt Parade Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34331,7 +34333,7 @@ const showsDataArray = [
     "venueid": 786,
     "tourid": 101,
     "tourname": "TAB - 70 Volt Parade Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34346,7 +34348,7 @@ const showsDataArray = [
     "venueid": 786,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -34361,7 +34363,7 @@ const showsDataArray = [
     "venueid": 786,
     "tourid": 101,
     "tourname": "TAB - 70 Volt Parade Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34376,7 +34378,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 121,
     "tourname": "Mike - The Duo Feat. Mike Gordon Spring 2005 Tour",
-    "tour_when": "2005 Spring",
+    "tour_year": "2005 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -34391,7 +34393,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 102,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34406,7 +34408,7 @@ const showsDataArray = [
     "venueid": 269,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34421,7 +34423,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34436,7 +34438,7 @@ const showsDataArray = [
     "venueid": 397,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34451,7 +34453,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -34466,7 +34468,7 @@ const showsDataArray = [
     "venueid": 1508,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34481,7 +34483,7 @@ const showsDataArray = [
     "venueid": 769,
     "tourid": 123,
     "tourname": "Mike Gordon & Leo Kottke Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -34496,7 +34498,7 @@ const showsDataArray = [
     "venueid": 199,
     "tourid": 123,
     "tourname": "Mike Gordon & Leo Kottke Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -34511,7 +34513,7 @@ const showsDataArray = [
     "venueid": 390,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34526,7 +34528,7 @@ const showsDataArray = [
     "venueid": 262,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34541,7 +34543,7 @@ const showsDataArray = [
     "venueid": 1010,
     "tourid": 123,
     "tourname": "Mike Gordon & Leo Kottke Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -34556,7 +34558,7 @@ const showsDataArray = [
     "venueid": 1010,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -34571,7 +34573,7 @@ const showsDataArray = [
     "venueid": 1509,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34586,7 +34588,7 @@ const showsDataArray = [
     "venueid": 1510,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34601,7 +34603,7 @@ const showsDataArray = [
     "venueid": 1011,
     "tourid": 123,
     "tourname": "Mike Gordon & Leo Kottke Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -34616,7 +34618,7 @@ const showsDataArray = [
     "venueid": 1012,
     "tourid": 123,
     "tourname": "Mike Gordon & Leo Kottke Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -34631,7 +34633,7 @@ const showsDataArray = [
     "venueid": 1013,
     "tourid": 123,
     "tourname": "Mike Gordon & Leo Kottke Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -34646,7 +34648,7 @@ const showsDataArray = [
     "venueid": 823,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34661,7 +34663,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -34676,7 +34678,7 @@ const showsDataArray = [
     "venueid": 389,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34691,7 +34693,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 123,
     "tourname": "Mike Gordon & Leo Kottke Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -34706,7 +34708,7 @@ const showsDataArray = [
     "venueid": 1014,
     "tourid": 123,
     "tourname": "Mike Gordon & Leo Kottke Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -34721,7 +34723,7 @@ const showsDataArray = [
     "venueid": 402,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34736,7 +34738,7 @@ const showsDataArray = [
     "venueid": 1015,
     "tourid": 123,
     "tourname": "Mike Gordon & Leo Kottke Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -34751,7 +34753,7 @@ const showsDataArray = [
     "venueid": 1511,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34766,7 +34768,7 @@ const showsDataArray = [
     "venueid": 398,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34781,7 +34783,7 @@ const showsDataArray = [
     "venueid": 1512,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34796,7 +34798,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34811,7 +34813,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -34826,7 +34828,7 @@ const showsDataArray = [
     "venueid": 973,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34841,7 +34843,7 @@ const showsDataArray = [
     "venueid": 262,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -34856,7 +34858,7 @@ const showsDataArray = [
     "venueid": 223,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34871,7 +34873,7 @@ const showsDataArray = [
     "venueid": 810,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34886,7 +34888,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34901,7 +34903,7 @@ const showsDataArray = [
     "venueid": 4,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34916,7 +34918,7 @@ const showsDataArray = [
     "venueid": 386,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34931,7 +34933,7 @@ const showsDataArray = [
     "venueid": 268,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34946,7 +34948,7 @@ const showsDataArray = [
     "venueid": 909,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34961,7 +34963,7 @@ const showsDataArray = [
     "venueid": 252,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34976,7 +34978,7 @@ const showsDataArray = [
     "venueid": 928,
     "tourid": 102,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -34991,7 +34993,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35006,7 +35008,7 @@ const showsDataArray = [
     "venueid": 245,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35021,7 +35023,7 @@ const showsDataArray = [
     "venueid": 393,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -35036,7 +35038,7 @@ const showsDataArray = [
     "venueid": 247,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35051,7 +35053,7 @@ const showsDataArray = [
     "venueid": 1168,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -35066,7 +35068,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 187,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Zooma Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35081,7 +35083,7 @@ const showsDataArray = [
     "venueid": 929,
     "tourid": 102,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35096,7 +35098,7 @@ const showsDataArray = [
     "venueid": 931,
     "tourid": 102,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35111,7 +35113,7 @@ const showsDataArray = [
     "venueid": 211,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -35126,7 +35128,7 @@ const showsDataArray = [
     "venueid": 211,
     "tourid": 102,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35141,7 +35143,7 @@ const showsDataArray = [
     "venueid": 820,
     "tourid": 102,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35156,7 +35158,7 @@ const showsDataArray = [
     "venueid": 932,
     "tourid": 102,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35171,7 +35173,7 @@ const showsDataArray = [
     "venueid": 933,
     "tourid": 102,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35186,7 +35188,7 @@ const showsDataArray = [
     "venueid": 111,
     "tourid": 123,
     "tourname": "Mike Gordon & Leo Kottke Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35201,7 +35203,7 @@ const showsDataArray = [
     "venueid": 510,
     "tourid": 102,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35216,7 +35218,7 @@ const showsDataArray = [
     "venueid": 999,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -35231,7 +35233,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 102,
     "tourname": "TAB - 70 Volt Parade Summer 2005 Tour",
-    "tour_when": "2005 Summer",
+    "tour_year": "2005 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35246,7 +35248,7 @@ const showsDataArray = [
     "venueid": 822,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -35261,7 +35263,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -35276,7 +35278,7 @@ const showsDataArray = [
     "venueid": 1261,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -35291,7 +35293,7 @@ const showsDataArray = [
     "venueid": 1262,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -35306,7 +35308,7 @@ const showsDataArray = [
     "venueid": 934,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35321,7 +35323,7 @@ const showsDataArray = [
     "venueid": 108,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35336,7 +35338,7 @@ const showsDataArray = [
     "venueid": 106,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35351,7 +35353,7 @@ const showsDataArray = [
     "venueid": 825,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -35366,7 +35368,7 @@ const showsDataArray = [
     "venueid": 107,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35381,7 +35383,7 @@ const showsDataArray = [
     "venueid": 862,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35396,7 +35398,7 @@ const showsDataArray = [
     "venueid": 275,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35411,7 +35413,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35426,7 +35428,7 @@ const showsDataArray = [
     "venueid": 771,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35441,7 +35443,7 @@ const showsDataArray = [
     "venueid": 372,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35456,7 +35458,7 @@ const showsDataArray = [
     "venueid": 1016,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35471,7 +35473,7 @@ const showsDataArray = [
     "venueid": 1017,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35486,7 +35488,7 @@ const showsDataArray = [
     "venueid": 950,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35501,7 +35503,7 @@ const showsDataArray = [
     "venueid": 1169,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -35516,7 +35518,7 @@ const showsDataArray = [
     "venueid": 1018,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35531,7 +35533,7 @@ const showsDataArray = [
     "venueid": 139,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35546,7 +35548,7 @@ const showsDataArray = [
     "venueid": 935,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35561,7 +35563,7 @@ const showsDataArray = [
     "venueid": 560,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35576,7 +35578,7 @@ const showsDataArray = [
     "venueid": 841,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -35591,7 +35593,7 @@ const showsDataArray = [
     "venueid": 790,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35606,7 +35608,7 @@ const showsDataArray = [
     "venueid": 814,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35621,7 +35623,7 @@ const showsDataArray = [
     "venueid": 327,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35636,7 +35638,7 @@ const showsDataArray = [
     "venueid": 146,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35651,7 +35653,7 @@ const showsDataArray = [
     "venueid": 856,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35666,7 +35668,7 @@ const showsDataArray = [
     "venueid": 1019,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35681,7 +35683,7 @@ const showsDataArray = [
     "venueid": 160,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35696,7 +35698,7 @@ const showsDataArray = [
     "venueid": 310,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35711,7 +35713,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35726,7 +35728,7 @@ const showsDataArray = [
     "venueid": 47,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35741,7 +35743,7 @@ const showsDataArray = [
     "venueid": 1020,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35756,7 +35758,7 @@ const showsDataArray = [
     "venueid": 727,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35771,7 +35773,7 @@ const showsDataArray = [
     "venueid": 944,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35786,7 +35788,7 @@ const showsDataArray = [
     "venueid": 936,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35801,7 +35803,7 @@ const showsDataArray = [
     "venueid": 936,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -35816,7 +35818,7 @@ const showsDataArray = [
     "venueid": 936,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35831,7 +35833,7 @@ const showsDataArray = [
     "venueid": 846,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35846,7 +35848,7 @@ const showsDataArray = [
     "venueid": 1021,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35861,7 +35863,7 @@ const showsDataArray = [
     "venueid": 944,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -35876,7 +35878,7 @@ const showsDataArray = [
     "venueid": 787,
     "tourid": 122,
     "tourname": "Mike Gordon & Leo Kottke Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -35891,7 +35893,7 @@ const showsDataArray = [
     "venueid": 744,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35906,7 +35908,7 @@ const showsDataArray = [
     "venueid": 937,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35921,7 +35923,7 @@ const showsDataArray = [
     "venueid": 938,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35936,7 +35938,7 @@ const showsDataArray = [
     "venueid": 926,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35951,7 +35953,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35966,7 +35968,7 @@ const showsDataArray = [
     "venueid": 939,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35981,7 +35983,7 @@ const showsDataArray = [
     "venueid": 774,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -35996,7 +35998,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -36011,7 +36013,7 @@ const showsDataArray = [
     "venueid": 940,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -36026,7 +36028,7 @@ const showsDataArray = [
     "venueid": 940,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36041,7 +36043,7 @@ const showsDataArray = [
     "venueid": 941,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36056,7 +36058,7 @@ const showsDataArray = [
     "venueid": 317,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36071,7 +36073,7 @@ const showsDataArray = [
     "venueid": 190,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36086,7 +36088,7 @@ const showsDataArray = [
     "venueid": 385,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36101,7 +36103,7 @@ const showsDataArray = [
     "venueid": 302,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36116,7 +36118,7 @@ const showsDataArray = [
     "venueid": 905,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36131,7 +36133,7 @@ const showsDataArray = [
     "venueid": 815,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36146,7 +36148,7 @@ const showsDataArray = [
     "venueid": 808,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36161,7 +36163,7 @@ const showsDataArray = [
     "venueid": 370,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36176,7 +36178,7 @@ const showsDataArray = [
     "venueid": 143,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36191,7 +36193,7 @@ const showsDataArray = [
     "venueid": 137,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36206,7 +36208,7 @@ const showsDataArray = [
     "venueid": 137,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36221,7 +36223,7 @@ const showsDataArray = [
     "venueid": 942,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36236,7 +36238,7 @@ const showsDataArray = [
     "venueid": 135,
     "tourid": 103,
     "tourname": "TAB - 70 Volt Parade Fall 2005 Tour",
-    "tour_when": "2005 Fall",
+    "tour_year": "2005 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36251,7 +36253,7 @@ const showsDataArray = [
     "venueid": 392,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36266,7 +36268,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -36281,7 +36283,7 @@ const showsDataArray = [
     "venueid": 1206,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -36296,7 +36298,7 @@ const showsDataArray = [
     "venueid": 862,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -36311,7 +36313,7 @@ const showsDataArray = [
     "venueid": 502,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -36326,7 +36328,7 @@ const showsDataArray = [
     "venueid": 502,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -36341,7 +36343,7 @@ const showsDataArray = [
     "venueid": 1002,
     "tourid": 124,
     "tourname": "Mike - The Duo Feat. Mike Gordon NYE 2005 Run",
-    "tour_when": "2005 NYE",
+    "tour_year": "2005 NYE",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -36356,7 +36358,7 @@ const showsDataArray = [
     "venueid": 864,
     "tourid": 124,
     "tourname": "Mike - The Duo Feat. Mike Gordon NYE 2005 Run",
-    "tour_when": "2005 NYE",
+    "tour_year": "2005 NYE",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -36371,7 +36373,7 @@ const showsDataArray = [
     "venueid": 861,
     "tourid": 124,
     "tourname": "Mike - The Duo Feat. Mike Gordon NYE 2005 Run",
-    "tour_when": "2005 NYE",
+    "tour_year": "2005 NYE",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -36386,7 +36388,7 @@ const showsDataArray = [
     "venueid": 954,
     "tourid": 124,
     "tourname": "Mike - The Duo Feat. Mike Gordon NYE 2005 Run",
-    "tour_when": "2005 NYE",
+    "tour_year": "2005 NYE",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -36401,7 +36403,7 @@ const showsDataArray = [
     "venueid": 1003,
     "tourid": 124,
     "tourname": "Mike - The Duo Feat. Mike Gordon NYE 2005 Run",
-    "tour_when": "2005 NYE",
+    "tour_year": "2005 NYE",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -36416,7 +36418,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36431,7 +36433,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -36446,7 +36448,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -36461,7 +36463,7 @@ const showsDataArray = [
     "venueid": 985,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36476,7 +36478,7 @@ const showsDataArray = [
     "venueid": 1125,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36491,7 +36493,7 @@ const showsDataArray = [
     "venueid": 1126,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36506,7 +36508,7 @@ const showsDataArray = [
     "venueid": 1127,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36521,7 +36523,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -36536,7 +36538,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -36551,7 +36553,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -36566,7 +36568,7 @@ const showsDataArray = [
     "venueid": 992,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36581,7 +36583,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -36596,7 +36598,7 @@ const showsDataArray = [
     "venueid": 1235,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -36611,7 +36613,7 @@ const showsDataArray = [
     "venueid": 1235,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -36626,7 +36628,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -36641,7 +36643,7 @@ const showsDataArray = [
     "venueid": 949,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -36656,7 +36658,7 @@ const showsDataArray = [
     "venueid": 949,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -36671,7 +36673,7 @@ const showsDataArray = [
     "venueid": 1123,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -36686,7 +36688,7 @@ const showsDataArray = [
     "venueid": 1000,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -36701,7 +36703,7 @@ const showsDataArray = [
     "venueid": 1324,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -36716,7 +36718,7 @@ const showsDataArray = [
     "venueid": 827,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36731,7 +36733,7 @@ const showsDataArray = [
     "venueid": 827,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36746,7 +36748,7 @@ const showsDataArray = [
     "venueid": 348,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -36761,7 +36763,7 @@ const showsDataArray = [
     "venueid": 47,
     "tourid": 125,
     "tourname": "Mike Gordon and Ramble Dove Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -36776,7 +36778,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 125,
     "tourname": "Mike Gordon and Ramble Dove Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -36791,7 +36793,7 @@ const showsDataArray = [
     "venueid": 944,
     "tourid": 125,
     "tourname": "Mike Gordon and Ramble Dove Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -36806,7 +36808,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 125,
     "tourname": "Mike Gordon and Ramble Dove Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -36821,7 +36823,7 @@ const showsDataArray = [
     "venueid": 233,
     "tourid": 125,
     "tourname": "Mike Gordon and Ramble Dove Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -36836,7 +36838,7 @@ const showsDataArray = [
     "venueid": 996,
     "tourid": 125,
     "tourname": "Mike Gordon and Ramble Dove Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -36851,7 +36853,7 @@ const showsDataArray = [
     "venueid": 261,
     "tourid": 104,
     "tourname": "TAB - Early Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36866,7 +36868,7 @@ const showsDataArray = [
     "venueid": 534,
     "tourid": 104,
     "tourname": "TAB - Early Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36881,7 +36883,7 @@ const showsDataArray = [
     "venueid": 765,
     "tourid": 104,
     "tourname": "TAB - Early Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36896,7 +36898,7 @@ const showsDataArray = [
     "venueid": 908,
     "tourid": 104,
     "tourname": "TAB - Early Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36911,7 +36913,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36926,7 +36928,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 125,
     "tourname": "Mike Gordon and Ramble Dove Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -36941,7 +36943,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36956,7 +36958,7 @@ const showsDataArray = [
     "venueid": 909,
     "tourid": 104,
     "tourname": "TAB - Early Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36971,7 +36973,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 104,
     "tourname": "TAB - Early Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -36986,7 +36988,7 @@ const showsDataArray = [
     "venueid": 402,
     "tourid": 104,
     "tourname": "TAB - Early Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37001,7 +37003,7 @@ const showsDataArray = [
     "venueid": 4,
     "tourid": 104,
     "tourname": "TAB - Early Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37016,7 +37018,7 @@ const showsDataArray = [
     "venueid": 1344,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37031,7 +37033,7 @@ const showsDataArray = [
     "venueid": 965,
     "tourid": 104,
     "tourname": "TAB - Early Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37046,7 +37048,7 @@ const showsDataArray = [
     "venueid": 502,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -37061,7 +37063,7 @@ const showsDataArray = [
     "venueid": 397,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37076,7 +37078,7 @@ const showsDataArray = [
     "venueid": 269,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37091,7 +37093,7 @@ const showsDataArray = [
     "venueid": 269,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37106,7 +37108,7 @@ const showsDataArray = [
     "venueid": 398,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37121,7 +37123,7 @@ const showsDataArray = [
     "venueid": 398,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37136,7 +37138,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37151,7 +37153,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37166,7 +37168,7 @@ const showsDataArray = [
     "venueid": 972,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37181,7 +37183,7 @@ const showsDataArray = [
     "venueid": 972,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37196,7 +37198,7 @@ const showsDataArray = [
     "venueid": 402,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37211,7 +37213,7 @@ const showsDataArray = [
     "venueid": 402,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37226,7 +37228,7 @@ const showsDataArray = [
     "venueid": 211,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37241,7 +37243,7 @@ const showsDataArray = [
     "venueid": 211,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37256,7 +37258,7 @@ const showsDataArray = [
     "venueid": 361,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37271,7 +37273,7 @@ const showsDataArray = [
     "venueid": 809,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37286,7 +37288,7 @@ const showsDataArray = [
     "venueid": 809,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37301,7 +37303,7 @@ const showsDataArray = [
     "venueid": 973,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37316,7 +37318,7 @@ const showsDataArray = [
     "venueid": 973,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37331,7 +37333,7 @@ const showsDataArray = [
     "venueid": 822,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37346,7 +37348,7 @@ const showsDataArray = [
     "venueid": 822,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37361,7 +37363,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37376,7 +37378,7 @@ const showsDataArray = [
     "venueid": 869,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37391,7 +37393,7 @@ const showsDataArray = [
     "venueid": 869,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37406,7 +37408,7 @@ const showsDataArray = [
     "venueid": 358,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37421,7 +37423,7 @@ const showsDataArray = [
     "venueid": 902,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37436,7 +37438,7 @@ const showsDataArray = [
     "venueid": 976,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37451,7 +37453,7 @@ const showsDataArray = [
     "venueid": 974,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37466,7 +37468,7 @@ const showsDataArray = [
     "venueid": 975,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37481,7 +37483,7 @@ const showsDataArray = [
     "venueid": 933,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37496,7 +37498,7 @@ const showsDataArray = [
     "venueid": 928,
     "tourid": 78,
     "tourname": "G.R.A.B. - Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37511,7 +37513,7 @@ const showsDataArray = [
     "venueid": 928,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37526,7 +37528,7 @@ const showsDataArray = [
     "venueid": 928,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37541,7 +37543,7 @@ const showsDataArray = [
     "venueid": 910,
     "tourid": 105,
     "tourname": "TAB - Late Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37556,7 +37558,7 @@ const showsDataArray = [
     "venueid": 911,
     "tourid": 105,
     "tourname": "TAB - Late Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37571,7 +37573,7 @@ const showsDataArray = [
     "venueid": 718,
     "tourid": 105,
     "tourname": "TAB - Late Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37586,7 +37588,7 @@ const showsDataArray = [
     "venueid": 912,
     "tourid": 105,
     "tourname": "TAB - Late Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37601,7 +37603,7 @@ const showsDataArray = [
     "venueid": 997,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -37616,7 +37618,7 @@ const showsDataArray = [
     "venueid": 416,
     "tourid": 105,
     "tourname": "TAB - Late Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37631,7 +37633,7 @@ const showsDataArray = [
     "venueid": 810,
     "tourid": 105,
     "tourname": "TAB - Late Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37646,7 +37648,7 @@ const showsDataArray = [
     "venueid": 810,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37661,7 +37663,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 126,
     "tourname": "Mike - The Rhythm Devils Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -37676,7 +37678,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 126,
     "tourname": "Mike - The Rhythm Devils Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -37691,7 +37693,7 @@ const showsDataArray = [
     "venueid": 1034,
     "tourid": 126,
     "tourname": "Mike - The Rhythm Devils Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -37706,7 +37708,7 @@ const showsDataArray = [
     "venueid": 1053,
     "tourid": 126,
     "tourname": "Mike - The Rhythm Devils Summer 2006 Tour",
-    "tour_when": "2006 Summer",
+    "tour_year": "2006 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -37721,7 +37723,7 @@ const showsDataArray = [
     "venueid": 998,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -37736,7 +37738,7 @@ const showsDataArray = [
     "venueid": 998,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37751,7 +37753,7 @@ const showsDataArray = [
     "venueid": 998,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -37766,7 +37768,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37781,7 +37783,7 @@ const showsDataArray = [
     "venueid": 944,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37796,7 +37798,7 @@ const showsDataArray = [
     "venueid": 233,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37811,7 +37813,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37826,7 +37828,7 @@ const showsDataArray = [
     "venueid": 47,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37841,7 +37843,7 @@ const showsDataArray = [
     "venueid": 228,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37856,7 +37858,7 @@ const showsDataArray = [
     "venueid": 1043,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37871,7 +37873,7 @@ const showsDataArray = [
     "venueid": 864,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37886,7 +37888,7 @@ const showsDataArray = [
     "venueid": 922,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37901,7 +37903,7 @@ const showsDataArray = [
     "venueid": 913,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37916,7 +37918,7 @@ const showsDataArray = [
     "venueid": 913,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37931,7 +37933,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -37946,7 +37948,7 @@ const showsDataArray = [
     "venueid": 794,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -37961,7 +37963,7 @@ const showsDataArray = [
     "venueid": 1232,
     "tourid": 166,
     "tourname": "Fish - Touchpants Fall 2006",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -37976,7 +37978,7 @@ const showsDataArray = [
     "venueid": 1233,
     "tourid": 166,
     "tourname": "Fish - Touchpants Fall 2006",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -37991,7 +37993,7 @@ const showsDataArray = [
     "venueid": 914,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38006,7 +38008,7 @@ const showsDataArray = [
     "venueid": 1033,
     "tourid": 166,
     "tourname": "Fish - Touchpants Fall 2006",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -38021,7 +38023,7 @@ const showsDataArray = [
     "venueid": 915,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38036,7 +38038,7 @@ const showsDataArray = [
     "venueid": 790,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38051,7 +38053,7 @@ const showsDataArray = [
     "venueid": 1234,
     "tourid": 166,
     "tourname": "Fish - Touchpants Fall 2006",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -38066,7 +38068,7 @@ const showsDataArray = [
     "venueid": 1117,
     "tourid": 127,
     "tourname": "Mike - The Rhythm Devils Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -38081,7 +38083,7 @@ const showsDataArray = [
     "venueid": 1118,
     "tourid": 127,
     "tourname": "Mike - The Rhythm Devils Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -38096,7 +38098,7 @@ const showsDataArray = [
     "venueid": 322,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38111,7 +38113,7 @@ const showsDataArray = [
     "venueid": 796,
     "tourid": 127,
     "tourname": "Mike - The Rhythm Devils Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -38126,7 +38128,7 @@ const showsDataArray = [
     "venueid": 322,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38141,7 +38143,7 @@ const showsDataArray = [
     "venueid": 916,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38156,7 +38158,7 @@ const showsDataArray = [
     "venueid": 310,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38171,7 +38173,7 @@ const showsDataArray = [
     "venueid": 1119,
     "tourid": 127,
     "tourname": "Mike - The Rhythm Devils Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -38186,7 +38188,7 @@ const showsDataArray = [
     "venueid": 991,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38201,7 +38203,7 @@ const showsDataArray = [
     "venueid": 1120,
     "tourid": 127,
     "tourname": "Mike - The Rhythm Devils Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -38216,7 +38218,7 @@ const showsDataArray = [
     "venueid": 111,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38231,7 +38233,7 @@ const showsDataArray = [
     "venueid": 826,
     "tourid": 127,
     "tourname": "Mike - The Rhythm Devils Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -38246,7 +38248,7 @@ const showsDataArray = [
     "venueid": 111,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38261,7 +38263,7 @@ const showsDataArray = [
     "venueid": 1121,
     "tourid": 127,
     "tourname": "Mike - The Rhythm Devils Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -38276,7 +38278,7 @@ const showsDataArray = [
     "venueid": 1122,
     "tourid": 127,
     "tourname": "Mike - The Rhythm Devils Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -38291,7 +38293,7 @@ const showsDataArray = [
     "venueid": 917,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38306,7 +38308,7 @@ const showsDataArray = [
     "venueid": 917,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38321,7 +38323,7 @@ const showsDataArray = [
     "venueid": 936,
     "tourid": 127,
     "tourname": "Mike - The Rhythm Devils Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -38336,7 +38338,7 @@ const showsDataArray = [
     "venueid": 936,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38351,7 +38353,7 @@ const showsDataArray = [
     "venueid": 918,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38366,7 +38368,7 @@ const showsDataArray = [
     "venueid": 543,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38381,7 +38383,7 @@ const showsDataArray = [
     "venueid": 919,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38396,7 +38398,7 @@ const showsDataArray = [
     "venueid": 920,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38411,7 +38413,7 @@ const showsDataArray = [
     "venueid": 815,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38426,7 +38428,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -38441,7 +38443,7 @@ const showsDataArray = [
     "venueid": 137,
     "tourid": 127,
     "tourname": "Mike - The Rhythm Devils Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -38456,7 +38458,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -38471,7 +38473,7 @@ const showsDataArray = [
     "venueid": 921,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38486,7 +38488,7 @@ const showsDataArray = [
     "venueid": 137,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38501,7 +38503,7 @@ const showsDataArray = [
     "venueid": 137,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38516,7 +38518,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -38531,7 +38533,7 @@ const showsDataArray = [
     "venueid": 264,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38546,7 +38548,7 @@ const showsDataArray = [
     "venueid": 135,
     "tourid": 106,
     "tourname": "TAB - Fall 2006 Tour",
-    "tour_when": "2006 Fall",
+    "tour_year": "2006 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38561,7 +38563,7 @@ const showsDataArray = [
     "venueid": 787,
     "tourid": 107,
     "tourname": "TAB - The Undectet NYE Run 2006-2007",
-    "tour_when": "2006 NYE",
+    "tour_year": "2006 NYE",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38576,7 +38578,7 @@ const showsDataArray = [
     "venueid": 190,
     "tourid": 107,
     "tourname": "TAB - The Undectet NYE Run 2006-2007",
-    "tour_when": "2006 NYE",
+    "tour_year": "2006 NYE",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38591,7 +38593,7 @@ const showsDataArray = [
     "venueid": 302,
     "tourid": 107,
     "tourname": "TAB - The Undectet NYE Run 2006-2007",
-    "tour_when": "2006 NYE",
+    "tour_year": "2006 NYE",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38606,7 +38608,7 @@ const showsDataArray = [
     "venueid": 922,
     "tourid": 107,
     "tourname": "TAB - The Undectet NYE Run 2006-2007",
-    "tour_when": "2006 NYE",
+    "tour_year": "2006 NYE",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38621,7 +38623,7 @@ const showsDataArray = [
     "venueid": 922,
     "tourid": 107,
     "tourname": "TAB - The Undectet NYE Run 2006-2007",
-    "tour_when": "2006 NYE",
+    "tour_year": "2006 NYE",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38636,7 +38638,7 @@ const showsDataArray = [
     "venueid": 1124,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -38651,7 +38653,7 @@ const showsDataArray = [
     "venueid": 987,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38666,7 +38668,7 @@ const showsDataArray = [
     "venueid": 956,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38681,7 +38683,7 @@ const showsDataArray = [
     "venueid": 957,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -38696,7 +38698,7 @@ const showsDataArray = [
     "venueid": 815,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38711,7 +38713,7 @@ const showsDataArray = [
     "venueid": 1132,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38726,7 +38728,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -38741,7 +38743,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38756,7 +38758,7 @@ const showsDataArray = [
     "venueid": 943,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38771,7 +38773,7 @@ const showsDataArray = [
     "venueid": 1503,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38786,7 +38788,7 @@ const showsDataArray = [
     "venueid": 846,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38801,7 +38803,7 @@ const showsDataArray = [
     "venueid": 944,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38816,7 +38818,7 @@ const showsDataArray = [
     "venueid": 787,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38831,7 +38833,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38846,7 +38848,7 @@ const showsDataArray = [
     "venueid": 862,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38861,7 +38863,7 @@ const showsDataArray = [
     "venueid": 160,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38876,7 +38878,7 @@ const showsDataArray = [
     "venueid": 857,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38891,7 +38893,7 @@ const showsDataArray = [
     "venueid": 951,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38906,7 +38908,7 @@ const showsDataArray = [
     "venueid": 322,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38921,7 +38923,7 @@ const showsDataArray = [
     "venueid": 1077,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38936,7 +38938,7 @@ const showsDataArray = [
     "venueid": 889,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38951,7 +38953,7 @@ const showsDataArray = [
     "venueid": 950,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38966,7 +38968,7 @@ const showsDataArray = [
     "venueid": 1015,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38981,7 +38983,7 @@ const showsDataArray = [
     "venueid": 1015,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -38996,7 +38998,7 @@ const showsDataArray = [
     "venueid": 560,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -39011,7 +39013,7 @@ const showsDataArray = [
     "venueid": 840,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -39026,7 +39028,7 @@ const showsDataArray = [
     "venueid": 1113,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -39041,7 +39043,7 @@ const showsDataArray = [
     "venueid": 892,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -39056,7 +39058,7 @@ const showsDataArray = [
     "venueid": 199,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -39071,7 +39073,7 @@ const showsDataArray = [
     "venueid": 111,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -39086,7 +39088,7 @@ const showsDataArray = [
     "venueid": 1278,
     "tourid": 144,
     "tourname": "Page McConnell Spring & Summer 2007 Tour",
-    "tour_when": "2007 Spring and Summer",
+    "tour_year": "2007 Spring and Summer",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -39101,7 +39103,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39116,7 +39118,7 @@ const showsDataArray = [
     "venueid": 111,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39131,7 +39133,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39146,7 +39148,7 @@ const showsDataArray = [
     "venueid": 1167,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39161,7 +39163,7 @@ const showsDataArray = [
     "venueid": 1130,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -39176,7 +39178,7 @@ const showsDataArray = [
     "venueid": 1239,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39191,7 +39193,7 @@ const showsDataArray = [
     "venueid": 969,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39206,7 +39208,7 @@ const showsDataArray = [
     "venueid": 742,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39221,7 +39223,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39236,7 +39238,7 @@ const showsDataArray = [
     "venueid": 825,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39251,7 +39253,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39266,7 +39268,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39281,7 +39283,7 @@ const showsDataArray = [
     "venueid": 902,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39296,7 +39298,7 @@ const showsDataArray = [
     "venueid": 1242,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39311,7 +39313,7 @@ const showsDataArray = [
     "venueid": 1137,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -39326,7 +39328,7 @@ const showsDataArray = [
     "venueid": 1242,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39341,7 +39343,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39356,7 +39358,7 @@ const showsDataArray = [
     "venueid": 199,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39371,7 +39373,7 @@ const showsDataArray = [
     "venueid": 1271,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39386,7 +39388,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39401,7 +39403,7 @@ const showsDataArray = [
     "venueid": 1157,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39416,7 +39418,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39431,7 +39433,7 @@ const showsDataArray = [
     "venueid": 796,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39446,7 +39448,7 @@ const showsDataArray = [
     "venueid": 790,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39461,7 +39463,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39476,7 +39478,7 @@ const showsDataArray = [
     "venueid": 137,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39491,7 +39493,7 @@ const showsDataArray = [
     "venueid": 1263,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39506,7 +39508,7 @@ const showsDataArray = [
     "venueid": 1272,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -39521,7 +39523,7 @@ const showsDataArray = [
     "venueid": 1273,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39536,7 +39538,7 @@ const showsDataArray = [
     "venueid": 1272,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39551,7 +39553,7 @@ const showsDataArray = [
     "venueid": 70,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -39566,7 +39568,7 @@ const showsDataArray = [
     "venueid": 1000,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39581,7 +39583,7 @@ const showsDataArray = [
     "venueid": 1000,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -39596,7 +39598,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -39611,7 +39613,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39626,7 +39628,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39641,7 +39643,7 @@ const showsDataArray = [
     "venueid": 866,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -39656,7 +39658,7 @@ const showsDataArray = [
     "venueid": 868,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39671,7 +39673,7 @@ const showsDataArray = [
     "venueid": 867,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -39686,7 +39688,7 @@ const showsDataArray = [
     "venueid": 868,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -39701,7 +39703,7 @@ const showsDataArray = [
     "venueid": 868,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -39716,7 +39718,7 @@ const showsDataArray = [
     "venueid": 869,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -39731,7 +39733,7 @@ const showsDataArray = [
     "venueid": 869,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39746,7 +39748,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -39761,7 +39763,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39776,7 +39778,7 @@ const showsDataArray = [
     "venueid": 990,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -39791,7 +39793,7 @@ const showsDataArray = [
     "venueid": 870,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -39806,7 +39808,7 @@ const showsDataArray = [
     "venueid": 846,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -39821,7 +39823,7 @@ const showsDataArray = [
     "venueid": 872,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -39836,7 +39838,7 @@ const showsDataArray = [
     "venueid": 871,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -39851,7 +39853,7 @@ const showsDataArray = [
     "venueid": 863,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -39866,7 +39868,7 @@ const showsDataArray = [
     "venueid": 873,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -39881,7 +39883,7 @@ const showsDataArray = [
     "venueid": 784,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -39896,7 +39898,7 @@ const showsDataArray = [
     "venueid": 677,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -39911,7 +39913,7 @@ const showsDataArray = [
     "venueid": 1236,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -39926,7 +39928,7 @@ const showsDataArray = [
     "venueid": 358,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -39941,7 +39943,7 @@ const showsDataArray = [
     "venueid": 907,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -39956,7 +39958,7 @@ const showsDataArray = [
     "venueid": 907,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -39971,7 +39973,7 @@ const showsDataArray = [
     "venueid": 864,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -39986,7 +39988,7 @@ const showsDataArray = [
     "venueid": 874,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40001,7 +40003,7 @@ const showsDataArray = [
     "venueid": 923,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40016,7 +40018,7 @@ const showsDataArray = [
     "venueid": 875,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40031,7 +40033,7 @@ const showsDataArray = [
     "venueid": 876,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40046,7 +40048,7 @@ const showsDataArray = [
     "venueid": 877,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40061,7 +40063,7 @@ const showsDataArray = [
     "venueid": 840,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40076,7 +40078,7 @@ const showsDataArray = [
     "venueid": 878,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40091,7 +40093,7 @@ const showsDataArray = [
     "venueid": 879,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40106,7 +40108,7 @@ const showsDataArray = [
     "venueid": 111,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40121,7 +40123,7 @@ const showsDataArray = [
     "venueid": 880,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40136,7 +40138,7 @@ const showsDataArray = [
     "venueid": 881,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40151,7 +40153,7 @@ const showsDataArray = [
     "venueid": 882,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40166,7 +40168,7 @@ const showsDataArray = [
     "venueid": 883,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40181,7 +40183,7 @@ const showsDataArray = [
     "venueid": 856,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40196,7 +40198,7 @@ const showsDataArray = [
     "venueid": 831,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40211,7 +40213,7 @@ const showsDataArray = [
     "venueid": 497,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -40226,7 +40228,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 128,
     "tourname": "Mike Gordon - Summer 2008 Tour",
-    "tour_when": "2008 Summer",
+    "tour_year": "2008 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40241,7 +40243,7 @@ const showsDataArray = [
     "venueid": 849,
     "tourid": 145,
     "tourname": "Page - Porter Batiste Stoltz Feat. Page McConnell",
-    "tour_when": "2008 Fall",
+    "tour_year": "2008 Fall",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -40256,7 +40258,7 @@ const showsDataArray = [
     "venueid": 1503,
     "tourid": 145,
     "tourname": "Page - Porter Batiste Stoltz Feat. Page McConnell",
-    "tour_when": "2008 Fall",
+    "tour_year": "2008 Fall",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -40271,7 +40273,7 @@ const showsDataArray = [
     "venueid": 999,
     "tourid": 145,
     "tourname": "Page - Porter Batiste Stoltz Feat. Page McConnell",
-    "tour_when": "2008 Fall",
+    "tour_year": "2008 Fall",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -40286,7 +40288,7 @@ const showsDataArray = [
     "venueid": 902,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -40301,7 +40303,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 145,
     "tourname": "Page - Porter Batiste Stoltz Feat. Page McConnell",
-    "tour_when": "2008 Fall",
+    "tour_year": "2008 Fall",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -40316,7 +40318,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -40331,7 +40333,7 @@ const showsDataArray = [
     "venueid": 1240,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -40346,7 +40348,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -40361,7 +40363,7 @@ const showsDataArray = [
     "venueid": 794,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -40376,7 +40378,7 @@ const showsDataArray = [
     "venueid": 1237,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -40391,7 +40393,7 @@ const showsDataArray = [
     "venueid": 96,
     "tourid": 108,
     "tourname": "TAB - Classic TAB Fall 2008 Tour",
-    "tour_when": "2008 Fall",
+    "tour_year": "2008 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -40406,7 +40408,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -40421,7 +40423,7 @@ const showsDataArray = [
     "venueid": 905,
     "tourid": 108,
     "tourname": "TAB - Classic TAB Fall 2008 Tour",
-    "tour_when": "2008 Fall",
+    "tour_year": "2008 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -40436,7 +40438,7 @@ const showsDataArray = [
     "venueid": 302,
     "tourid": 108,
     "tourname": "TAB - Classic TAB Fall 2008 Tour",
-    "tour_when": "2008 Fall",
+    "tour_year": "2008 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -40451,7 +40453,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 108,
     "tourname": "TAB - Classic TAB Fall 2008 Tour",
-    "tour_when": "2008 Fall",
+    "tour_year": "2008 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -40466,7 +40468,7 @@ const showsDataArray = [
     "venueid": 1503,
     "tourid": 108,
     "tourname": "TAB - Classic TAB Fall 2008 Tour",
-    "tour_when": "2008 Fall",
+    "tour_year": "2008 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -40481,7 +40483,7 @@ const showsDataArray = [
     "venueid": 190,
     "tourid": 108,
     "tourname": "TAB - Classic TAB Fall 2008 Tour",
-    "tour_when": "2008 Fall",
+    "tour_year": "2008 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -40496,7 +40498,7 @@ const showsDataArray = [
     "venueid": 794,
     "tourid": 108,
     "tourname": "TAB - Classic TAB Fall 2008 Tour",
-    "tour_when": "2008 Fall",
+    "tour_year": "2008 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -40511,7 +40513,7 @@ const showsDataArray = [
     "venueid": 906,
     "tourid": 108,
     "tourname": "TAB - Classic TAB Fall 2008 Tour",
-    "tour_when": "2008 Fall",
+    "tour_year": "2008 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -40526,7 +40528,7 @@ const showsDataArray = [
     "venueid": 1078,
     "tourid": 167,
     "tourname": "Fish - Marco Benevento Trio Fall 2008",
-    "tour_when": "2008 Fall",
+    "tour_year": "2008 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -40541,7 +40543,7 @@ const showsDataArray = [
     "venueid": 1079,
     "tourid": 167,
     "tourname": "Fish - Marco Benevento Trio Fall 2008",
-    "tour_when": "2008 Fall",
+    "tour_year": "2008 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -40556,7 +40558,7 @@ const showsDataArray = [
     "venueid": 1080,
     "tourid": 167,
     "tourname": "Fish - Marco Benevento Trio Fall 2008",
-    "tour_when": "2008 Fall",
+    "tour_year": "2008 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -40571,7 +40573,7 @@ const showsDataArray = [
     "venueid": 1081,
     "tourid": 167,
     "tourname": "Fish - Marco Benevento Trio Fall 2008",
-    "tour_when": "2008 Fall",
+    "tour_year": "2008 Fall",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -40586,7 +40588,7 @@ const showsDataArray = [
     "venueid": 1238,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -40601,7 +40603,7 @@ const showsDataArray = [
     "venueid": 1503,
     "tourid": 129,
     "tourname": "Mike Gordon - New Year's Run 2008",
-    "tour_when": "2008 NYE",
+    "tour_year": "2008 NYE",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40616,7 +40618,7 @@ const showsDataArray = [
     "venueid": 77,
     "tourid": 129,
     "tourname": "Mike Gordon - New Year's Run 2008",
-    "tour_when": "2008 NYE",
+    "tour_year": "2008 NYE",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40631,7 +40633,7 @@ const showsDataArray = [
     "venueid": 537,
     "tourid": 129,
     "tourname": "Mike Gordon - New Year's Run 2008",
-    "tour_when": "2008 NYE",
+    "tour_year": "2008 NYE",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40646,7 +40648,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 129,
     "tourname": "Mike Gordon - New Year's Run 2008",
-    "tour_when": "2008 NYE",
+    "tour_year": "2008 NYE",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40661,7 +40663,7 @@ const showsDataArray = [
     "venueid": 829,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -40676,7 +40678,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -40691,7 +40693,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 62,
     "tourname": "2009 Hampton Reunion Run",
-    "tour_when": "2009 March",
+    "tour_year": "2009 March",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -40706,7 +40708,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 62,
     "tourname": "2009 Hampton Reunion Run",
-    "tour_when": "2009 March",
+    "tour_year": "2009 March",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -40721,7 +40723,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 62,
     "tourname": "2009 Hampton Reunion Run",
-    "tour_when": "2009 March",
+    "tour_year": "2009 March",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -40736,7 +40738,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -40751,7 +40753,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -40766,7 +40768,7 @@ const showsDataArray = [
     "venueid": 70,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -40781,7 +40783,7 @@ const showsDataArray = [
     "venueid": 1166,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -40796,7 +40798,7 @@ const showsDataArray = [
     "venueid": 994,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -40811,7 +40813,7 @@ const showsDataArray = [
     "venueid": 498,
     "tourid": 59,
     "tourname": "2009 Early Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -40826,7 +40828,7 @@ const showsDataArray = [
     "venueid": 499,
     "tourid": 59,
     "tourname": "2009 Early Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -40841,7 +40843,7 @@ const showsDataArray = [
     "venueid": 1165,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -40856,7 +40858,7 @@ const showsDataArray = [
     "venueid": 499,
     "tourid": 59,
     "tourname": "2009 Early Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -40871,7 +40873,7 @@ const showsDataArray = [
     "venueid": 499,
     "tourid": 59,
     "tourname": "2009 Early Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -40886,7 +40888,7 @@ const showsDataArray = [
     "venueid": 500,
     "tourid": 59,
     "tourname": "2009 Early Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -40901,7 +40903,7 @@ const showsDataArray = [
     "venueid": 501,
     "tourid": 59,
     "tourname": "2009 Early Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -40916,7 +40918,7 @@ const showsDataArray = [
     "venueid": 502,
     "tourid": 59,
     "tourname": "2009 Early Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -40931,7 +40933,7 @@ const showsDataArray = [
     "venueid": 503,
     "tourid": 59,
     "tourname": "2009 Early Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -40946,7 +40948,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 59,
     "tourname": "2009 Early Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -40961,7 +40963,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 59,
     "tourname": "2009 Early Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -40976,7 +40978,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 59,
     "tourname": "2009 Early Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -40991,7 +40993,7 @@ const showsDataArray = [
     "venueid": 510,
     "tourid": 59,
     "tourname": "2009 Early Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41006,7 +41008,7 @@ const showsDataArray = [
     "venueid": 512,
     "tourid": 59,
     "tourname": "2009 Early Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41021,7 +41023,7 @@ const showsDataArray = [
     "venueid": 4,
     "tourid": 59,
     "tourname": "2009 Early Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41036,7 +41038,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 59,
     "tourname": "2009 Early Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41051,7 +41053,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 59,
     "tourname": "2009 Early Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41066,7 +41068,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 63,
     "tourname": "2009 Late Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41081,7 +41083,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 63,
     "tourname": "2009 Late Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41096,7 +41098,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 63,
     "tourname": "2009 Late Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41111,7 +41113,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 63,
     "tourname": "2009 Late Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41126,7 +41128,7 @@ const showsDataArray = [
     "venueid": 247,
     "tourid": 63,
     "tourname": "2009 Late Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41141,7 +41143,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 63,
     "tourname": "2009 Late Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41156,7 +41158,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 63,
     "tourname": "2009 Late Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41171,7 +41173,7 @@ const showsDataArray = [
     "venueid": 519,
     "tourid": 63,
     "tourname": "2009 Late Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41186,7 +41188,7 @@ const showsDataArray = [
     "venueid": 361,
     "tourid": 63,
     "tourname": "2009 Late Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41201,7 +41203,7 @@ const showsDataArray = [
     "venueid": 523,
     "tourid": 63,
     "tourname": "2009 Late Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41216,7 +41218,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 63,
     "tourname": "2009 Late Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41231,7 +41233,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 63,
     "tourname": "2009 Late Summer Tour",
-    "tour_when": "2009 Summer",
+    "tour_year": "2009 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41246,7 +41248,7 @@ const showsDataArray = [
     "venueid": 784,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41261,7 +41263,7 @@ const showsDataArray = [
     "venueid": 203,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41276,7 +41278,7 @@ const showsDataArray = [
     "venueid": 829,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41291,7 +41293,7 @@ const showsDataArray = [
     "venueid": 865,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41306,7 +41308,7 @@ const showsDataArray = [
     "venueid": 969,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -41321,7 +41323,7 @@ const showsDataArray = [
     "venueid": 1341,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -41336,7 +41338,7 @@ const showsDataArray = [
     "venueid": 864,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41351,7 +41353,7 @@ const showsDataArray = [
     "venueid": 863,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41366,7 +41368,7 @@ const showsDataArray = [
     "venueid": 862,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41381,7 +41383,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41396,7 +41398,7 @@ const showsDataArray = [
     "venueid": 861,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41411,7 +41413,7 @@ const showsDataArray = [
     "venueid": 860,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41426,7 +41428,7 @@ const showsDataArray = [
     "venueid": 859,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41441,7 +41443,7 @@ const showsDataArray = [
     "venueid": 858,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41456,7 +41458,7 @@ const showsDataArray = [
     "venueid": 857,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41471,7 +41473,7 @@ const showsDataArray = [
     "venueid": 856,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41486,7 +41488,7 @@ const showsDataArray = [
     "venueid": 146,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41501,7 +41503,7 @@ const showsDataArray = [
     "venueid": 855,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41516,7 +41518,7 @@ const showsDataArray = [
     "venueid": 854,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41531,7 +41533,7 @@ const showsDataArray = [
     "venueid": 853,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41546,7 +41548,7 @@ const showsDataArray = [
     "venueid": 852,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41561,7 +41563,7 @@ const showsDataArray = [
     "venueid": 851,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41576,7 +41578,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 130,
     "tourname": "Mike Gordon - Fall 2009 Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41591,7 +41593,7 @@ const showsDataArray = [
     "venueid": 756,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41606,7 +41608,7 @@ const showsDataArray = [
     "venueid": 756,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41621,7 +41623,7 @@ const showsDataArray = [
     "venueid": 756,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41636,7 +41638,7 @@ const showsDataArray = [
     "venueid": 756,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41651,7 +41653,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -41666,7 +41668,7 @@ const showsDataArray = [
     "venueid": 755,
     "tourid": 66,
     "tourname": "2009 Fall Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41681,7 +41683,7 @@ const showsDataArray = [
     "venueid": 238,
     "tourid": 66,
     "tourname": "2009 Fall Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41696,7 +41698,7 @@ const showsDataArray = [
     "venueid": 238,
     "tourid": 66,
     "tourname": "2009 Fall Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41711,7 +41713,7 @@ const showsDataArray = [
     "venueid": 757,
     "tourid": 66,
     "tourname": "2009 Fall Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41726,7 +41728,7 @@ const showsDataArray = [
     "venueid": 760,
     "tourid": 66,
     "tourname": "2009 Fall Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41741,7 +41743,7 @@ const showsDataArray = [
     "venueid": 760,
     "tourid": 66,
     "tourname": "2009 Fall Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41756,7 +41758,7 @@ const showsDataArray = [
     "venueid": 758,
     "tourid": 66,
     "tourname": "2009 Fall Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41771,7 +41773,7 @@ const showsDataArray = [
     "venueid": 758,
     "tourid": 66,
     "tourname": "2009 Fall Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41786,7 +41788,7 @@ const showsDataArray = [
     "venueid": 208,
     "tourid": 66,
     "tourname": "2009 Fall Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41801,7 +41803,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 66,
     "tourname": "2009 Fall Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41816,7 +41818,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 66,
     "tourname": "2009 Fall Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41831,7 +41833,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 66,
     "tourname": "2009 Fall Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41846,7 +41848,7 @@ const showsDataArray = [
     "venueid": 759,
     "tourid": 66,
     "tourname": "2009 Fall Tour",
-    "tour_when": "2009 Fall",
+    "tour_year": "2009 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41861,7 +41863,7 @@ const showsDataArray = [
     "venueid": 274,
     "tourid": 67,
     "tourname": "2009 NYE Run",
-    "tour_when": "2009 NYE",
+    "tour_year": "2009 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41876,7 +41878,7 @@ const showsDataArray = [
     "venueid": 274,
     "tourid": 67,
     "tourname": "2009 NYE Run",
-    "tour_when": "2009 NYE",
+    "tour_year": "2009 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41891,7 +41893,7 @@ const showsDataArray = [
     "venueid": 274,
     "tourid": 67,
     "tourname": "2009 NYE Run",
-    "tour_when": "2009 NYE",
+    "tour_year": "2009 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41906,7 +41908,7 @@ const showsDataArray = [
     "venueid": 274,
     "tourid": 67,
     "tourname": "2009 NYE Run",
-    "tour_when": "2009 NYE",
+    "tour_year": "2009 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -41921,7 +41923,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -41936,7 +41938,7 @@ const showsDataArray = [
     "venueid": 785,
     "tourid": 109,
     "tourname": "TAB - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -41951,7 +41953,7 @@ const showsDataArray = [
     "venueid": 787,
     "tourid": 109,
     "tourname": "TAB - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -41966,7 +41968,7 @@ const showsDataArray = [
     "venueid": 794,
     "tourid": 109,
     "tourname": "TAB - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -41981,7 +41983,7 @@ const showsDataArray = [
     "venueid": 792,
     "tourid": 109,
     "tourname": "TAB - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -41996,7 +41998,7 @@ const showsDataArray = [
     "venueid": 898,
     "tourid": 109,
     "tourname": "TAB - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -42011,7 +42013,7 @@ const showsDataArray = [
     "venueid": 899,
     "tourid": 109,
     "tourname": "TAB - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -42026,7 +42028,7 @@ const showsDataArray = [
     "venueid": 793,
     "tourid": 109,
     "tourname": "TAB - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -42041,7 +42043,7 @@ const showsDataArray = [
     "venueid": 900,
     "tourid": 109,
     "tourname": "TAB - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -42056,7 +42058,7 @@ const showsDataArray = [
     "venueid": 788,
     "tourid": 109,
     "tourname": "TAB - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -42071,7 +42073,7 @@ const showsDataArray = [
     "venueid": 285,
     "tourid": 109,
     "tourname": "TAB - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -42086,7 +42088,7 @@ const showsDataArray = [
     "venueid": 901,
     "tourid": 109,
     "tourname": "TAB - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -42101,7 +42103,7 @@ const showsDataArray = [
     "venueid": 894,
     "tourid": 109,
     "tourname": "TAB - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -42116,7 +42118,7 @@ const showsDataArray = [
     "venueid": 902,
     "tourid": 109,
     "tourname": "TAB - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -42131,7 +42133,7 @@ const showsDataArray = [
     "venueid": 903,
     "tourid": 109,
     "tourname": "TAB - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -42146,7 +42148,7 @@ const showsDataArray = [
     "venueid": 827,
     "tourid": 109,
     "tourname": "TAB - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -42161,7 +42163,7 @@ const showsDataArray = [
     "venueid": 356,
     "tourid": 109,
     "tourname": "TAB - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -42176,7 +42178,7 @@ const showsDataArray = [
     "venueid": 849,
     "tourid": 131,
     "tourname": "Mike Gordon - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -42191,7 +42193,7 @@ const showsDataArray = [
     "venueid": 47,
     "tourid": 131,
     "tourname": "Mike Gordon - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -42206,7 +42208,7 @@ const showsDataArray = [
     "venueid": 848,
     "tourid": 131,
     "tourname": "Mike Gordon - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -42221,7 +42223,7 @@ const showsDataArray = [
     "venueid": 847,
     "tourid": 131,
     "tourname": "Mike Gordon - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -42236,7 +42238,7 @@ const showsDataArray = [
     "venueid": 785,
     "tourid": 131,
     "tourname": "Mike Gordon - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -42251,7 +42253,7 @@ const showsDataArray = [
     "venueid": 846,
     "tourid": 131,
     "tourname": "Mike Gordon - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -42266,7 +42268,7 @@ const showsDataArray = [
     "venueid": 233,
     "tourid": 131,
     "tourname": "Mike Gordon - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -42281,7 +42283,7 @@ const showsDataArray = [
     "venueid": 845,
     "tourid": 131,
     "tourname": "Mike Gordon - Winter 2010 Tour",
-    "tour_when": "2010 Winter",
+    "tour_year": "2010 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -42296,7 +42298,7 @@ const showsDataArray = [
     "venueid": 764,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42311,7 +42313,7 @@ const showsDataArray = [
     "venueid": 1076,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -42326,7 +42328,7 @@ const showsDataArray = [
     "venueid": 770,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42341,7 +42343,7 @@ const showsDataArray = [
     "venueid": 904,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -42356,7 +42358,7 @@ const showsDataArray = [
     "venueid": 317,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -42371,7 +42373,7 @@ const showsDataArray = [
     "venueid": 519,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42386,7 +42388,7 @@ const showsDataArray = [
     "venueid": 223,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42401,7 +42403,7 @@ const showsDataArray = [
     "venueid": 389,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42416,7 +42418,7 @@ const showsDataArray = [
     "venueid": 765,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42431,7 +42433,7 @@ const showsDataArray = [
     "venueid": 523,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42446,7 +42448,7 @@ const showsDataArray = [
     "venueid": 523,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42461,7 +42463,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42476,7 +42478,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42491,7 +42493,7 @@ const showsDataArray = [
     "venueid": 500,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42506,7 +42508,7 @@ const showsDataArray = [
     "venueid": 501,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42521,7 +42523,7 @@ const showsDataArray = [
     "venueid": 501,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42536,7 +42538,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42551,7 +42553,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42566,7 +42568,7 @@ const showsDataArray = [
     "venueid": 766,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42581,7 +42583,7 @@ const showsDataArray = [
     "venueid": 767,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42596,7 +42598,7 @@ const showsDataArray = [
     "venueid": 261,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42611,7 +42613,7 @@ const showsDataArray = [
     "venueid": 768,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42626,7 +42628,7 @@ const showsDataArray = [
     "venueid": 768,
     "tourid": 68,
     "tourname": "2010 Early Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42641,7 +42643,7 @@ const showsDataArray = [
     "venueid": 1170,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -42656,7 +42658,7 @@ const showsDataArray = [
     "venueid": 372,
     "tourid": 69,
     "tourname": "2010 Late Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42671,7 +42673,7 @@ const showsDataArray = [
     "venueid": 372,
     "tourid": 69,
     "tourname": "2010 Late Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42686,7 +42688,7 @@ const showsDataArray = [
     "venueid": 372,
     "tourid": 69,
     "tourname": "2010 Late Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42701,7 +42703,7 @@ const showsDataArray = [
     "venueid": 769,
     "tourid": 69,
     "tourname": "2010 Late Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42716,7 +42718,7 @@ const showsDataArray = [
     "venueid": 769,
     "tourid": 69,
     "tourname": "2010 Late Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42731,7 +42733,7 @@ const showsDataArray = [
     "venueid": 4,
     "tourid": 69,
     "tourname": "2010 Late Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42746,7 +42748,7 @@ const showsDataArray = [
     "venueid": 4,
     "tourid": 69,
     "tourname": "2010 Late Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42761,7 +42763,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 69,
     "tourname": "2010 Late Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42776,7 +42778,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 69,
     "tourname": "2010 Late Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42791,7 +42793,7 @@ const showsDataArray = [
     "venueid": 499,
     "tourid": 69,
     "tourname": "2010 Late Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42806,7 +42808,7 @@ const showsDataArray = [
     "venueid": 499,
     "tourid": 69,
     "tourname": "2010 Late Summer Tour",
-    "tour_when": "2010 Summer",
+    "tour_year": "2010 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42821,7 +42823,7 @@ const showsDataArray = [
     "venueid": 844,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -42836,7 +42838,7 @@ const showsDataArray = [
     "venueid": 771,
     "tourid": 70,
     "tourname": "2010 Fall Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42851,7 +42853,7 @@ const showsDataArray = [
     "venueid": 772,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -42866,7 +42868,7 @@ const showsDataArray = [
     "venueid": 772,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -42881,7 +42883,7 @@ const showsDataArray = [
     "venueid": 772,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -42896,7 +42898,7 @@ const showsDataArray = [
     "venueid": 772,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -42911,7 +42913,7 @@ const showsDataArray = [
     "venueid": 772,
     "tourid": 70,
     "tourname": "2010 Fall Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42926,7 +42928,7 @@ const showsDataArray = [
     "venueid": 772,
     "tourid": 70,
     "tourname": "2010 Fall Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42941,7 +42943,7 @@ const showsDataArray = [
     "venueid": 772,
     "tourid": 70,
     "tourname": "2010 Fall Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42956,7 +42958,7 @@ const showsDataArray = [
     "venueid": 698,
     "tourid": 70,
     "tourname": "2010 Fall Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42971,7 +42973,7 @@ const showsDataArray = [
     "venueid": 698,
     "tourid": 70,
     "tourname": "2010 Fall Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -42986,7 +42988,7 @@ const showsDataArray = [
     "venueid": 467,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43001,7 +43003,7 @@ const showsDataArray = [
     "venueid": 773,
     "tourid": 70,
     "tourname": "2010 Fall Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -43016,7 +43018,7 @@ const showsDataArray = [
     "venueid": 774,
     "tourid": 70,
     "tourname": "2010 Fall Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -43031,7 +43033,7 @@ const showsDataArray = [
     "venueid": 775,
     "tourid": 70,
     "tourname": "2010 Fall Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -43046,7 +43048,7 @@ const showsDataArray = [
     "venueid": 34,
     "tourid": 70,
     "tourname": "2010 Fall Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -43061,7 +43063,7 @@ const showsDataArray = [
     "venueid": 34,
     "tourid": 70,
     "tourname": "2010 Fall Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -43076,7 +43078,7 @@ const showsDataArray = [
     "venueid": 776,
     "tourid": 70,
     "tourname": "2010 Fall Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -43091,7 +43093,7 @@ const showsDataArray = [
     "venueid": 777,
     "tourid": 70,
     "tourname": "2010 Fall Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -43106,7 +43108,7 @@ const showsDataArray = [
     "venueid": 777,
     "tourid": 70,
     "tourname": "2010 Fall Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -43121,7 +43123,7 @@ const showsDataArray = [
     "venueid": 777,
     "tourid": 70,
     "tourname": "2010 Fall Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -43136,7 +43138,7 @@ const showsDataArray = [
     "venueid": 843,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43151,7 +43153,7 @@ const showsDataArray = [
     "venueid": 842,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43166,7 +43168,7 @@ const showsDataArray = [
     "venueid": 841,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43181,7 +43183,7 @@ const showsDataArray = [
     "venueid": 840,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43196,7 +43198,7 @@ const showsDataArray = [
     "venueid": 839,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43211,7 +43213,7 @@ const showsDataArray = [
     "venueid": 838,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43226,7 +43228,7 @@ const showsDataArray = [
     "venueid": 837,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43241,7 +43243,7 @@ const showsDataArray = [
     "venueid": 111,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43256,7 +43258,7 @@ const showsDataArray = [
     "venueid": 836,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43271,7 +43273,7 @@ const showsDataArray = [
     "venueid": 835,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43286,7 +43288,7 @@ const showsDataArray = [
     "venueid": 146,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43301,7 +43303,7 @@ const showsDataArray = [
     "venueid": 834,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43316,7 +43318,7 @@ const showsDataArray = [
     "venueid": 993,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -43331,7 +43333,7 @@ const showsDataArray = [
     "venueid": 833,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43346,7 +43348,7 @@ const showsDataArray = [
     "venueid": 832,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43361,7 +43363,7 @@ const showsDataArray = [
     "venueid": 831,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43376,7 +43378,7 @@ const showsDataArray = [
     "venueid": 830,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43391,7 +43393,7 @@ const showsDataArray = [
     "venueid": 829,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43406,7 +43408,7 @@ const showsDataArray = [
     "venueid": 33,
     "tourid": 132,
     "tourname": "Mike Gordon - Fall 2010 Tour",
-    "tour_when": "2010 Fall",
+    "tour_year": "2010 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43421,7 +43423,7 @@ const showsDataArray = [
     "venueid": 781,
     "tourid": 71,
     "tourname": "2010/2011 NYE Run",
-    "tour_when": "2010-2011 NYE",
+    "tour_year": "2010-2011 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -43436,7 +43438,7 @@ const showsDataArray = [
     "venueid": 781,
     "tourid": 71,
     "tourname": "2010/2011 NYE Run",
-    "tour_when": "2010-2011 NYE",
+    "tour_year": "2010-2011 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -43451,7 +43453,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 71,
     "tourname": "2010/2011 NYE Run",
-    "tour_when": "2010-2011 NYE",
+    "tour_year": "2010-2011 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -43466,7 +43468,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 71,
     "tourname": "2010/2011 NYE Run",
-    "tour_when": "2010-2011 NYE",
+    "tour_year": "2010-2011 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -43481,7 +43483,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 71,
     "tourname": "2010/2011 NYE Run",
-    "tour_when": "2010-2011 NYE",
+    "tour_year": "2010-2011 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -43496,7 +43498,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -43511,7 +43513,7 @@ const showsDataArray = [
     "venueid": 770,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43526,7 +43528,7 @@ const showsDataArray = [
     "venueid": 791,
     "tourid": 72,
     "tourname": "TAB - Winter 2011 Acoustic/Electric Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -43541,7 +43543,7 @@ const showsDataArray = [
     "venueid": 302,
     "tourid": 72,
     "tourname": "TAB - Winter 2011 Acoustic/Electric Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -43556,7 +43558,7 @@ const showsDataArray = [
     "venueid": 792,
     "tourid": 72,
     "tourname": "TAB - Winter 2011 Acoustic/Electric Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -43571,7 +43573,7 @@ const showsDataArray = [
     "venueid": 793,
     "tourid": 72,
     "tourname": "TAB - Winter 2011 Acoustic/Electric Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -43586,7 +43588,7 @@ const showsDataArray = [
     "venueid": 794,
     "tourid": 72,
     "tourname": "TAB - Winter 2011 Acoustic/Electric Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -43601,7 +43603,7 @@ const showsDataArray = [
     "venueid": 795,
     "tourid": 72,
     "tourname": "TAB - Winter 2011 Acoustic/Electric Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -43616,7 +43618,7 @@ const showsDataArray = [
     "venueid": 796,
     "tourid": 72,
     "tourname": "TAB - Winter 2011 Acoustic/Electric Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -43631,7 +43633,7 @@ const showsDataArray = [
     "venueid": 788,
     "tourid": 72,
     "tourname": "TAB - Winter 2011 Acoustic/Electric Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -43646,7 +43648,7 @@ const showsDataArray = [
     "venueid": 797,
     "tourid": 72,
     "tourname": "TAB - Winter 2011 Acoustic/Electric Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -43661,7 +43663,7 @@ const showsDataArray = [
     "venueid": 797,
     "tourid": 72,
     "tourname": "TAB - Winter 2011 Acoustic/Electric Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -43676,7 +43678,7 @@ const showsDataArray = [
     "venueid": 798,
     "tourid": 72,
     "tourname": "TAB - Winter 2011 Acoustic/Electric Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -43691,7 +43693,7 @@ const showsDataArray = [
     "venueid": 885,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43706,7 +43708,7 @@ const showsDataArray = [
     "venueid": 799,
     "tourid": 72,
     "tourname": "TAB - Winter 2011 Acoustic/Electric Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -43721,7 +43723,7 @@ const showsDataArray = [
     "venueid": 886,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43736,7 +43738,7 @@ const showsDataArray = [
     "venueid": 888,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43751,7 +43753,7 @@ const showsDataArray = [
     "venueid": 887,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43766,7 +43768,7 @@ const showsDataArray = [
     "venueid": 889,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43781,7 +43783,7 @@ const showsDataArray = [
     "venueid": 890,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43796,7 +43798,7 @@ const showsDataArray = [
     "venueid": 891,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43811,7 +43813,7 @@ const showsDataArray = [
     "venueid": 892,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43826,7 +43828,7 @@ const showsDataArray = [
     "venueid": 797,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43841,7 +43843,7 @@ const showsDataArray = [
     "venueid": 893,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43856,7 +43858,7 @@ const showsDataArray = [
     "venueid": 894,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43871,7 +43873,7 @@ const showsDataArray = [
     "venueid": 858,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43886,7 +43888,7 @@ const showsDataArray = [
     "venueid": 895,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43901,7 +43903,7 @@ const showsDataArray = [
     "venueid": 862,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43916,7 +43918,7 @@ const showsDataArray = [
     "venueid": 896,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43931,7 +43933,7 @@ const showsDataArray = [
     "venueid": 896,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43946,7 +43948,7 @@ const showsDataArray = [
     "venueid": 864,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43961,7 +43963,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43976,7 +43978,7 @@ const showsDataArray = [
     "venueid": 897,
     "tourid": 75,
     "tourname": "Mike Gordon - Winter 2011 Tour",
-    "tour_when": "2011 Winter",
+    "tour_year": "2011 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -43991,7 +43993,7 @@ const showsDataArray = [
     "venueid": 809,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44006,7 +44008,7 @@ const showsDataArray = [
     "venueid": 809,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44021,7 +44023,7 @@ const showsDataArray = [
     "venueid": 809,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44036,7 +44038,7 @@ const showsDataArray = [
     "venueid": 809,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44051,7 +44053,7 @@ const showsDataArray = [
     "venueid": 398,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44066,7 +44068,7 @@ const showsDataArray = [
     "venueid": 398,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44081,7 +44083,7 @@ const showsDataArray = [
     "venueid": 810,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44096,7 +44098,7 @@ const showsDataArray = [
     "venueid": 223,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44111,7 +44113,7 @@ const showsDataArray = [
     "venueid": 390,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44126,7 +44128,7 @@ const showsDataArray = [
     "venueid": 500,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44141,7 +44143,7 @@ const showsDataArray = [
     "venueid": 361,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44156,7 +44158,7 @@ const showsDataArray = [
     "venueid": 501,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44171,7 +44173,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44186,7 +44188,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44201,7 +44203,7 @@ const showsDataArray = [
     "venueid": 768,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44216,7 +44218,7 @@ const showsDataArray = [
     "venueid": 768,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44231,7 +44233,7 @@ const showsDataArray = [
     "venueid": 261,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44246,7 +44248,7 @@ const showsDataArray = [
     "venueid": 767,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44261,7 +44263,7 @@ const showsDataArray = [
     "venueid": 765,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44276,7 +44278,7 @@ const showsDataArray = [
     "venueid": 958,
     "tourid": 74,
     "tourname": "2011 Early Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44291,7 +44293,7 @@ const showsDataArray = [
     "venueid": 958,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44306,7 +44308,7 @@ const showsDataArray = [
     "venueid": 958,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44321,7 +44323,7 @@ const showsDataArray = [
     "venueid": 958,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44336,7 +44338,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 76,
     "tourname": "2011 Late Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44351,7 +44353,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 76,
     "tourname": "2011 Late Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44366,7 +44368,7 @@ const showsDataArray = [
     "venueid": 959,
     "tourid": 76,
     "tourname": "2011 Late Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44381,7 +44383,7 @@ const showsDataArray = [
     "venueid": 960,
     "tourid": 76,
     "tourname": "2011 Late Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44396,7 +44398,7 @@ const showsDataArray = [
     "venueid": 960,
     "tourid": 76,
     "tourname": "2011 Late Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44411,7 +44413,7 @@ const showsDataArray = [
     "venueid": 878,
     "tourid": 76,
     "tourname": "2011 Late Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44426,7 +44428,7 @@ const showsDataArray = [
     "venueid": 368,
     "tourid": 76,
     "tourname": "2011 Late Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44441,7 +44443,7 @@ const showsDataArray = [
     "venueid": 368,
     "tourid": 76,
     "tourname": "2011 Late Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44456,7 +44458,7 @@ const showsDataArray = [
     "venueid": 368,
     "tourid": 76,
     "tourname": "2011 Late Summer Tour",
-    "tour_when": "2011 Summer",
+    "tour_year": "2011 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44471,7 +44473,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44486,7 +44488,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44501,7 +44503,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44516,7 +44518,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -44531,7 +44533,7 @@ const showsDataArray = [
     "venueid": 822,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44546,7 +44548,7 @@ const showsDataArray = [
     "venueid": 896,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -44561,7 +44563,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 77,
     "tourname": "TAB - Fall 2011 Tour",
-    "tour_when": "2011 Fall",
+    "tour_year": "2011 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -44576,7 +44578,7 @@ const showsDataArray = [
     "venueid": 790,
     "tourid": 77,
     "tourname": "TAB - Fall 2011 Tour",
-    "tour_when": "2011 Fall",
+    "tour_year": "2011 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -44591,7 +44593,7 @@ const showsDataArray = [
     "venueid": 915,
     "tourid": 77,
     "tourname": "TAB - Fall 2011 Tour",
-    "tour_when": "2011 Fall",
+    "tour_year": "2011 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -44606,7 +44608,7 @@ const showsDataArray = [
     "venueid": 847,
     "tourid": 77,
     "tourname": "TAB - Fall 2011 Tour",
-    "tour_when": "2011 Fall",
+    "tour_year": "2011 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -44621,7 +44623,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -44636,7 +44638,7 @@ const showsDataArray = [
     "venueid": 962,
     "tourid": 77,
     "tourname": "TAB - Fall 2011 Tour",
-    "tour_when": "2011 Fall",
+    "tour_year": "2011 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -44651,7 +44653,7 @@ const showsDataArray = [
     "venueid": 963,
     "tourid": 77,
     "tourname": "TAB - Fall 2011 Tour",
-    "tour_when": "2011 Fall",
+    "tour_year": "2011 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -44666,7 +44668,7 @@ const showsDataArray = [
     "venueid": 903,
     "tourid": 77,
     "tourname": "TAB - Fall 2011 Tour",
-    "tour_when": "2011 Fall",
+    "tour_year": "2011 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -44681,7 +44683,7 @@ const showsDataArray = [
     "venueid": 964,
     "tourid": 77,
     "tourname": "TAB - Fall 2011 Tour",
-    "tour_when": "2011 Fall",
+    "tour_year": "2011 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -44696,7 +44698,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -44711,7 +44713,7 @@ const showsDataArray = [
     "venueid": 1164,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -44726,7 +44728,7 @@ const showsDataArray = [
     "venueid": 827,
     "tourid": 77,
     "tourname": "TAB - Fall 2011 Tour",
-    "tour_when": "2011 Fall",
+    "tour_year": "2011 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -44741,7 +44743,7 @@ const showsDataArray = [
     "venueid": 897,
     "tourid": 77,
     "tourname": "TAB - Fall 2011 Tour",
-    "tour_when": "2011 Fall",
+    "tour_year": "2011 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -44756,7 +44758,7 @@ const showsDataArray = [
     "venueid": 77,
     "tourid": 133,
     "tourname": "Mike Gordon - Fall 2011 Weekends Tour",
-    "tour_when": "2011 Fall",
+    "tour_year": "2011 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -44771,7 +44773,7 @@ const showsDataArray = [
     "venueid": 845,
     "tourid": 133,
     "tourname": "Mike Gordon - Fall 2011 Weekends Tour",
-    "tour_when": "2011 Fall",
+    "tour_year": "2011 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -44786,7 +44788,7 @@ const showsDataArray = [
     "venueid": 967,
     "tourid": 133,
     "tourname": "Mike Gordon - Fall 2011 Weekends Tour",
-    "tour_when": "2011 Fall",
+    "tour_year": "2011 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -44801,7 +44803,7 @@ const showsDataArray = [
     "venueid": 945,
     "tourid": 133,
     "tourname": "Mike Gordon - Fall 2011 Weekends Tour",
-    "tour_when": "2011 Fall",
+    "tour_year": "2011 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -44816,7 +44818,7 @@ const showsDataArray = [
     "venueid": 968,
     "tourid": 133,
     "tourname": "Mike Gordon - Fall 2011 Weekends Tour",
-    "tour_when": "2011 Fall",
+    "tour_year": "2011 Fall",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -44831,7 +44833,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -44846,7 +44848,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 79,
     "tourname": "2011 NYE",
-    "tour_when": "2011 NYE",
+    "tour_year": "2011 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44861,7 +44863,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 79,
     "tourname": "2011 NYE",
-    "tour_when": "2011 NYE",
+    "tour_year": "2011 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44876,7 +44878,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 79,
     "tourname": "2011 NYE",
-    "tour_when": "2011 NYE",
+    "tour_year": "2011 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44891,7 +44893,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 79,
     "tourname": "2011 NYE",
-    "tour_when": "2011 NYE",
+    "tour_year": "2011 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -44906,7 +44908,7 @@ const showsDataArray = [
     "venueid": 1129,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -44921,7 +44923,7 @@ const showsDataArray = [
     "venueid": 1030,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -44936,7 +44938,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -44951,7 +44953,7 @@ const showsDataArray = [
     "venueid": 1026,
     "tourid": 80,
     "tourname": "Trey - Winter 2012 Symphony Tour",
-    "tour_when": "2012 Winter",
+    "tour_year": "2012 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -44966,7 +44968,7 @@ const showsDataArray = [
     "venueid": 1027,
     "tourid": 80,
     "tourname": "Trey - Winter 2012 Symphony Tour",
-    "tour_when": "2012 Winter",
+    "tour_year": "2012 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -44981,7 +44983,7 @@ const showsDataArray = [
     "venueid": 1028,
     "tourid": 80,
     "tourname": "Trey - Winter 2012 Symphony Tour",
-    "tour_when": "2012 Winter",
+    "tour_year": "2012 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -44996,7 +44998,7 @@ const showsDataArray = [
     "venueid": 1029,
     "tourid": 80,
     "tourname": "Trey - Winter 2012 Symphony Tour",
-    "tour_when": "2012 Winter",
+    "tour_year": "2012 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -45011,7 +45013,7 @@ const showsDataArray = [
     "venueid": 171,
     "tourid": 134,
     "tourname": "Mike Gordon - Europe 2012 Tour",
-    "tour_when": "2012 Winter",
+    "tour_year": "2012 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -45026,7 +45028,7 @@ const showsDataArray = [
     "venueid": 171,
     "tourid": 134,
     "tourname": "Mike Gordon - Europe 2012 Tour",
-    "tour_when": "2012 Winter",
+    "tour_year": "2012 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -45041,7 +45043,7 @@ const showsDataArray = [
     "venueid": 171,
     "tourid": 134,
     "tourname": "Mike Gordon - Europe 2012 Tour",
-    "tour_when": "2012 Winter",
+    "tour_year": "2012 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -45056,7 +45058,7 @@ const showsDataArray = [
     "venueid": 1142,
     "tourid": 134,
     "tourname": "Mike Gordon - Europe 2012 Tour",
-    "tour_when": "2012 Winter",
+    "tour_year": "2012 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -45071,7 +45073,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -45086,7 +45088,7 @@ const showsDataArray = [
     "venueid": 1226,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -45101,7 +45103,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -45116,7 +45118,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -45131,7 +45133,7 @@ const showsDataArray = [
     "venueid": 781,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45146,7 +45148,7 @@ const showsDataArray = [
     "venueid": 781,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45161,7 +45163,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45176,7 +45178,7 @@ const showsDataArray = [
     "venueid": 1192,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45191,7 +45193,7 @@ const showsDataArray = [
     "venueid": 1192,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45206,7 +45208,7 @@ const showsDataArray = [
     "venueid": 1192,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45221,7 +45223,7 @@ const showsDataArray = [
     "venueid": 765,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45236,7 +45238,7 @@ const showsDataArray = [
     "venueid": 765,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45251,7 +45253,7 @@ const showsDataArray = [
     "venueid": 390,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45266,7 +45268,7 @@ const showsDataArray = [
     "venueid": 1193,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45281,7 +45283,7 @@ const showsDataArray = [
     "venueid": 223,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45296,7 +45298,7 @@ const showsDataArray = [
     "venueid": 1194,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45311,7 +45313,7 @@ const showsDataArray = [
     "venueid": 1194,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45326,7 +45328,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45341,7 +45343,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45356,7 +45358,7 @@ const showsDataArray = [
     "venueid": 499,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45371,7 +45373,7 @@ const showsDataArray = [
     "venueid": 499,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45386,7 +45388,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45401,7 +45403,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45416,7 +45418,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 81,
     "tourname": "2012 Early Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45431,7 +45433,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -45446,7 +45448,7 @@ const showsDataArray = [
     "venueid": 1254,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -45461,7 +45463,7 @@ const showsDataArray = [
     "venueid": 1220,
     "tourid": 82,
     "tourname": "2012 Late Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45476,7 +45478,7 @@ const showsDataArray = [
     "venueid": 1249,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -45491,7 +45493,7 @@ const showsDataArray = [
     "venueid": 816,
     "tourid": 82,
     "tourname": "2012 Late Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45506,7 +45508,7 @@ const showsDataArray = [
     "venueid": 816,
     "tourid": 82,
     "tourname": "2012 Late Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45521,7 +45523,7 @@ const showsDataArray = [
     "venueid": 816,
     "tourid": 82,
     "tourname": "2012 Late Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45536,7 +45538,7 @@ const showsDataArray = [
     "venueid": 1225,
     "tourid": 82,
     "tourname": "2012 Late Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45551,7 +45553,7 @@ const showsDataArray = [
     "venueid": 418,
     "tourid": 82,
     "tourname": "2012 Late Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45566,7 +45568,7 @@ const showsDataArray = [
     "venueid": 1224,
     "tourid": 82,
     "tourname": "2012 Late Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45581,7 +45583,7 @@ const showsDataArray = [
     "venueid": 261,
     "tourid": 82,
     "tourname": "2012 Late Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45596,7 +45598,7 @@ const showsDataArray = [
     "venueid": 1222,
     "tourid": 82,
     "tourname": "2012 Late Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45611,7 +45613,7 @@ const showsDataArray = [
     "venueid": 1223,
     "tourid": 82,
     "tourname": "2012 Late Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45626,7 +45628,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 82,
     "tourname": "2012 Late Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45641,7 +45643,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 82,
     "tourname": "2012 Late Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45656,7 +45658,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 82,
     "tourname": "2012 Late Summer Tour",
-    "tour_when": "2012 Summer",
+    "tour_year": "2012 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -45671,7 +45673,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -45686,7 +45688,7 @@ const showsDataArray = [
     "venueid": 876,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -45701,7 +45703,7 @@ const showsDataArray = [
     "venueid": 1253,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -45716,7 +45718,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -45731,7 +45733,7 @@ const showsDataArray = [
     "venueid": 1248,
     "tourid": 110,
     "tourname": "TAB - Fall 2012 Traveler Tour",
-    "tour_when": "2012 Fall",
+    "tour_year": "2012 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -45746,7 +45748,7 @@ const showsDataArray = [
     "venueid": 826,
     "tourid": 110,
     "tourname": "TAB - Fall 2012 Traveler Tour",
-    "tour_when": "2012 Fall",
+    "tour_year": "2012 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -45761,7 +45763,7 @@ const showsDataArray = [
     "venueid": 796,
     "tourid": 110,
     "tourname": "TAB - Fall 2012 Traveler Tour",
-    "tour_when": "2012 Fall",
+    "tour_year": "2012 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -45776,7 +45778,7 @@ const showsDataArray = [
     "venueid": 848,
     "tourid": 110,
     "tourname": "TAB - Fall 2012 Traveler Tour",
-    "tour_when": "2012 Fall",
+    "tour_year": "2012 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -45791,7 +45793,7 @@ const showsDataArray = [
     "venueid": 906,
     "tourid": 110,
     "tourname": "TAB - Fall 2012 Traveler Tour",
-    "tour_when": "2012 Fall",
+    "tour_year": "2012 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -45806,7 +45808,7 @@ const showsDataArray = [
     "venueid": 963,
     "tourid": 110,
     "tourname": "TAB - Fall 2012 Traveler Tour",
-    "tour_when": "2012 Fall",
+    "tour_year": "2012 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -45821,7 +45823,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 110,
     "tourname": "TAB - Fall 2012 Traveler Tour",
-    "tour_when": "2012 Fall",
+    "tour_year": "2012 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -45836,7 +45838,7 @@ const showsDataArray = [
     "venueid": 1247,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -45851,7 +45853,7 @@ const showsDataArray = [
     "venueid": 190,
     "tourid": 110,
     "tourname": "TAB - Fall 2012 Traveler Tour",
-    "tour_when": "2012 Fall",
+    "tour_year": "2012 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -45866,7 +45868,7 @@ const showsDataArray = [
     "venueid": 1247,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -45881,7 +45883,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 110,
     "tourname": "TAB - Fall 2012 Traveler Tour",
-    "tour_when": "2012 Fall",
+    "tour_year": "2012 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -45896,7 +45898,7 @@ const showsDataArray = [
     "venueid": 1247,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -45911,7 +45913,7 @@ const showsDataArray = [
     "venueid": 1250,
     "tourid": 146,
     "tourname": "Page - The Meter Men w/Page McConnell Fall 2012",
-    "tour_when": "2012 Fall",
+    "tour_year": "2012 Fall",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -45926,7 +45928,7 @@ const showsDataArray = [
     "venueid": 770,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -45941,7 +45943,7 @@ const showsDataArray = [
     "venueid": 999,
     "tourid": 146,
     "tourname": "Page - The Meter Men w/Page McConnell Fall 2012",
-    "tour_when": "2012 Fall",
+    "tour_year": "2012 Fall",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -45956,7 +45958,7 @@ const showsDataArray = [
     "venueid": 999,
     "tourid": 146,
     "tourname": "Page - The Meter Men w/Page McConnell Fall 2012",
-    "tour_when": "2012 Fall",
+    "tour_year": "2012 Fall",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -45971,7 +45973,7 @@ const showsDataArray = [
     "venueid": 1251,
     "tourid": 146,
     "tourname": "Page - The Meter Men w/Page McConnell Fall 2012",
-    "tour_when": "2012 Fall",
+    "tour_year": "2012 Fall",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -45986,7 +45988,7 @@ const showsDataArray = [
     "venueid": 1170,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -46001,7 +46003,7 @@ const showsDataArray = [
     "venueid": 1257,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -46016,7 +46018,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 88,
     "tourname": "2012 NYE Run",
-    "tour_when": "2012 NYE",
+    "tour_year": "2012 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46031,7 +46033,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 88,
     "tourname": "2012 NYE Run",
-    "tour_when": "2012 NYE",
+    "tour_year": "2012 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46046,7 +46048,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 88,
     "tourname": "2012 NYE Run",
-    "tour_when": "2012 NYE",
+    "tour_year": "2012 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46061,7 +46063,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 88,
     "tourname": "2012 NYE Run",
-    "tour_when": "2012 NYE",
+    "tour_year": "2012 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46076,7 +46078,7 @@ const showsDataArray = [
     "venueid": 1267,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -46091,7 +46093,7 @@ const showsDataArray = [
     "venueid": 815,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -46106,7 +46108,7 @@ const showsDataArray = [
     "venueid": 1264,
     "tourid": 83,
     "tourname": "TAB - Winter 2013 Traveler Tour",
-    "tour_when": "2013 Winter",
+    "tour_year": "2013 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -46121,7 +46123,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -46136,7 +46138,7 @@ const showsDataArray = [
     "venueid": 811,
     "tourid": 83,
     "tourname": "TAB - Winter 2013 Traveler Tour",
-    "tour_when": "2013 Winter",
+    "tour_year": "2013 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -46151,7 +46153,7 @@ const showsDataArray = [
     "venueid": 791,
     "tourid": 83,
     "tourname": "TAB - Winter 2013 Traveler Tour",
-    "tour_when": "2013 Winter",
+    "tour_year": "2013 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -46166,7 +46168,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 83,
     "tourname": "TAB - Winter 2013 Traveler Tour",
-    "tour_when": "2013 Winter",
+    "tour_year": "2013 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -46181,7 +46183,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 83,
     "tourname": "TAB - Winter 2013 Traveler Tour",
-    "tour_when": "2013 Winter",
+    "tour_year": "2013 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -46196,7 +46198,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -46211,7 +46213,7 @@ const showsDataArray = [
     "venueid": 962,
     "tourid": 83,
     "tourname": "TAB - Winter 2013 Traveler Tour",
-    "tour_when": "2013 Winter",
+    "tour_year": "2013 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -46226,7 +46228,7 @@ const showsDataArray = [
     "venueid": 1265,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -46241,7 +46243,7 @@ const showsDataArray = [
     "venueid": 302,
     "tourid": 83,
     "tourname": "TAB - Winter 2013 Traveler Tour",
-    "tour_when": "2013 Winter",
+    "tour_year": "2013 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -46256,7 +46258,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -46271,7 +46273,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -46286,7 +46288,7 @@ const showsDataArray = [
     "venueid": 1276,
     "tourid": 147,
     "tourname": "Page - The Meter Men w/Page McConnell Spring 2013",
-    "tour_when": "2013 Spring",
+    "tour_year": "2013 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -46301,7 +46303,7 @@ const showsDataArray = [
     "venueid": 1269,
     "tourid": 147,
     "tourname": "Page - The Meter Men w/Page McConnell Spring 2013",
-    "tour_when": "2013 Spring",
+    "tour_year": "2013 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -46316,7 +46318,7 @@ const showsDataArray = [
     "venueid": 1270,
     "tourid": 147,
     "tourname": "Page - The Meter Men w/Page McConnell Spring 2013",
-    "tour_when": "2013 Spring",
+    "tour_year": "2013 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -46331,7 +46333,7 @@ const showsDataArray = [
     "venueid": 327,
     "tourid": 111,
     "tourname": "TAB - Spring 2013 Tour",
-    "tour_when": "2013 Spring",
+    "tour_year": "2013 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -46346,7 +46348,7 @@ const showsDataArray = [
     "venueid": 949,
     "tourid": 111,
     "tourname": "TAB - Spring 2013 Tour",
-    "tour_when": "2013 Spring",
+    "tour_year": "2013 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -46361,7 +46363,7 @@ const showsDataArray = [
     "venueid": 1277,
     "tourid": 168,
     "tourname": "Fish - Touchpants Spring 2013",
-    "tour_when": "2013 Spring",
+    "tour_year": "2013 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -46376,7 +46378,7 @@ const showsDataArray = [
     "venueid": 1229,
     "tourid": 168,
     "tourname": "Fish - Touchpants Spring 2013",
-    "tour_when": "2013 Spring",
+    "tour_year": "2013 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -46391,7 +46393,7 @@ const showsDataArray = [
     "venueid": 799,
     "tourid": 111,
     "tourname": "TAB - Spring 2013 Tour",
-    "tour_when": "2013 Spring",
+    "tour_year": "2013 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -46406,7 +46408,7 @@ const showsDataArray = [
     "venueid": 799,
     "tourid": 111,
     "tourname": "TAB - Spring 2013 Tour",
-    "tour_when": "2013 Spring",
+    "tour_year": "2013 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -46421,7 +46423,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 168,
     "tourname": "Fish - Touchpants Spring 2013",
-    "tour_when": "2013 Spring",
+    "tour_year": "2013 Spring",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -46436,7 +46438,7 @@ const showsDataArray = [
     "venueid": 1266,
     "tourid": 147,
     "tourname": "Page - The Meter Men w/Page McConnell Spring 2013",
-    "tour_when": "2013 Spring",
+    "tour_year": "2013 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -46451,7 +46453,7 @@ const showsDataArray = [
     "venueid": 1266,
     "tourid": 147,
     "tourname": "Page - The Meter Men w/Page McConnell Spring 2013",
-    "tour_when": "2013 Spring",
+    "tour_year": "2013 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -46466,7 +46468,7 @@ const showsDataArray = [
     "venueid": 1272,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -46481,7 +46483,7 @@ const showsDataArray = [
     "venueid": 797,
     "tourid": 147,
     "tourname": "Page - The Meter Men w/Page McConnell Spring 2013",
-    "tour_when": "2013 Spring",
+    "tour_year": "2013 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -46496,7 +46498,7 @@ const showsDataArray = [
     "venueid": 797,
     "tourid": 147,
     "tourname": "Page - The Meter Men w/Page McConnell Spring 2013",
-    "tour_when": "2013 Spring",
+    "tour_year": "2013 Spring",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -46511,7 +46513,7 @@ const showsDataArray = [
     "venueid": 1280,
     "tourid": 111,
     "tourname": "TAB - Spring 2013 Tour",
-    "tour_when": "2013 Spring",
+    "tour_year": "2013 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -46526,7 +46528,7 @@ const showsDataArray = [
     "venueid": 1268,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -46541,7 +46543,7 @@ const showsDataArray = [
     "venueid": 1281,
     "tourid": 111,
     "tourname": "TAB - Spring 2013 Tour",
-    "tour_when": "2013 Spring",
+    "tour_year": "2013 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -46556,7 +46558,7 @@ const showsDataArray = [
     "venueid": 1069,
     "tourid": 111,
     "tourname": "TAB - Spring 2013 Tour",
-    "tour_when": "2013 Spring",
+    "tour_year": "2013 Spring",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -46571,7 +46573,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -46586,7 +46588,7 @@ const showsDataArray = [
     "venueid": 1274,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46601,7 +46603,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46616,7 +46618,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46631,7 +46633,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46646,7 +46648,7 @@ const showsDataArray = [
     "venueid": 1275,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46661,7 +46663,7 @@ const showsDataArray = [
     "venueid": 398,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46676,7 +46678,7 @@ const showsDataArray = [
     "venueid": 499,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46691,7 +46693,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46706,7 +46708,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46721,7 +46723,7 @@ const showsDataArray = [
     "venueid": 768,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46736,7 +46738,7 @@ const showsDataArray = [
     "venueid": 768,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46751,7 +46753,7 @@ const showsDataArray = [
     "venueid": 1282,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -46766,7 +46768,7 @@ const showsDataArray = [
     "venueid": 933,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46781,7 +46783,7 @@ const showsDataArray = [
     "venueid": 933,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46796,7 +46798,7 @@ const showsDataArray = [
     "venueid": 933,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46811,7 +46813,7 @@ const showsDataArray = [
     "venueid": 1275,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46826,7 +46828,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46841,7 +46843,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46856,7 +46858,7 @@ const showsDataArray = [
     "venueid": 960,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46871,7 +46873,7 @@ const showsDataArray = [
     "venueid": 960,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46886,7 +46888,7 @@ const showsDataArray = [
     "venueid": 1249,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -46901,7 +46903,7 @@ const showsDataArray = [
     "venueid": 816,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46916,7 +46918,7 @@ const showsDataArray = [
     "venueid": 816,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46931,7 +46933,7 @@ const showsDataArray = [
     "venueid": 816,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46946,7 +46948,7 @@ const showsDataArray = [
     "venueid": 959,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46961,7 +46963,7 @@ const showsDataArray = [
     "venueid": 1285,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -46976,7 +46978,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -46991,7 +46993,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47006,7 +47008,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 85,
     "tourname": "2013 Summer Tour",
-    "tour_when": "2013 Summer",
+    "tour_year": "2013 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47021,7 +47023,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -47036,7 +47038,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -47051,7 +47053,7 @@ const showsDataArray = [
     "venueid": 1286,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -47066,7 +47068,7 @@ const showsDataArray = [
     "venueid": 1286,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -47081,7 +47083,7 @@ const showsDataArray = [
     "venueid": 1279,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -47096,7 +47098,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 86,
     "tourname": "2013 Fall Tour",
-    "tour_when": "2013 Fall",
+    "tour_year": "2013 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47111,7 +47113,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 86,
     "tourname": "2013 Fall Tour",
-    "tour_when": "2013 Fall",
+    "tour_year": "2013 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47126,7 +47128,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 86,
     "tourname": "2013 Fall Tour",
-    "tour_when": "2013 Fall",
+    "tour_year": "2013 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47141,7 +47143,7 @@ const showsDataArray = [
     "venueid": 429,
     "tourid": 86,
     "tourname": "2013 Fall Tour",
-    "tour_when": "2013 Fall",
+    "tour_year": "2013 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47156,7 +47158,7 @@ const showsDataArray = [
     "venueid": 742,
     "tourid": 86,
     "tourname": "2013 Fall Tour",
-    "tour_when": "2013 Fall",
+    "tour_year": "2013 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47171,7 +47173,7 @@ const showsDataArray = [
     "venueid": 1304,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -47186,7 +47188,7 @@ const showsDataArray = [
     "venueid": 781,
     "tourid": 86,
     "tourname": "2013 Fall Tour",
-    "tour_when": "2013 Fall",
+    "tour_year": "2013 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47201,7 +47203,7 @@ const showsDataArray = [
     "venueid": 781,
     "tourid": 86,
     "tourname": "2013 Fall Tour",
-    "tour_when": "2013 Fall",
+    "tour_year": "2013 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47216,7 +47218,7 @@ const showsDataArray = [
     "venueid": 1284,
     "tourid": 86,
     "tourname": "2013 Fall Tour",
-    "tour_when": "2013 Fall",
+    "tour_year": "2013 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47231,7 +47233,7 @@ const showsDataArray = [
     "venueid": 1283,
     "tourid": 86,
     "tourname": "2013 Fall Tour",
-    "tour_when": "2013 Fall",
+    "tour_year": "2013 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47246,7 +47248,7 @@ const showsDataArray = [
     "venueid": 777,
     "tourid": 86,
     "tourname": "2013 Fall Tour",
-    "tour_when": "2013 Fall",
+    "tour_year": "2013 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47261,7 +47263,7 @@ const showsDataArray = [
     "venueid": 777,
     "tourid": 86,
     "tourname": "2013 Fall Tour",
-    "tour_when": "2013 Fall",
+    "tour_year": "2013 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47276,7 +47278,7 @@ const showsDataArray = [
     "venueid": 777,
     "tourid": 86,
     "tourname": "2013 Fall Tour",
-    "tour_when": "2013 Fall",
+    "tour_year": "2013 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47291,7 +47293,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 169,
     "tourname": "2013 NYE Run",
-    "tour_when": "2013 NYE",
+    "tour_year": "2013 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47306,7 +47308,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 169,
     "tourname": "2013 NYE Run",
-    "tour_when": "2013 NYE",
+    "tour_year": "2013 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47321,7 +47323,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 169,
     "tourname": "2013 NYE Run",
-    "tour_when": "2013 NYE",
+    "tour_year": "2013 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47336,7 +47338,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 169,
     "tourname": "2013 NYE Run",
-    "tour_when": "2013 NYE",
+    "tour_year": "2013 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -47351,7 +47353,7 @@ const showsDataArray = [
     "venueid": 1298,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -47366,7 +47368,7 @@ const showsDataArray = [
     "venueid": 797,
     "tourid": 112,
     "tourname": "TAB - Winter 2014 Tour",
-    "tour_when": "2014 Winter",
+    "tour_year": "2014 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -47381,7 +47383,7 @@ const showsDataArray = [
     "venueid": 797,
     "tourid": 112,
     "tourname": "TAB - Winter 2014 Tour",
-    "tour_when": "2014 Winter",
+    "tour_year": "2014 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -47396,7 +47398,7 @@ const showsDataArray = [
     "venueid": 901,
     "tourid": 112,
     "tourname": "TAB - Winter 2014 Tour",
-    "tour_when": "2014 Winter",
+    "tour_year": "2014 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -47411,7 +47413,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47426,7 +47428,7 @@ const showsDataArray = [
     "venueid": 894,
     "tourid": 112,
     "tourname": "TAB - Winter 2014 Tour",
-    "tour_when": "2014 Winter",
+    "tour_year": "2014 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -47441,7 +47443,7 @@ const showsDataArray = [
     "venueid": 145,
     "tourid": 112,
     "tourname": "TAB - Winter 2014 Tour",
-    "tour_when": "2014 Winter",
+    "tour_year": "2014 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -47456,7 +47458,7 @@ const showsDataArray = [
     "venueid": 900,
     "tourid": 112,
     "tourname": "TAB - Winter 2014 Tour",
-    "tour_when": "2014 Winter",
+    "tour_year": "2014 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -47471,7 +47473,7 @@ const showsDataArray = [
     "venueid": 1287,
     "tourid": 112,
     "tourname": "TAB - Winter 2014 Tour",
-    "tour_when": "2014 Winter",
+    "tour_year": "2014 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -47486,7 +47488,7 @@ const showsDataArray = [
     "venueid": 1287,
     "tourid": 112,
     "tourname": "TAB - Winter 2014 Tour",
-    "tour_when": "2014 Winter",
+    "tour_year": "2014 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -47501,7 +47503,7 @@ const showsDataArray = [
     "venueid": 1288,
     "tourid": 112,
     "tourname": "TAB - Winter 2014 Tour",
-    "tour_when": "2014 Winter",
+    "tour_year": "2014 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -47516,7 +47518,7 @@ const showsDataArray = [
     "venueid": 1289,
     "tourid": 112,
     "tourname": "TAB - Winter 2014 Tour",
-    "tour_when": "2014 Winter",
+    "tour_year": "2014 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -47531,7 +47533,7 @@ const showsDataArray = [
     "venueid": 827,
     "tourid": 112,
     "tourname": "TAB - Winter 2014 Tour",
-    "tour_when": "2014 Winter",
+    "tour_year": "2014 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -47546,7 +47548,7 @@ const showsDataArray = [
     "venueid": 1290,
     "tourid": 112,
     "tourname": "TAB - Winter 2014 Tour",
-    "tour_when": "2014 Winter",
+    "tour_year": "2014 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -47561,7 +47563,7 @@ const showsDataArray = [
     "venueid": 903,
     "tourid": 112,
     "tourname": "TAB - Winter 2014 Tour",
-    "tour_when": "2014 Winter",
+    "tour_year": "2014 Winter",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -47576,7 +47578,7 @@ const showsDataArray = [
     "venueid": 792,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47591,7 +47593,7 @@ const showsDataArray = [
     "venueid": 1303,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47606,7 +47608,7 @@ const showsDataArray = [
     "venueid": 830,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47621,7 +47623,7 @@ const showsDataArray = [
     "venueid": 913,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47636,7 +47638,7 @@ const showsDataArray = [
     "venueid": 1305,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47651,7 +47653,7 @@ const showsDataArray = [
     "venueid": 1270,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47666,7 +47668,7 @@ const showsDataArray = [
     "venueid": 787,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47681,7 +47683,7 @@ const showsDataArray = [
     "venueid": 862,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47696,7 +47698,7 @@ const showsDataArray = [
     "venueid": 795,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47711,7 +47713,7 @@ const showsDataArray = [
     "venueid": 856,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47726,7 +47728,7 @@ const showsDataArray = [
     "venueid": 146,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47741,7 +47743,7 @@ const showsDataArray = [
     "venueid": 882,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47756,7 +47758,7 @@ const showsDataArray = [
     "venueid": 108,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47771,7 +47773,7 @@ const showsDataArray = [
     "venueid": 199,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47786,7 +47788,7 @@ const showsDataArray = [
     "venueid": 1293,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47801,7 +47803,7 @@ const showsDataArray = [
     "venueid": 1294,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47816,7 +47818,7 @@ const showsDataArray = [
     "venueid": 560,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47831,7 +47833,7 @@ const showsDataArray = [
     "venueid": 1295,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47846,7 +47848,7 @@ const showsDataArray = [
     "venueid": 1296,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47861,7 +47863,7 @@ const showsDataArray = [
     "venueid": 1297,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47876,7 +47878,7 @@ const showsDataArray = [
     "venueid": 792,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47891,7 +47893,7 @@ const showsDataArray = [
     "venueid": 1300,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47906,7 +47908,7 @@ const showsDataArray = [
     "venueid": 865,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47921,7 +47923,7 @@ const showsDataArray = [
     "venueid": 969,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47936,7 +47938,7 @@ const showsDataArray = [
     "venueid": 1299,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47951,7 +47953,7 @@ const showsDataArray = [
     "venueid": 1292,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47966,7 +47968,7 @@ const showsDataArray = [
     "venueid": 1292,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47981,7 +47983,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 89,
     "tourname": "Mike Gordon - Spring 2014 Overstep Tour",
-    "tour_when": "2014 Spring",
+    "tour_year": "2014 Spring",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -47996,7 +47998,7 @@ const showsDataArray = [
     "venueid": 897,
     "tourid": 113,
     "tourname": "TAB - Spring and Summer 2014 Tour",
-    "tour_when": "2014 Spring and Summer",
+    "tour_year": "2014 Spring and Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -48011,7 +48013,7 @@ const showsDataArray = [
     "venueid": 897,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -48026,7 +48028,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -48041,7 +48043,7 @@ const showsDataArray = [
     "venueid": 1266,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -48056,7 +48058,7 @@ const showsDataArray = [
     "venueid": 1272,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48071,7 +48073,7 @@ const showsDataArray = [
     "venueid": 1266,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -48086,7 +48088,7 @@ const showsDataArray = [
     "venueid": 1267,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -48101,7 +48103,7 @@ const showsDataArray = [
     "venueid": 1120,
     "tourid": 113,
     "tourname": "TAB - Spring and Summer 2014 Tour",
-    "tour_when": "2014 Spring and Summer",
+    "tour_year": "2014 Spring and Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -48116,7 +48118,7 @@ const showsDataArray = [
     "venueid": 926,
     "tourid": 113,
     "tourname": "TAB - Spring and Summer 2014 Tour",
-    "tour_when": "2014 Spring and Summer",
+    "tour_year": "2014 Spring and Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -48131,7 +48133,7 @@ const showsDataArray = [
     "venueid": 1069,
     "tourid": 113,
     "tourname": "TAB - Spring and Summer 2014 Tour",
-    "tour_when": "2014 Spring and Summer",
+    "tour_year": "2014 Spring and Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -48146,7 +48148,7 @@ const showsDataArray = [
     "venueid": 1164,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -48161,7 +48163,7 @@ const showsDataArray = [
     "venueid": 228,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48176,7 +48178,7 @@ const showsDataArray = [
     "venueid": 228,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48191,7 +48193,7 @@ const showsDataArray = [
     "venueid": 1306,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48206,7 +48208,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48221,7 +48223,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48236,7 +48238,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48251,7 +48253,7 @@ const showsDataArray = [
     "venueid": 213,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48266,7 +48268,7 @@ const showsDataArray = [
     "venueid": 213,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48281,7 +48283,7 @@ const showsDataArray = [
     "venueid": 1307,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48296,7 +48298,7 @@ const showsDataArray = [
     "venueid": 1307,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48311,7 +48313,7 @@ const showsDataArray = [
     "venueid": 1307,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48326,7 +48328,7 @@ const showsDataArray = [
     "venueid": 1311,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48341,7 +48343,7 @@ const showsDataArray = [
     "venueid": 766,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48356,7 +48358,7 @@ const showsDataArray = [
     "venueid": 810,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48371,7 +48373,7 @@ const showsDataArray = [
     "venueid": 933,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48386,7 +48388,7 @@ const showsDataArray = [
     "venueid": 933,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48401,7 +48403,7 @@ const showsDataArray = [
     "venueid": 933,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48416,7 +48418,7 @@ const showsDataArray = [
     "venueid": 1317,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -48431,7 +48433,7 @@ const showsDataArray = [
     "venueid": 1308,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48446,7 +48448,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48461,7 +48463,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48476,7 +48478,7 @@ const showsDataArray = [
     "venueid": 765,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48491,7 +48493,7 @@ const showsDataArray = [
     "venueid": 765,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48506,7 +48508,7 @@ const showsDataArray = [
     "venueid": 1309,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48521,7 +48523,7 @@ const showsDataArray = [
     "venueid": 418,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48536,7 +48538,7 @@ const showsDataArray = [
     "venueid": 768,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48551,7 +48553,7 @@ const showsDataArray = [
     "venueid": 1301,
     "tourid": 113,
     "tourname": "TAB - Spring and Summer 2014 Tour",
-    "tour_when": "2014 Spring and Summer",
+    "tour_year": "2014 Spring and Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -48566,7 +48568,7 @@ const showsDataArray = [
     "venueid": 1301,
     "tourid": 113,
     "tourname": "TAB - Spring and Summer 2014 Tour",
-    "tour_when": "2014 Spring and Summer",
+    "tour_year": "2014 Spring and Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -48581,7 +48583,7 @@ const showsDataArray = [
     "venueid": 896,
     "tourid": 113,
     "tourname": "TAB - Spring and Summer 2014 Tour",
-    "tour_when": "2014 Spring and Summer",
+    "tour_year": "2014 Spring and Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -48596,7 +48598,7 @@ const showsDataArray = [
     "venueid": 1271,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -48611,7 +48613,7 @@ const showsDataArray = [
     "venueid": 1271,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -48626,7 +48628,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48641,7 +48643,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48656,7 +48658,7 @@ const showsDataArray = [
     "venueid": 1271,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -48671,7 +48673,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 90,
     "tourname": "2014 Summer",
-    "tour_when": "2014 Summer",
+    "tour_year": "2014 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48686,7 +48688,7 @@ const showsDataArray = [
     "venueid": 1271,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -48701,7 +48703,7 @@ const showsDataArray = [
     "venueid": 371,
     "tourid": 114,
     "tourname": "Trey - Fall 2014 Symphony Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -48716,7 +48718,7 @@ const showsDataArray = [
     "venueid": 1310,
     "tourid": 114,
     "tourname": "Trey - Fall 2014 Symphony Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -48731,7 +48733,7 @@ const showsDataArray = [
     "venueid": 959,
     "tourid": 114,
     "tourname": "Trey - Fall 2014 Symphony Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -48746,7 +48748,7 @@ const showsDataArray = [
     "venueid": 1312,
     "tourid": 92,
     "tourname": "2014 Fall Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48761,7 +48763,7 @@ const showsDataArray = [
     "venueid": 721,
     "tourid": 92,
     "tourname": "2014 Fall Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48776,7 +48778,7 @@ const showsDataArray = [
     "venueid": 296,
     "tourid": 92,
     "tourname": "2014 Fall Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48791,7 +48793,7 @@ const showsDataArray = [
     "venueid": 296,
     "tourid": 92,
     "tourname": "2014 Fall Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48806,7 +48808,7 @@ const showsDataArray = [
     "venueid": 1314,
     "tourid": 92,
     "tourname": "2014 Fall Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48821,7 +48823,7 @@ const showsDataArray = [
     "venueid": 1315,
     "tourid": 92,
     "tourname": "2014 Fall Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48836,7 +48838,7 @@ const showsDataArray = [
     "venueid": 1249,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -48851,7 +48853,7 @@ const showsDataArray = [
     "venueid": 1319,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -48866,7 +48868,7 @@ const showsDataArray = [
     "venueid": 816,
     "tourid": 92,
     "tourname": "2014 Fall Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48881,7 +48883,7 @@ const showsDataArray = [
     "venueid": 816,
     "tourid": 92,
     "tourname": "2014 Fall Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48896,7 +48898,7 @@ const showsDataArray = [
     "venueid": 816,
     "tourid": 92,
     "tourname": "2014 Fall Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48911,7 +48913,7 @@ const showsDataArray = [
     "venueid": 1316,
     "tourid": 92,
     "tourname": "2014 Fall Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48926,7 +48928,7 @@ const showsDataArray = [
     "venueid": 1316,
     "tourid": 92,
     "tourname": "2014 Fall Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48941,7 +48943,7 @@ const showsDataArray = [
     "venueid": 1316,
     "tourid": 92,
     "tourname": "2014 Fall Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -48956,7 +48958,7 @@ const showsDataArray = [
     "venueid": 286,
     "tourid": 115,
     "tourname": "TAB - Fall 2014 Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -48971,7 +48973,7 @@ const showsDataArray = [
     "venueid": 795,
     "tourid": 115,
     "tourname": "TAB - Fall 2014 Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -48986,7 +48988,7 @@ const showsDataArray = [
     "venueid": 906,
     "tourid": 115,
     "tourname": "TAB - Fall 2014 Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -49001,7 +49003,7 @@ const showsDataArray = [
     "venueid": 787,
     "tourid": 115,
     "tourname": "TAB - Fall 2014 Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -49016,7 +49018,7 @@ const showsDataArray = [
     "venueid": 787,
     "tourid": 115,
     "tourname": "TAB - Fall 2014 Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -49031,7 +49033,7 @@ const showsDataArray = [
     "venueid": 1321,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -49046,7 +49048,7 @@ const showsDataArray = [
     "venueid": 190,
     "tourid": 115,
     "tourname": "TAB - Fall 2014 Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -49061,7 +49063,7 @@ const showsDataArray = [
     "venueid": 190,
     "tourid": 115,
     "tourname": "TAB - Fall 2014 Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -49076,7 +49078,7 @@ const showsDataArray = [
     "venueid": 791,
     "tourid": 115,
     "tourname": "TAB - Fall 2014 Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -49091,7 +49093,7 @@ const showsDataArray = [
     "venueid": 1318,
     "tourid": 115,
     "tourname": "TAB - Fall 2014 Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -49106,7 +49108,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 115,
     "tourname": "TAB - Fall 2014 Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -49121,7 +49123,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 115,
     "tourname": "TAB - Fall 2014 Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -49136,7 +49138,7 @@ const showsDataArray = [
     "venueid": 317,
     "tourid": 115,
     "tourname": "TAB - Fall 2014 Tour",
-    "tour_when": "2014 Fall",
+    "tour_year": "2014 Fall",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -49151,7 +49153,7 @@ const showsDataArray = [
     "venueid": 274,
     "tourid": 93,
     "tourname": "2014/2015 NYE Run",
-    "tour_when": "2014-15 NYE",
+    "tour_year": "2014-15 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49166,7 +49168,7 @@ const showsDataArray = [
     "venueid": 1395,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -49181,7 +49183,7 @@ const showsDataArray = [
     "venueid": 274,
     "tourid": 93,
     "tourname": "2014/2015 NYE Run",
-    "tour_when": "2014-15 NYE",
+    "tour_year": "2014-15 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49196,7 +49198,7 @@ const showsDataArray = [
     "venueid": 1395,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -49211,7 +49213,7 @@ const showsDataArray = [
     "venueid": 274,
     "tourid": 93,
     "tourname": "2014/2015 NYE Run",
-    "tour_when": "2014-15 NYE",
+    "tour_year": "2014-15 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49226,7 +49228,7 @@ const showsDataArray = [
     "venueid": 274,
     "tourid": 93,
     "tourname": "2014/2015 NYE Run",
-    "tour_when": "2014-15 NYE",
+    "tour_year": "2014-15 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49241,7 +49243,7 @@ const showsDataArray = [
     "venueid": 1298,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -49256,7 +49258,7 @@ const showsDataArray = [
     "venueid": 1343,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -49271,7 +49273,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -49286,7 +49288,7 @@ const showsDataArray = [
     "venueid": 1330,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -49301,7 +49303,7 @@ const showsDataArray = [
     "venueid": 1320,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -49316,7 +49318,7 @@ const showsDataArray = [
     "venueid": 1320,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -49331,7 +49333,7 @@ const showsDataArray = [
     "venueid": 1249,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -49346,7 +49348,7 @@ const showsDataArray = [
     "venueid": 1331,
     "tourid": 139,
     "tourname": "Mike Gordon - Summer 2015 Tour",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -49361,7 +49363,7 @@ const showsDataArray = [
     "venueid": 895,
     "tourid": 139,
     "tourname": "Mike Gordon - Summer 2015 Tour",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -49376,7 +49378,7 @@ const showsDataArray = [
     "venueid": 1332,
     "tourid": 139,
     "tourname": "Mike Gordon - Summer 2015 Tour",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -49391,7 +49393,7 @@ const showsDataArray = [
     "venueid": 894,
     "tourid": 139,
     "tourname": "Mike Gordon - Summer 2015 Tour",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -49406,7 +49408,7 @@ const showsDataArray = [
     "venueid": 311,
     "tourid": 139,
     "tourname": "Mike Gordon - Summer 2015 Tour",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -49421,7 +49423,7 @@ const showsDataArray = [
     "venueid": 1340,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -49436,7 +49438,7 @@ const showsDataArray = [
     "venueid": 1333,
     "tourid": 139,
     "tourname": "Mike Gordon - Summer 2015 Tour",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -49451,7 +49453,7 @@ const showsDataArray = [
     "venueid": 322,
     "tourid": 139,
     "tourname": "Mike Gordon - Summer 2015 Tour",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -49466,7 +49468,7 @@ const showsDataArray = [
     "venueid": 1120,
     "tourid": 139,
     "tourname": "Mike Gordon - Summer 2015 Tour",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -49481,7 +49483,7 @@ const showsDataArray = [
     "venueid": 851,
     "tourid": 139,
     "tourname": "Mike Gordon - Summer 2015 Tour",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -49496,7 +49498,7 @@ const showsDataArray = [
     "venueid": 1334,
     "tourid": 139,
     "tourname": "Mike Gordon - Summer 2015 Tour",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -49511,7 +49513,7 @@ const showsDataArray = [
     "venueid": 968,
     "tourid": 139,
     "tourname": "Mike Gordon - Summer 2015 Tour",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -49526,7 +49528,7 @@ const showsDataArray = [
     "venueid": 1335,
     "tourid": 139,
     "tourname": "Mike Gordon - Summer 2015 Tour",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -49541,7 +49543,7 @@ const showsDataArray = [
     "venueid": 1155,
     "tourid": 139,
     "tourname": "Mike Gordon - Summer 2015 Tour",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -49556,7 +49558,7 @@ const showsDataArray = [
     "venueid": 1336,
     "tourid": 139,
     "tourname": "Mike Gordon - Summer 2015 Tour",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -49571,7 +49573,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 139,
     "tourname": "Mike Gordon - Summer 2015 Tour",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -49586,7 +49588,7 @@ const showsDataArray = [
     "venueid": 1337,
     "tourid": 140,
     "tourname": "Trey - Fare Thee Well",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -49601,7 +49603,7 @@ const showsDataArray = [
     "venueid": 1270,
     "tourid": 139,
     "tourname": "Mike Gordon - Summer 2015 Tour",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -49616,7 +49618,7 @@ const showsDataArray = [
     "venueid": 1337,
     "tourid": 140,
     "tourname": "Trey - Fare Thee Well",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -49631,7 +49633,7 @@ const showsDataArray = [
     "venueid": 1322,
     "tourid": 140,
     "tourname": "Trey - Fare Thee Well",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -49646,7 +49648,7 @@ const showsDataArray = [
     "venueid": 1322,
     "tourid": 140,
     "tourname": "Trey - Fare Thee Well",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -49661,7 +49663,7 @@ const showsDataArray = [
     "venueid": 1322,
     "tourid": 140,
     "tourname": "Trey - Fare Thee Well",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -49676,7 +49678,7 @@ const showsDataArray = [
     "venueid": 1325,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49691,7 +49693,7 @@ const showsDataArray = [
     "venueid": 1325,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49706,7 +49708,7 @@ const showsDataArray = [
     "venueid": 247,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49721,7 +49723,7 @@ const showsDataArray = [
     "venueid": 1314,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49736,7 +49738,7 @@ const showsDataArray = [
     "venueid": 1338,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -49751,7 +49753,7 @@ const showsDataArray = [
     "venueid": 1326,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49766,7 +49768,7 @@ const showsDataArray = [
     "venueid": 1327,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49781,7 +49783,7 @@ const showsDataArray = [
     "venueid": 1224,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49796,7 +49798,7 @@ const showsDataArray = [
     "venueid": 1224,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49811,7 +49813,7 @@ const showsDataArray = [
     "venueid": 1328,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49826,7 +49828,7 @@ const showsDataArray = [
     "venueid": 1329,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49841,7 +49843,7 @@ const showsDataArray = [
     "venueid": 1225,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49856,7 +49858,7 @@ const showsDataArray = [
     "venueid": 223,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49871,7 +49873,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49886,7 +49888,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49901,7 +49903,7 @@ const showsDataArray = [
     "venueid": 213,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49916,7 +49918,7 @@ const showsDataArray = [
     "venueid": 1339,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -49931,7 +49933,7 @@ const showsDataArray = [
     "venueid": 213,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49946,7 +49948,7 @@ const showsDataArray = [
     "venueid": 456,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49961,7 +49963,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49976,7 +49978,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -49991,7 +49993,7 @@ const showsDataArray = [
     "venueid": 958,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50006,7 +50008,7 @@ const showsDataArray = [
     "venueid": 958,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50021,7 +50023,7 @@ const showsDataArray = [
     "venueid": 958,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50036,7 +50038,7 @@ const showsDataArray = [
     "venueid": 958,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50051,7 +50053,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50066,7 +50068,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50081,7 +50083,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 94,
     "tourname": "2015 Summer",
-    "tour_when": "2015 Summer",
+    "tour_year": "2015 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50096,7 +50098,7 @@ const showsDataArray = [
     "venueid": 1352,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -50111,7 +50113,7 @@ const showsDataArray = [
     "venueid": 876,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -50126,7 +50128,7 @@ const showsDataArray = [
     "venueid": 1351,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -50141,7 +50143,7 @@ const showsDataArray = [
     "venueid": 876,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -50156,7 +50158,7 @@ const showsDataArray = [
     "venueid": 1353,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -50171,7 +50173,7 @@ const showsDataArray = [
     "venueid": 1347,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -50186,7 +50188,7 @@ const showsDataArray = [
     "venueid": 1347,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -50201,7 +50203,7 @@ const showsDataArray = [
     "venueid": 1354,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -50216,7 +50218,7 @@ const showsDataArray = [
     "venueid": 1345,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -50231,7 +50233,7 @@ const showsDataArray = [
     "venueid": 1345,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -50246,7 +50248,7 @@ const showsDataArray = [
     "venueid": 889,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -50261,7 +50263,7 @@ const showsDataArray = [
     "venueid": 1359,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -50276,7 +50278,7 @@ const showsDataArray = [
     "venueid": 135,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -50291,7 +50293,7 @@ const showsDataArray = [
     "venueid": 799,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -50306,7 +50308,7 @@ const showsDataArray = [
     "venueid": 799,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -50321,7 +50323,7 @@ const showsDataArray = [
     "venueid": 949,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -50336,7 +50338,7 @@ const showsDataArray = [
     "venueid": 1057,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -50351,7 +50353,7 @@ const showsDataArray = [
     "venueid": 1348,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -50366,7 +50368,7 @@ const showsDataArray = [
     "venueid": 808,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -50381,7 +50383,7 @@ const showsDataArray = [
     "venueid": 808,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -50396,7 +50398,7 @@ const showsDataArray = [
     "venueid": 424,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -50411,7 +50413,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 171,
     "tourname": "2015/16 New Year's Run",
-    "tour_when": "2015-16 NYE",
+    "tour_year": "2015-16 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50426,7 +50428,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 171,
     "tourname": "2015/16 New Year's Run",
-    "tour_when": "2015-16 NYE",
+    "tour_year": "2015-16 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50441,7 +50443,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 171,
     "tourname": "2015/16 New Year's Run",
-    "tour_when": "2015-16 NYE",
+    "tour_year": "2015-16 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50456,7 +50458,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 171,
     "tourname": "2015/16 New Year's Run",
-    "tour_when": "2015-16 NYE",
+    "tour_year": "2015-16 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50471,7 +50473,7 @@ const showsDataArray = [
     "venueid": 1361,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -50486,7 +50488,7 @@ const showsDataArray = [
     "venueid": 1360,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -50501,7 +50503,7 @@ const showsDataArray = [
     "venueid": 1349,
     "tourid": 172,
     "tourname": "Mexico 2016",
-    "tour_when": "2016 January",
+    "tour_year": "2016 January",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50516,7 +50518,7 @@ const showsDataArray = [
     "venueid": 1349,
     "tourid": 172,
     "tourname": "Mexico 2016",
-    "tour_when": "2016 January",
+    "tour_year": "2016 January",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50531,7 +50533,7 @@ const showsDataArray = [
     "venueid": 1349,
     "tourid": 172,
     "tourname": "Mexico 2016",
-    "tour_when": "2016 January",
+    "tour_year": "2016 January",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50546,7 +50548,7 @@ const showsDataArray = [
     "venueid": 1174,
     "tourid": 170,
     "tourname": "Mike Gordon - 2016 Winter Tour",
-    "tour_when": "2016 Winter",
+    "tour_year": "2016 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -50561,7 +50563,7 @@ const showsDataArray = [
     "venueid": 1355,
     "tourid": 170,
     "tourname": "Mike Gordon - 2016 Winter Tour",
-    "tour_when": "2016 Winter",
+    "tour_year": "2016 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -50576,7 +50578,7 @@ const showsDataArray = [
     "venueid": 1356,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -50591,7 +50593,7 @@ const showsDataArray = [
     "venueid": 1013,
     "tourid": 170,
     "tourname": "Mike Gordon - 2016 Winter Tour",
-    "tour_when": "2016 Winter",
+    "tour_year": "2016 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -50606,7 +50608,7 @@ const showsDataArray = [
     "venueid": 890,
     "tourid": 170,
     "tourname": "Mike Gordon - 2016 Winter Tour",
-    "tour_when": "2016 Winter",
+    "tour_year": "2016 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -50621,7 +50623,7 @@ const showsDataArray = [
     "venueid": 1357,
     "tourid": 170,
     "tourname": "Mike Gordon - 2016 Winter Tour",
-    "tour_when": "2016 Winter",
+    "tour_year": "2016 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -50636,7 +50638,7 @@ const showsDataArray = [
     "venueid": 1358,
     "tourid": 170,
     "tourname": "Mike Gordon - 2016 Winter Tour",
-    "tour_when": "2016 Winter",
+    "tour_year": "2016 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -50651,7 +50653,7 @@ const showsDataArray = [
     "venueid": 560,
     "tourid": 170,
     "tourname": "Mike Gordon - 2016 Winter Tour",
-    "tour_when": "2016 Winter",
+    "tour_year": "2016 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -50666,7 +50668,7 @@ const showsDataArray = [
     "venueid": 949,
     "tourid": 170,
     "tourname": "Mike Gordon - 2016 Winter Tour",
-    "tour_when": "2016 Winter",
+    "tour_year": "2016 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -50681,7 +50683,7 @@ const showsDataArray = [
     "venueid": 1363,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -50696,7 +50698,7 @@ const showsDataArray = [
     "venueid": 1296,
     "tourid": 170,
     "tourname": "Mike Gordon - 2016 Winter Tour",
-    "tour_when": "2016 Winter",
+    "tour_year": "2016 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -50711,7 +50713,7 @@ const showsDataArray = [
     "venueid": 1364,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -50726,7 +50728,7 @@ const showsDataArray = [
     "venueid": 1365,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -50741,7 +50743,7 @@ const showsDataArray = [
     "venueid": 1293,
     "tourid": 170,
     "tourname": "Mike Gordon - 2016 Winter Tour",
-    "tour_when": "2016 Winter",
+    "tour_year": "2016 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -50756,7 +50758,7 @@ const showsDataArray = [
     "venueid": 1075,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -50771,7 +50773,7 @@ const showsDataArray = [
     "venueid": 547,
     "tourid": 170,
     "tourname": "Mike Gordon - 2016 Winter Tour",
-    "tour_when": "2016 Winter",
+    "tour_year": "2016 Winter",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -50786,7 +50788,7 @@ const showsDataArray = [
     "venueid": 1372,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -50801,7 +50803,7 @@ const showsDataArray = [
     "venueid": 791,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -50816,7 +50818,7 @@ const showsDataArray = [
     "venueid": 1373,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -50831,7 +50833,7 @@ const showsDataArray = [
     "venueid": 1410,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -50846,7 +50848,7 @@ const showsDataArray = [
     "venueid": 1375,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -50861,7 +50863,7 @@ const showsDataArray = [
     "venueid": 1374,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -50876,7 +50878,7 @@ const showsDataArray = [
     "venueid": 1376,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -50891,7 +50893,7 @@ const showsDataArray = [
     "venueid": 1377,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -50906,7 +50908,7 @@ const showsDataArray = [
     "venueid": 1366,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50921,7 +50923,7 @@ const showsDataArray = [
     "venueid": 1367,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50936,7 +50938,7 @@ const showsDataArray = [
     "venueid": 1367,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50951,7 +50953,7 @@ const showsDataArray = [
     "venueid": 1194,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50966,7 +50968,7 @@ const showsDataArray = [
     "venueid": 213,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50981,7 +50983,7 @@ const showsDataArray = [
     "venueid": 213,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -50996,7 +50998,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51011,7 +51013,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51026,7 +51028,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51041,7 +51043,7 @@ const showsDataArray = [
     "venueid": 1368,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51056,7 +51058,7 @@ const showsDataArray = [
     "venueid": 1306,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51071,7 +51073,7 @@ const showsDataArray = [
     "venueid": 1369,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51086,7 +51088,7 @@ const showsDataArray = [
     "venueid": 1370,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51101,7 +51103,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51116,7 +51118,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51131,7 +51133,7 @@ const showsDataArray = [
     "venueid": 1249,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51146,7 +51148,7 @@ const showsDataArray = [
     "venueid": 816,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51161,7 +51163,7 @@ const showsDataArray = [
     "venueid": 816,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51176,7 +51178,7 @@ const showsDataArray = [
     "venueid": 816,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51191,7 +51193,7 @@ const showsDataArray = [
     "venueid": 1314,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51206,7 +51208,7 @@ const showsDataArray = [
     "venueid": 1315,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51221,7 +51223,7 @@ const showsDataArray = [
     "venueid": 876,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -51236,7 +51238,7 @@ const showsDataArray = [
     "venueid": 1378,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -51251,7 +51253,7 @@ const showsDataArray = [
     "venueid": 1301,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -51266,7 +51268,7 @@ const showsDataArray = [
     "venueid": 2,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -51281,7 +51283,7 @@ const showsDataArray = [
     "venueid": 1286,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51296,7 +51298,7 @@ const showsDataArray = [
     "venueid": 1286,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51311,7 +51313,7 @@ const showsDataArray = [
     "venueid": 1286,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -51326,7 +51328,7 @@ const showsDataArray = [
     "venueid": 1286,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51341,7 +51343,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51356,7 +51358,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51371,7 +51373,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 173,
     "tourname": "2016 Summer Tour",
-    "tour_when": "2016 Summer",
+    "tour_year": "2016 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51386,7 +51388,7 @@ const showsDataArray = [
     "venueid": 1380,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51401,7 +51403,7 @@ const showsDataArray = [
     "venueid": 1311,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51416,7 +51418,7 @@ const showsDataArray = [
     "venueid": 698,
     "tourid": 174,
     "tourname": "2016 Fall Tour",
-    "tour_when": "2016 Fall",
+    "tour_year": "2016 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51431,7 +51433,7 @@ const showsDataArray = [
     "venueid": 698,
     "tourid": 174,
     "tourname": "2016 Fall Tour",
-    "tour_when": "2016 Fall",
+    "tour_year": "2016 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51446,7 +51448,7 @@ const showsDataArray = [
     "venueid": 1379,
     "tourid": 174,
     "tourname": "2016 Fall Tour",
-    "tour_when": "2016 Fall",
+    "tour_year": "2016 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51461,7 +51463,7 @@ const showsDataArray = [
     "venueid": 1329,
     "tourid": 174,
     "tourname": "2016 Fall Tour",
-    "tour_when": "2016 Fall",
+    "tour_year": "2016 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51476,7 +51478,7 @@ const showsDataArray = [
     "venueid": 1329,
     "tourid": 174,
     "tourname": "2016 Fall Tour",
-    "tour_when": "2016 Fall",
+    "tour_year": "2016 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51491,7 +51493,7 @@ const showsDataArray = [
     "venueid": 768,
     "tourid": 174,
     "tourname": "2016 Fall Tour",
-    "tour_when": "2016 Fall",
+    "tour_year": "2016 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51506,7 +51508,7 @@ const showsDataArray = [
     "venueid": 768,
     "tourid": 174,
     "tourname": "2016 Fall Tour",
-    "tour_when": "2016 Fall",
+    "tour_year": "2016 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51521,7 +51523,7 @@ const showsDataArray = [
     "venueid": 1327,
     "tourid": 174,
     "tourname": "2016 Fall Tour",
-    "tour_when": "2016 Fall",
+    "tour_year": "2016 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51536,7 +51538,7 @@ const showsDataArray = [
     "venueid": 1327,
     "tourid": 174,
     "tourname": "2016 Fall Tour",
-    "tour_when": "2016 Fall",
+    "tour_year": "2016 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51551,7 +51553,7 @@ const showsDataArray = [
     "venueid": 1316,
     "tourid": 174,
     "tourname": "2016 Fall Tour",
-    "tour_when": "2016 Fall",
+    "tour_year": "2016 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51566,7 +51568,7 @@ const showsDataArray = [
     "venueid": 1316,
     "tourid": 174,
     "tourname": "2016 Fall Tour",
-    "tour_when": "2016 Fall",
+    "tour_year": "2016 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51581,7 +51583,7 @@ const showsDataArray = [
     "venueid": 1316,
     "tourid": 174,
     "tourname": "2016 Fall Tour",
-    "tour_when": "2016 Fall",
+    "tour_year": "2016 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51596,7 +51598,7 @@ const showsDataArray = [
     "venueid": 1316,
     "tourid": 174,
     "tourname": "2016 Fall Tour",
-    "tour_when": "2016 Fall",
+    "tour_year": "2016 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51611,7 +51613,7 @@ const showsDataArray = [
     "venueid": 1381,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51626,7 +51628,7 @@ const showsDataArray = [
     "venueid": 1386,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -51641,7 +51643,7 @@ const showsDataArray = [
     "venueid": 883,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51656,7 +51658,7 @@ const showsDataArray = [
     "venueid": 856,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51671,7 +51673,7 @@ const showsDataArray = [
     "venueid": 853,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51686,7 +51688,7 @@ const showsDataArray = [
     "venueid": 1387,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51701,7 +51703,7 @@ const showsDataArray = [
     "venueid": 851,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51716,7 +51718,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51731,7 +51733,7 @@ const showsDataArray = [
     "venueid": 968,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51746,7 +51748,7 @@ const showsDataArray = [
     "venueid": 1270,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51761,7 +51763,7 @@ const showsDataArray = [
     "venueid": 1382,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51776,7 +51778,7 @@ const showsDataArray = [
     "venueid": 862,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51791,7 +51793,7 @@ const showsDataArray = [
     "venueid": 1383,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51806,7 +51808,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51821,7 +51823,7 @@ const showsDataArray = [
     "venueid": 1384,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51836,7 +51838,7 @@ const showsDataArray = [
     "venueid": 1384,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51851,7 +51853,7 @@ const showsDataArray = [
     "venueid": 1384,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -51866,7 +51868,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 175,
     "tourname": "2016 NYE Run",
-    "tour_when": "2016 NYE",
+    "tour_year": "2016 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51881,7 +51883,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 175,
     "tourname": "2016 NYE Run",
-    "tour_when": "2016 NYE",
+    "tour_year": "2016 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51896,7 +51898,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 175,
     "tourname": "2016 NYE Run",
-    "tour_when": "2016 NYE",
+    "tour_year": "2016 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51911,7 +51913,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 175,
     "tourname": "2016 NYE Run",
-    "tour_when": "2016 NYE",
+    "tour_year": "2016 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51926,7 +51928,7 @@ const showsDataArray = [
     "venueid": 1349,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51941,7 +51943,7 @@ const showsDataArray = [
     "venueid": 1349,
     "tourid": 177,
     "tourname": "Mexico 2017",
-    "tour_when": "2017 January",
+    "tour_year": "2017 January",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51956,7 +51958,7 @@ const showsDataArray = [
     "venueid": 1349,
     "tourid": 177,
     "tourname": "Mexico 2017",
-    "tour_when": "2017 January",
+    "tour_year": "2017 January",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51971,7 +51973,7 @@ const showsDataArray = [
     "venueid": 1349,
     "tourid": 177,
     "tourname": "Mexico 2017",
-    "tour_when": "2017 January",
+    "tour_year": "2017 January",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -51986,7 +51988,7 @@ const showsDataArray = [
     "venueid": 291,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -52001,7 +52003,7 @@ const showsDataArray = [
     "venueid": 1155,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52016,7 +52018,7 @@ const showsDataArray = [
     "venueid": 995,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52031,7 +52033,7 @@ const showsDataArray = [
     "venueid": 77,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52046,7 +52048,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52061,7 +52063,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52076,7 +52078,7 @@ const showsDataArray = [
     "venueid": 903,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52091,7 +52093,7 @@ const showsDataArray = [
     "venueid": 1388,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52106,7 +52108,7 @@ const showsDataArray = [
     "venueid": 897,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52121,7 +52123,7 @@ const showsDataArray = [
     "venueid": 897,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52136,7 +52138,7 @@ const showsDataArray = [
     "venueid": 1272,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52151,7 +52153,7 @@ const showsDataArray = [
     "venueid": 1389,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52166,7 +52168,7 @@ const showsDataArray = [
     "venueid": 1390,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52181,7 +52183,7 @@ const showsDataArray = [
     "venueid": 40,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -52196,7 +52198,7 @@ const showsDataArray = [
     "venueid": 1391,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52211,7 +52213,7 @@ const showsDataArray = [
     "venueid": 894,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52226,7 +52228,7 @@ const showsDataArray = [
     "venueid": 1290,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52241,7 +52243,7 @@ const showsDataArray = [
     "venueid": 1392,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52256,7 +52258,7 @@ const showsDataArray = [
     "venueid": 1264,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52271,7 +52273,7 @@ const showsDataArray = [
     "venueid": 1281,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -52286,7 +52288,7 @@ const showsDataArray = [
     "venueid": 1394,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52301,7 +52303,7 @@ const showsDataArray = [
     "venueid": 1281,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52316,7 +52318,7 @@ const showsDataArray = [
     "venueid": 1069,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -52331,7 +52333,7 @@ const showsDataArray = [
     "venueid": 1069,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52346,7 +52348,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52361,7 +52363,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52376,7 +52378,7 @@ const showsDataArray = [
     "venueid": 1397,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52391,7 +52393,7 @@ const showsDataArray = [
     "venueid": 1393,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52406,7 +52408,7 @@ const showsDataArray = [
     "venueid": 1015,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -52421,7 +52423,7 @@ const showsDataArray = [
     "venueid": 1015,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52436,7 +52438,7 @@ const showsDataArray = [
     "venueid": 1399,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52451,7 +52453,7 @@ const showsDataArray = [
     "venueid": 1399,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52466,7 +52468,7 @@ const showsDataArray = [
     "venueid": 1399,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52481,7 +52483,7 @@ const showsDataArray = [
     "venueid": 526,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52496,7 +52498,7 @@ const showsDataArray = [
     "venueid": 1396,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52511,7 +52513,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52526,7 +52528,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52541,7 +52543,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52556,7 +52558,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52571,7 +52573,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52586,7 +52588,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52601,7 +52603,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52616,7 +52618,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52631,7 +52633,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52646,7 +52648,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52661,7 +52663,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52676,7 +52678,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52691,7 +52693,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52706,7 +52708,7 @@ const showsDataArray = [
     "venueid": 1407,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -52721,7 +52723,7 @@ const showsDataArray = [
     "venueid": 1301,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -52736,7 +52738,7 @@ const showsDataArray = [
     "venueid": 1409,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -52751,7 +52753,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52766,7 +52768,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52781,7 +52783,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 176,
     "tourname": "2017 Summer Tour",
-    "tour_when": "2017 Summer",
+    "tour_year": "2017 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -52796,7 +52798,7 @@ const showsDataArray = [
     "venueid": 1401,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52811,7 +52813,7 @@ const showsDataArray = [
     "venueid": 1400,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52826,7 +52828,7 @@ const showsDataArray = [
     "venueid": 876,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52841,7 +52843,7 @@ const showsDataArray = [
     "venueid": 25,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -52856,7 +52858,7 @@ const showsDataArray = [
     "venueid": 873,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -52871,7 +52873,7 @@ const showsDataArray = [
     "venueid": 863,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -52886,7 +52888,7 @@ const showsDataArray = [
     "venueid": 906,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -52901,7 +52903,7 @@ const showsDataArray = [
     "venueid": 1398,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52916,7 +52918,7 @@ const showsDataArray = [
     "venueid": 1335,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -52931,7 +52933,7 @@ const showsDataArray = [
     "venueid": 1411,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -52946,7 +52948,7 @@ const showsDataArray = [
     "venueid": 1026,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -52961,7 +52963,7 @@ const showsDataArray = [
     "venueid": 830,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -52976,7 +52978,7 @@ const showsDataArray = [
     "venueid": 1403,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -52991,7 +52993,7 @@ const showsDataArray = [
     "venueid": 161,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53006,7 +53008,7 @@ const showsDataArray = [
     "venueid": 1404,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53021,7 +53023,7 @@ const showsDataArray = [
     "venueid": 855,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53036,7 +53038,7 @@ const showsDataArray = [
     "venueid": 857,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53051,7 +53053,7 @@ const showsDataArray = [
     "venueid": 1405,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53066,7 +53068,7 @@ const showsDataArray = [
     "venueid": 900,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53081,7 +53083,7 @@ const showsDataArray = [
     "venueid": 881,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53096,7 +53098,7 @@ const showsDataArray = [
     "venueid": 1406,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53111,7 +53113,7 @@ const showsDataArray = [
     "venueid": 199,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53126,7 +53128,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53141,7 +53143,7 @@ const showsDataArray = [
     "venueid": 199,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53156,7 +53158,7 @@ const showsDataArray = [
     "venueid": 991,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53171,7 +53173,7 @@ const showsDataArray = [
     "venueid": 1345,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53186,7 +53188,7 @@ const showsDataArray = [
     "venueid": 897,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53201,7 +53203,7 @@ const showsDataArray = [
     "venueid": 897,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53216,7 +53218,7 @@ const showsDataArray = [
     "venueid": 1345,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53231,7 +53233,7 @@ const showsDataArray = [
     "venueid": 135,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53246,7 +53248,7 @@ const showsDataArray = [
     "venueid": 1408,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53261,7 +53263,7 @@ const showsDataArray = [
     "venueid": 1415,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53276,7 +53278,7 @@ const showsDataArray = [
     "venueid": 799,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53291,7 +53293,7 @@ const showsDataArray = [
     "venueid": 799,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53306,7 +53308,7 @@ const showsDataArray = [
     "venueid": 1414,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53321,7 +53323,7 @@ const showsDataArray = [
     "venueid": 1414,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53336,7 +53338,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 178,
     "tourname": "2017 NYE Run",
-    "tour_when": "2017 NYE",
+    "tour_year": "2017 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -53351,7 +53353,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 178,
     "tourname": "2017 NYE Run",
-    "tour_when": "2017 NYE",
+    "tour_year": "2017 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -53366,7 +53368,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 178,
     "tourname": "2017 NYE Run",
-    "tour_when": "2017 NYE",
+    "tour_year": "2017 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -53381,7 +53383,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 178,
     "tourname": "2017 NYE Run",
-    "tour_when": "2017 NYE",
+    "tour_year": "2017 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -53396,7 +53398,7 @@ const showsDataArray = [
     "venueid": 275,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53411,7 +53413,7 @@ const showsDataArray = [
     "venueid": 275,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53426,7 +53428,7 @@ const showsDataArray = [
     "venueid": 1412,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53441,7 +53443,7 @@ const showsDataArray = [
     "venueid": 1413,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53456,7 +53458,7 @@ const showsDataArray = [
     "venueid": 1373,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -53471,7 +53473,7 @@ const showsDataArray = [
     "venueid": 1422,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53486,7 +53488,7 @@ const showsDataArray = [
     "venueid": 539,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53501,7 +53503,7 @@ const showsDataArray = [
     "venueid": 1296,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53516,7 +53518,7 @@ const showsDataArray = [
     "venueid": 1295,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53531,7 +53533,7 @@ const showsDataArray = [
     "venueid": 1006,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53546,7 +53548,7 @@ const showsDataArray = [
     "venueid": 1416,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53561,7 +53563,7 @@ const showsDataArray = [
     "venueid": 139,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53576,7 +53578,7 @@ const showsDataArray = [
     "venueid": 1423,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53591,7 +53593,7 @@ const showsDataArray = [
     "venueid": 1424,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53606,7 +53608,7 @@ const showsDataArray = [
     "venueid": 1425,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53621,7 +53623,7 @@ const showsDataArray = [
     "venueid": 841,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53636,7 +53638,7 @@ const showsDataArray = [
     "venueid": 841,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53651,7 +53653,7 @@ const showsDataArray = [
     "venueid": 1418,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53666,7 +53668,7 @@ const showsDataArray = [
     "venueid": 1426,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53681,7 +53683,7 @@ const showsDataArray = [
     "venueid": 1418,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53696,7 +53698,7 @@ const showsDataArray = [
     "venueid": 1427,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53711,7 +53713,7 @@ const showsDataArray = [
     "venueid": 1428,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53726,7 +53728,7 @@ const showsDataArray = [
     "venueid": 1421,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53741,7 +53743,7 @@ const showsDataArray = [
     "venueid": 1417,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53756,7 +53758,7 @@ const showsDataArray = [
     "venueid": 1419,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53771,7 +53773,7 @@ const showsDataArray = [
     "venueid": 1174,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53786,7 +53788,7 @@ const showsDataArray = [
     "venueid": 1420,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53801,7 +53803,7 @@ const showsDataArray = [
     "venueid": 275,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -53816,7 +53818,7 @@ const showsDataArray = [
     "venueid": 1270,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53831,7 +53833,7 @@ const showsDataArray = [
     "venueid": 1435,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53846,7 +53848,7 @@ const showsDataArray = [
     "venueid": 968,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53861,7 +53863,7 @@ const showsDataArray = [
     "venueid": 1429,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -53876,7 +53878,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53891,7 +53893,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -53906,7 +53908,7 @@ const showsDataArray = [
     "venueid": 829,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -53921,7 +53923,7 @@ const showsDataArray = [
     "venueid": 1431,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -53936,7 +53938,7 @@ const showsDataArray = [
     "venueid": 896,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -53951,7 +53953,7 @@ const showsDataArray = [
     "venueid": 830,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -53966,7 +53968,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -53981,7 +53983,7 @@ const showsDataArray = [
     "venueid": 1432,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -53996,7 +53998,7 @@ const showsDataArray = [
     "venueid": 1120,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -54011,7 +54013,7 @@ const showsDataArray = [
     "venueid": 1439,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -54026,7 +54028,7 @@ const showsDataArray = [
     "venueid": 1433,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -54041,7 +54043,7 @@ const showsDataArray = [
     "venueid": 1339,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -54056,7 +54058,7 @@ const showsDataArray = [
     "venueid": 866,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -54071,7 +54073,7 @@ const showsDataArray = [
     "venueid": 826,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -54086,7 +54088,7 @@ const showsDataArray = [
     "venueid": 1450,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -54101,7 +54103,7 @@ const showsDataArray = [
     "venueid": 826,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -54116,7 +54118,7 @@ const showsDataArray = [
     "venueid": 1430,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -54131,7 +54133,7 @@ const showsDataArray = [
     "venueid": 1288,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -54146,7 +54148,7 @@ const showsDataArray = [
     "venueid": 532,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -54161,7 +54163,7 @@ const showsDataArray = [
     "venueid": 532,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -54176,7 +54178,7 @@ const showsDataArray = [
     "venueid": 532,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -54191,7 +54193,7 @@ const showsDataArray = [
     "venueid": 1438,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -54206,7 +54208,7 @@ const showsDataArray = [
     "venueid": 1451,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -54221,7 +54223,7 @@ const showsDataArray = [
     "venueid": 1451,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -54236,7 +54238,7 @@ const showsDataArray = [
     "venueid": 424,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -54251,7 +54253,7 @@ const showsDataArray = [
     "venueid": 1453,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -54266,7 +54268,7 @@ const showsDataArray = [
     "venueid": 1454,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -54281,7 +54283,7 @@ const showsDataArray = [
     "venueid": 1441,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -54296,7 +54298,7 @@ const showsDataArray = [
     "venueid": 1442,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -54311,7 +54313,7 @@ const showsDataArray = [
     "venueid": 1443,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -54326,7 +54328,7 @@ const showsDataArray = [
     "venueid": 1452,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -54341,7 +54343,7 @@ const showsDataArray = [
     "venueid": 1449,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -54356,7 +54358,7 @@ const showsDataArray = [
     "venueid": 960,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54371,7 +54373,7 @@ const showsDataArray = [
     "venueid": 960,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54386,7 +54388,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54401,7 +54403,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54416,7 +54418,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54431,7 +54433,7 @@ const showsDataArray = [
     "venueid": 816,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54446,7 +54448,7 @@ const showsDataArray = [
     "venueid": 816,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54461,7 +54463,7 @@ const showsDataArray = [
     "venueid": 1314,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54476,7 +54478,7 @@ const showsDataArray = [
     "venueid": 1314,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54491,7 +54493,7 @@ const showsDataArray = [
     "venueid": 1326,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54506,7 +54508,7 @@ const showsDataArray = [
     "venueid": 768,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54521,7 +54523,7 @@ const showsDataArray = [
     "venueid": 768,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54536,7 +54538,7 @@ const showsDataArray = [
     "venueid": 768,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54551,7 +54553,7 @@ const showsDataArray = [
     "venueid": 1437,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54566,7 +54568,7 @@ const showsDataArray = [
     "venueid": 1437,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54581,7 +54583,7 @@ const showsDataArray = [
     "venueid": 1436,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54596,7 +54598,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54611,7 +54613,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54626,7 +54628,7 @@ const showsDataArray = [
     "venueid": 958,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54641,7 +54643,7 @@ const showsDataArray = [
     "venueid": 958,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54656,7 +54658,7 @@ const showsDataArray = [
     "venueid": 958,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54671,7 +54673,7 @@ const showsDataArray = [
     "venueid": 1456,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -54686,7 +54688,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54701,7 +54703,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54716,7 +54718,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 179,
     "tourname": "2018 Summer Tour",
-    "tour_when": "2018 Summer",
+    "tour_year": "2018 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54731,7 +54733,7 @@ const showsDataArray = [
     "venueid": 1457,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -54746,7 +54748,7 @@ const showsDataArray = [
     "venueid": 758,
     "tourid": 180,
     "tourname": "2018 Fall Tour",
-    "tour_when": "2018 Fall",
+    "tour_year": "2018 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54761,7 +54763,7 @@ const showsDataArray = [
     "venueid": 758,
     "tourid": 180,
     "tourname": "2018 Fall Tour",
-    "tour_when": "2018 Fall",
+    "tour_year": "2018 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54776,7 +54778,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 180,
     "tourname": "2018 Fall Tour",
-    "tour_when": "2018 Fall",
+    "tour_year": "2018 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54791,7 +54793,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 180,
     "tourname": "2018 Fall Tour",
-    "tour_when": "2018 Fall",
+    "tour_year": "2018 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54806,7 +54808,7 @@ const showsDataArray = [
     "venueid": 6,
     "tourid": 180,
     "tourname": "2018 Fall Tour",
-    "tour_when": "2018 Fall",
+    "tour_year": "2018 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54821,7 +54823,7 @@ const showsDataArray = [
     "venueid": 1329,
     "tourid": 180,
     "tourname": "2018 Fall Tour",
-    "tour_when": "2018 Fall",
+    "tour_year": "2018 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54836,7 +54838,7 @@ const showsDataArray = [
     "venueid": 1329,
     "tourid": 180,
     "tourname": "2018 Fall Tour",
-    "tour_when": "2018 Fall",
+    "tour_year": "2018 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54851,7 +54853,7 @@ const showsDataArray = [
     "venueid": 237,
     "tourid": 180,
     "tourname": "2018 Fall Tour",
-    "tour_when": "2018 Fall",
+    "tour_year": "2018 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54866,7 +54868,7 @@ const showsDataArray = [
     "venueid": 237,
     "tourid": 180,
     "tourname": "2018 Fall Tour",
-    "tour_when": "2018 Fall",
+    "tour_year": "2018 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54881,7 +54883,7 @@ const showsDataArray = [
     "venueid": 237,
     "tourid": 180,
     "tourname": "2018 Fall Tour",
-    "tour_when": "2018 Fall",
+    "tour_year": "2018 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54896,7 +54898,7 @@ const showsDataArray = [
     "venueid": 1316,
     "tourid": 180,
     "tourname": "2018 Fall Tour",
-    "tour_when": "2018 Fall",
+    "tour_year": "2018 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54911,7 +54913,7 @@ const showsDataArray = [
     "venueid": 1316,
     "tourid": 180,
     "tourname": "2018 Fall Tour",
-    "tour_when": "2018 Fall",
+    "tour_year": "2018 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54926,7 +54928,7 @@ const showsDataArray = [
     "venueid": 1316,
     "tourid": 180,
     "tourname": "2018 Fall Tour",
-    "tour_when": "2018 Fall",
+    "tour_year": "2018 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54941,7 +54943,7 @@ const showsDataArray = [
     "venueid": 1316,
     "tourid": 180,
     "tourname": "2018 Fall Tour",
-    "tour_when": "2018 Fall",
+    "tour_year": "2018 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -54956,7 +54958,7 @@ const showsDataArray = [
     "venueid": 1444,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -54971,7 +54973,7 @@ const showsDataArray = [
     "venueid": 1445,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -54986,7 +54988,7 @@ const showsDataArray = [
     "venueid": 1029,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55001,7 +55003,7 @@ const showsDataArray = [
     "venueid": 1414,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55016,7 +55018,7 @@ const showsDataArray = [
     "venueid": 1446,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55031,7 +55033,7 @@ const showsDataArray = [
     "venueid": 185,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55046,7 +55048,7 @@ const showsDataArray = [
     "venueid": 1447,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55061,7 +55063,7 @@ const showsDataArray = [
     "venueid": 1448,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55076,7 +55078,7 @@ const showsDataArray = [
     "venueid": 1448,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55091,7 +55093,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 181,
     "tourname": "2018 NYE Run",
-    "tour_when": "2018 NYE",
+    "tour_year": "2018 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -55106,7 +55108,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 181,
     "tourname": "2018 NYE Run",
-    "tour_when": "2018 NYE",
+    "tour_year": "2018 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -55121,7 +55123,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 181,
     "tourname": "2018 NYE Run",
-    "tour_when": "2018 NYE",
+    "tour_year": "2018 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -55136,7 +55138,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 181,
     "tourname": "2018 NYE Run",
-    "tour_when": "2018 NYE",
+    "tour_year": "2018 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -55151,7 +55153,7 @@ const showsDataArray = [
     "venueid": 1465,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55166,7 +55168,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55181,7 +55183,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55196,7 +55198,7 @@ const showsDataArray = [
     "venueid": 850,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55211,7 +55213,7 @@ const showsDataArray = [
     "venueid": 1349,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -55226,7 +55228,7 @@ const showsDataArray = [
     "venueid": 1349,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -55241,7 +55243,7 @@ const showsDataArray = [
     "venueid": 1349,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -55256,7 +55258,7 @@ const showsDataArray = [
     "venueid": 1349,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -55271,7 +55273,7 @@ const showsDataArray = [
     "venueid": 105,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55286,7 +55288,7 @@ const showsDataArray = [
     "venueid": 862,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55301,7 +55303,7 @@ const showsDataArray = [
     "venueid": 1458,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55316,7 +55318,7 @@ const showsDataArray = [
     "venueid": 1471,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55331,7 +55333,7 @@ const showsDataArray = [
     "venueid": 1331,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55346,7 +55348,7 @@ const showsDataArray = [
     "venueid": 1459,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55361,7 +55363,7 @@ const showsDataArray = [
     "venueid": 787,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55376,7 +55378,7 @@ const showsDataArray = [
     "venueid": 1460,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55391,7 +55393,7 @@ const showsDataArray = [
     "venueid": 1461,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55406,7 +55408,7 @@ const showsDataArray = [
     "venueid": 851,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55421,7 +55423,7 @@ const showsDataArray = [
     "venueid": 1384,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55436,7 +55438,7 @@ const showsDataArray = [
     "venueid": 1384,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55451,7 +55453,7 @@ const showsDataArray = [
     "venueid": 1384,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55466,7 +55468,7 @@ const showsDataArray = [
     "venueid": 1384,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55481,7 +55483,7 @@ const showsDataArray = [
     "venueid": 1473,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -55496,7 +55498,7 @@ const showsDataArray = [
     "venueid": 791,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55511,7 +55513,7 @@ const showsDataArray = [
     "venueid": 1462,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55526,7 +55528,7 @@ const showsDataArray = [
     "venueid": 1463,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55541,7 +55543,7 @@ const showsDataArray = [
     "venueid": 302,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55556,7 +55558,7 @@ const showsDataArray = [
     "venueid": 190,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55571,7 +55573,7 @@ const showsDataArray = [
     "venueid": 1464,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55586,7 +55588,7 @@ const showsDataArray = [
     "venueid": 1464,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55601,7 +55603,7 @@ const showsDataArray = [
     "venueid": 289,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55616,7 +55618,7 @@ const showsDataArray = [
     "venueid": 372,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55631,7 +55633,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55646,7 +55648,7 @@ const showsDataArray = [
     "venueid": 1335,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55661,7 +55663,7 @@ const showsDataArray = [
     "venueid": 1475,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55676,7 +55678,7 @@ const showsDataArray = [
     "venueid": 896,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55691,7 +55693,7 @@ const showsDataArray = [
     "venueid": 896,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55706,7 +55708,7 @@ const showsDataArray = [
     "venueid": 1177,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55721,7 +55723,7 @@ const showsDataArray = [
     "venueid": 532,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55736,7 +55738,7 @@ const showsDataArray = [
     "venueid": 1476,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55751,7 +55753,7 @@ const showsDataArray = [
     "venueid": 1320,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55766,7 +55768,7 @@ const showsDataArray = [
     "venueid": 1469,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55781,7 +55783,7 @@ const showsDataArray = [
     "venueid": 1468,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55796,7 +55798,7 @@ const showsDataArray = [
     "venueid": 827,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55811,7 +55813,7 @@ const showsDataArray = [
     "venueid": 827,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -55826,7 +55828,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -55841,7 +55843,7 @@ const showsDataArray = [
     "venueid": 50,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -55856,7 +55858,7 @@ const showsDataArray = [
     "venueid": 1222,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -55871,7 +55873,7 @@ const showsDataArray = [
     "venueid": 1222,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -55886,7 +55888,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -55901,7 +55903,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -55916,7 +55918,7 @@ const showsDataArray = [
     "venueid": 1466,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -55931,7 +55933,7 @@ const showsDataArray = [
     "venueid": 223,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -55946,7 +55948,7 @@ const showsDataArray = [
     "venueid": 1308,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -55961,7 +55963,7 @@ const showsDataArray = [
     "venueid": 1482,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -55976,7 +55978,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -55991,7 +55993,7 @@ const showsDataArray = [
     "venueid": 9,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56006,7 +56008,7 @@ const showsDataArray = [
     "venueid": 1274,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56021,7 +56023,7 @@ const showsDataArray = [
     "venueid": 1274,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56036,7 +56038,7 @@ const showsDataArray = [
     "venueid": 1437,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56051,7 +56053,7 @@ const showsDataArray = [
     "venueid": 1437,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56066,7 +56068,7 @@ const showsDataArray = [
     "venueid": 1437,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56081,7 +56083,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56096,7 +56098,7 @@ const showsDataArray = [
     "venueid": 220,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56111,7 +56113,7 @@ const showsDataArray = [
     "venueid": 498,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56126,7 +56128,7 @@ const showsDataArray = [
     "venueid": 498,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56141,7 +56143,7 @@ const showsDataArray = [
     "venueid": 1467,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56156,7 +56158,7 @@ const showsDataArray = [
     "venueid": 1467,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56171,7 +56173,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56186,7 +56188,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56201,7 +56203,7 @@ const showsDataArray = [
     "venueid": 3,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56216,7 +56218,7 @@ const showsDataArray = [
     "venueid": 1483,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56231,7 +56233,7 @@ const showsDataArray = [
     "venueid": 990,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56246,7 +56248,7 @@ const showsDataArray = [
     "venueid": 990,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -56261,7 +56263,7 @@ const showsDataArray = [
     "venueid": 1472,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56276,7 +56278,7 @@ const showsDataArray = [
     "venueid": 1472,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56291,7 +56293,7 @@ const showsDataArray = [
     "venueid": 1474,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56306,7 +56308,7 @@ const showsDataArray = [
     "venueid": 1474,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56321,7 +56323,7 @@ const showsDataArray = [
     "venueid": 1286,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -56336,7 +56338,7 @@ const showsDataArray = [
     "venueid": 1456,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -56351,7 +56353,7 @@ const showsDataArray = [
     "venueid": 1286,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56366,7 +56368,7 @@ const showsDataArray = [
     "venueid": 1286,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -56381,7 +56383,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56396,7 +56398,7 @@ const showsDataArray = [
     "venueid": 1271,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/guest"
   },
   {
@@ -56411,7 +56413,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56426,7 +56428,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 182,
     "tourname": "2019 Summer Tour",
-    "tour_when": "2019 Summer",
+    "tour_year": "2019 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56441,7 +56443,7 @@ const showsDataArray = [
     "venueid": 787,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -56456,7 +56458,7 @@ const showsDataArray = [
     "venueid": 1394,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -56471,7 +56473,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -56486,7 +56488,7 @@ const showsDataArray = [
     "venueid": 1470,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56501,7 +56503,7 @@ const showsDataArray = [
     "venueid": 1484,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56516,7 +56518,7 @@ const showsDataArray = [
     "venueid": 863,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -56531,7 +56533,7 @@ const showsDataArray = [
     "venueid": 1487,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -56546,7 +56548,7 @@ const showsDataArray = [
     "venueid": 1009,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56561,7 +56563,7 @@ const showsDataArray = [
     "venueid": 175,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56576,7 +56578,7 @@ const showsDataArray = [
     "venueid": 1477,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56591,7 +56593,7 @@ const showsDataArray = [
     "venueid": 1121,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56606,7 +56608,7 @@ const showsDataArray = [
     "venueid": 285,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56621,7 +56623,7 @@ const showsDataArray = [
     "venueid": 1478,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56636,7 +56638,7 @@ const showsDataArray = [
     "venueid": 1479,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56651,7 +56653,7 @@ const showsDataArray = [
     "venueid": 310,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56666,7 +56668,7 @@ const showsDataArray = [
     "venueid": 1480,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56681,7 +56683,7 @@ const showsDataArray = [
     "venueid": 902,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56696,7 +56698,7 @@ const showsDataArray = [
     "venueid": 969,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56711,7 +56713,7 @@ const showsDataArray = [
     "venueid": 969,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56726,7 +56728,7 @@ const showsDataArray = [
     "venueid": 775,
     "tourid": 183,
     "tourname": "2019 Fall Tour",
-    "tour_when": "2019 Fall",
+    "tour_year": "2019 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56741,7 +56743,7 @@ const showsDataArray = [
     "venueid": 775,
     "tourid": 183,
     "tourname": "2019 Fall Tour",
-    "tour_when": "2019 Fall",
+    "tour_year": "2019 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56756,7 +56758,7 @@ const showsDataArray = [
     "venueid": 242,
     "tourid": 183,
     "tourname": "2019 Fall Tour",
-    "tour_when": "2019 Fall",
+    "tour_year": "2019 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56771,7 +56773,7 @@ const showsDataArray = [
     "venueid": 1462,
     "tourid": 183,
     "tourname": "2019 Fall Tour",
-    "tour_when": "2019 Fall",
+    "tour_year": "2019 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56786,7 +56788,7 @@ const showsDataArray = [
     "venueid": 1396,
     "tourid": 183,
     "tourname": "2019 Fall Tour",
-    "tour_when": "2019 Fall",
+    "tour_year": "2019 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56801,7 +56803,7 @@ const showsDataArray = [
     "venueid": 698,
     "tourid": 183,
     "tourname": "2019 Fall Tour",
-    "tour_when": "2019 Fall",
+    "tour_year": "2019 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56816,7 +56818,7 @@ const showsDataArray = [
     "venueid": 698,
     "tourid": 183,
     "tourname": "2019 Fall Tour",
-    "tour_when": "2019 Fall",
+    "tour_year": "2019 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56831,7 +56833,7 @@ const showsDataArray = [
     "venueid": 698,
     "tourid": 183,
     "tourname": "2019 Fall Tour",
-    "tour_when": "2019 Fall",
+    "tour_year": "2019 Fall",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56846,7 +56848,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 184,
     "tourname": "2019 NYE Run",
-    "tour_when": "2019 NYE",
+    "tour_year": "2019 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56861,7 +56863,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 184,
     "tourname": "2019 NYE Run",
-    "tour_when": "2019 NYE",
+    "tour_year": "2019 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56876,7 +56878,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 184,
     "tourname": "2019 NYE Run",
-    "tour_when": "2019 NYE",
+    "tour_year": "2019 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56891,7 +56893,7 @@ const showsDataArray = [
     "venueid": 157,
     "tourid": 184,
     "tourname": "2019 NYE Run",
-    "tour_when": "2019 NYE",
+    "tour_year": "2019 NYE",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -56906,7 +56908,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56921,7 +56923,7 @@ const showsDataArray = [
     "venueid": 167,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56936,7 +56938,7 @@ const showsDataArray = [
     "venueid": 1358,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56951,7 +56953,7 @@ const showsDataArray = [
     "venueid": 135,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56966,7 +56968,7 @@ const showsDataArray = [
     "venueid": 539,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -56981,7 +56983,7 @@ const showsDataArray = [
     "venueid": 135,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -56996,7 +56998,7 @@ const showsDataArray = [
     "venueid": 1264,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -57011,7 +57013,7 @@ const showsDataArray = [
     "venueid": 853,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -57026,7 +57028,7 @@ const showsDataArray = [
     "venueid": 311,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -57041,7 +57043,7 @@ const showsDataArray = [
     "venueid": 1488,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57056,7 +57058,7 @@ const showsDataArray = [
     "venueid": 1485,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -57071,7 +57073,7 @@ const showsDataArray = [
     "venueid": 855,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -57086,7 +57088,7 @@ const showsDataArray = [
     "venueid": 1381,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -57101,7 +57103,7 @@ const showsDataArray = [
     "venueid": 1490,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57116,7 +57118,7 @@ const showsDataArray = [
     "venueid": 883,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -57131,7 +57133,7 @@ const showsDataArray = [
     "venueid": 1390,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57146,7 +57148,7 @@ const showsDataArray = [
     "venueid": 882,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -57161,7 +57163,7 @@ const showsDataArray = [
     "venueid": 129,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57176,7 +57178,7 @@ const showsDataArray = [
     "venueid": 199,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -57191,7 +57193,7 @@ const showsDataArray = [
     "venueid": 1489,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57206,7 +57208,7 @@ const showsDataArray = [
     "venueid": 1486,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -57221,7 +57223,7 @@ const showsDataArray = [
     "venueid": 949,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -57236,7 +57238,7 @@ const showsDataArray = [
     "venueid": 532,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57251,7 +57253,7 @@ const showsDataArray = [
     "venueid": 1057,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -57266,7 +57268,7 @@ const showsDataArray = [
     "venueid": 532,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57281,7 +57283,7 @@ const showsDataArray = [
     "venueid": 772,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57296,7 +57298,7 @@ const showsDataArray = [
     "venueid": 772,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57311,7 +57313,7 @@ const showsDataArray = [
     "venueid": 1481,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57326,7 +57328,7 @@ const showsDataArray = [
     "venueid": 1481,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57341,7 +57343,7 @@ const showsDataArray = [
     "venueid": 1481,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57356,7 +57358,7 @@ const showsDataArray = [
     "venueid": 1481,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57371,7 +57373,7 @@ const showsDataArray = [
     "venueid": 1481,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57386,7 +57388,7 @@ const showsDataArray = [
     "venueid": 1481,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57401,7 +57403,7 @@ const showsDataArray = [
     "venueid": 829,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -57416,7 +57418,7 @@ const showsDataArray = [
     "venueid": 822,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/fish"
   },
   {
@@ -57431,7 +57433,7 @@ const showsDataArray = [
     "venueid": 372,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57446,7 +57448,7 @@ const showsDataArray = [
     "venueid": 1493,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57461,7 +57463,7 @@ const showsDataArray = [
     "venueid": 286,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57476,7 +57478,7 @@ const showsDataArray = [
     "venueid": 286,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57491,7 +57493,7 @@ const showsDataArray = [
     "venueid": 827,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -57506,7 +57508,7 @@ const showsDataArray = [
     "venueid": 948,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/page"
   },
   {
@@ -57521,7 +57523,7 @@ const showsDataArray = [
     "venueid": 1500,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57536,7 +57538,7 @@ const showsDataArray = [
     "venueid": 1501,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57551,7 +57553,7 @@ const showsDataArray = [
     "venueid": 1501,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57566,7 +57568,7 @@ const showsDataArray = [
     "venueid": 1504,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57581,7 +57583,7 @@ const showsDataArray = [
     "venueid": 1400,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57596,7 +57598,7 @@ const showsDataArray = [
     "venueid": 809,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57611,7 +57613,7 @@ const showsDataArray = [
     "venueid": 1502,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57626,7 +57628,7 @@ const showsDataArray = [
     "venueid": 1392,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57641,7 +57643,7 @@ const showsDataArray = [
     "venueid": 795,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57656,7 +57658,7 @@ const showsDataArray = [
     "venueid": 1505,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57671,7 +57673,7 @@ const showsDataArray = [
     "venueid": 506,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57686,7 +57688,7 @@ const showsDataArray = [
     "venueid": 1268,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57701,7 +57703,7 @@ const showsDataArray = [
     "venueid": 1286,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -57716,7 +57718,7 @@ const showsDataArray = [
     "venueid": 1492,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57731,7 +57733,7 @@ const showsDataArray = [
     "venueid": 1506,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57746,7 +57748,7 @@ const showsDataArray = [
     "venueid": 1507,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -57761,7 +57763,7 @@ const showsDataArray = [
     "venueid": 1312,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57776,7 +57778,7 @@ const showsDataArray = [
     "venueid": 1312,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57791,7 +57793,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57806,7 +57808,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57821,7 +57823,7 @@ const showsDataArray = [
     "venueid": 248,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57836,7 +57838,7 @@ const showsDataArray = [
     "venueid": 960,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57851,7 +57853,7 @@ const showsDataArray = [
     "venueid": 960,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57866,7 +57868,7 @@ const showsDataArray = [
     "venueid": 1314,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57881,7 +57883,7 @@ const showsDataArray = [
     "venueid": 1494,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57896,7 +57898,7 @@ const showsDataArray = [
     "venueid": 1494,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57911,7 +57913,7 @@ const showsDataArray = [
     "venueid": 1495,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57926,7 +57928,7 @@ const showsDataArray = [
     "venueid": 1513,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -57941,7 +57943,7 @@ const showsDataArray = [
     "venueid": 418,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57956,7 +57958,7 @@ const showsDataArray = [
     "venueid": 1496,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57971,7 +57973,7 @@ const showsDataArray = [
     "venueid": 1496,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -57986,7 +57988,7 @@ const showsDataArray = [
     "venueid": 1329,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -58001,7 +58003,7 @@ const showsDataArray = [
     "venueid": 1329,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -58016,7 +58018,7 @@ const showsDataArray = [
     "venueid": 1497,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -58031,7 +58033,7 @@ const showsDataArray = [
     "venueid": 1497,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -58046,7 +58048,7 @@ const showsDataArray = [
     "venueid": 1497,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -58061,7 +58063,7 @@ const showsDataArray = [
     "venueid": 1498,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -58076,7 +58078,7 @@ const showsDataArray = [
     "venueid": 770,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -58091,7 +58093,7 @@ const showsDataArray = [
     "venueid": 1498,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -58106,7 +58108,7 @@ const showsDataArray = [
     "venueid": 1499,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -58121,7 +58123,7 @@ const showsDataArray = [
     "venueid": 1499,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -58136,7 +58138,7 @@ const showsDataArray = [
     "venueid": 1499,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -58151,7 +58153,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -58166,7 +58168,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -58181,7 +58183,7 @@ const showsDataArray = [
     "venueid": 961,
     "tourid": 185,
     "tourname": "2020 Summer Tour",
-    "tour_when": "2020 Summer",
+    "tour_year": "2020 Summer",
     "artistlink": "https://phish.net/setlists/phish"
   },
   {
@@ -58196,7 +58198,7 @@ const showsDataArray = [
     "venueid": 1515,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -58211,7 +58213,7 @@ const showsDataArray = [
     "venueid": 1514,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -58226,7 +58228,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -58241,7 +58243,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -58256,7 +58258,7 @@ const showsDataArray = [
     "venueid": 1516,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/mike"
   },
   {
@@ -58271,7 +58273,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -58286,7 +58288,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -58301,7 +58303,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -58316,7 +58318,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -58331,7 +58333,7 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   },
   {
@@ -58346,7 +58348,26 @@ const showsDataArray = [
     "venueid": 31,
     "tourid": 61,
     "tourname": "Not Part of a Tour",
-    "tour_when": "No Tour",
+    "tour_year": "No Tour",
     "artistlink": "https://phish.net/setlists/trey"
   }
 ]
+
+// ~Delete All Shows records
+db.Show.deleteMany({}, (err, deletedShows) => {
+  if (err) {
+    console.log(err);
+    process.exit();
+  }
+  console.log('Shows deleted successfully');
+
+  // ~Create New Shows
+  db.Show.create(showsDataArray, (err, allShows) => {
+    if (err) {
+      console.log(err);
+      process.exit();
+    }
+    console.log(`Created ${allShows.length} shows successfully`);
+    process.exit();
+  });
+});

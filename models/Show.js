@@ -5,17 +5,29 @@ const showSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  showdate: Date,
-  artist: String,
+  showdate: {
+    type: Date,
+    required: true
+  },
+  artist: {
+    type: String,
+    required: true
+  },
   billed_as: String,
   link: String,
-  location: String,
-  venue: String,
+  location: {
+    type: String,
+    required: true
+  },
+  venue: {
+    type: String,
+    required: true
+  },
   shownotes: String,
   venueid: Number,
   tourid: Number,
   tourname: String,
-  tour_when: Number,
+  tour_year: String,
   artistlink: String,
 }, { timestamps: true });
 
