@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const showSchema = new mongoose.Schema({
-  showid: {
+  phishnet_showid: {
     type: Number,
     required: true
   },
@@ -15,17 +15,11 @@ const showSchema = new mongoose.Schema({
   },
   billed_as: String,
   link: String,
-  location: {
-    type: String,
-    required: true
-  },
-  venue: {
-    type: String,
-    required: true
-  },
+  location: String,
+  venue: String,
   shownotes: String,
-  venueid: Number,
-  tourid: Number,
+  phishnet_venueid: Number,
+  phishnet_tourid: Number,
   tourname: String,
   tour_year: String,
   artistlink: String,
