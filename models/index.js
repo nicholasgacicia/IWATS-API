@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const connectionString = 'mongodb://localhost:27017/yemstats'
+const connectionString = process.env.MONGODB_URI;
 
 mongoose.connect(connectionString, {
   useNewUrlParser: true,
@@ -13,4 +13,5 @@ mongoose.connect(connectionString, {
 
 module.exports = {
   Show: require('./Show'),
+  User: require('./User'),
 };

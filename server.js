@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
+require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 4000;
 const routes = require('./routes');
@@ -13,16 +13,6 @@ app.use(bodyParser.json());
 
 // ~Cross Origin Resource Sharing
 app.use(cors());
-// const whitelist = ['http://example1.com', 'http://example2.com']
-// const corsOptions = {
-//   origin: function (origin, callback) {
-//     if (whitelist.indexOf(origin) !== -1) {
-//       callback(null, true)
-//     } else {
-//       callback(new Error('Not allowed by CORS'))
-//     }
-//   }
-// }
 
 
 // ~Home Route
@@ -32,6 +22,8 @@ app.get('/', (req, res) => {
 
 // ~Shows API Routes
 app.use('/api/shows', routes.shows);
+// ~Users API Routes
+app.use('/api/users', routes.users);
 
 
 // ~App Listener
