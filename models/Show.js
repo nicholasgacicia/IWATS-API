@@ -1,18 +1,9 @@
 const mongoose = require('mongoose');
 
 const showSchema = new mongoose.Schema({
-  phishnet_showid: {
-    type: Number,
-    required: true
-  },
-  showdate: {
-    type: Date,
-    required: true
-  },
-  artist: {
-    type: String,
-    required: true
-  },
+  phishnet_showid: Number,
+  showdate: Date,
+  artist: String,
   billed_as: String,
   link: String,
   location: String,
