@@ -24,7 +24,8 @@ app.get('/', (req, res) => {
 app.use('/api/shows', routes.shows);
 // ~Users API Routes
 app.use('/api/users', routes.users);
-
+// ~Auth API Routes
+app.use('/api/auth', routes.auth);
 
 // ~App Listener
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

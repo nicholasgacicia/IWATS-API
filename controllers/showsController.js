@@ -9,7 +9,7 @@ const index = (req, res) => {
 };
 
 const show = (req, res) => {
-  // console.log('Show to show ID = ', req.params.id);
+  // console.log('Show ID = ', req.params.id);
   // ~Get Show from DB by ID
   db.Show.findById(req.params.id, (err, foundShow) => {
     if (err) return console.log(err);

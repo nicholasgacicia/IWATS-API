@@ -1,4 +1,4 @@
-// const bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 const db = require('../models');
 
 async function create(req, res) {
@@ -17,11 +17,11 @@ async function create(req, res) {
       return res.status(400).json({ status: 400, error: 'User already exists. Please login' });
     }
 
-    // const salt = await bcrypt.genSalt(10);  // ~Create Salt for password hash
-    // const hash = await bcrypt.hash(password, salt);  // ~Hash user's plain text Password
-    // const newUser = await db.User.create({ name, email, password: hash }); // ~Create the new user with hashed password
+    const salt = await bcrypt.genSalt(10);  // ~Create Salt for password hash
+    const hash = await bcrypt.hash(password, salt);  // ~Hash user's plain text Password
+    const newUser = await db.User.create({ name, email, password: hash }); // ~Create the new user with hashed password
 
-    const newUser = await db.User.create({ name, email, password });  // ~Create the new user
+    // const newUser = await db.User.create({ name, email, password });  // ~Create the new user without bcrypt (comment out salt, hash and newUser above)
 
     res.json(newUser);
   } catch (err) {
