@@ -29,12 +29,12 @@ async function create(req, res) {
   }
 }
 
-async function myShows(req, res) {
+async function getMyShows(req, res) {
   try {
     // currentUserId = req.currentUserId
     // ~Find User by ID
     const user = await db.User.findById(req.currentUserId);
-    return res.json({ status: 200, profile: user });
+    return res.json({ status: 200, userData: user });
   } catch (err) {
     console.log(err);
     return res.status(500).json({ status: 500, error: 'Something went wrong. Please try again' });
@@ -43,4 +43,5 @@ async function myShows(req, res) {
 
 module.exports = {
   create,
+  getMyShows,
 };
