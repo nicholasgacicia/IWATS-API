@@ -35,15 +35,29 @@ async function create(req, res) {
 //! Add Show to attendedShows
 async function addAttendedShow(req, res) {
   try {
-    const currentUser = await db.User.findById(req.currentUserId);
-    console.log(currentUser);
-    console.log(req.params.showId);
-    await currentUser.showsAttended.push(req.params.showId);
-    await currentUser.save();
-    res.json();
+    const showId = req.params.showId;
+    console.log('Add showId = ', showId);
+
+    // ~Find User
+    const user = await db.User.findById(req.currentUserId);
+
+    // ~Check if show has already been added
+    if (user.showsAttended.indexOf(showId) !== -1) {
+      console.log('User has already added this show');
+      return res.status(400).json({ status: 400, message: 'FAILED: Show is already on your attended shows list.' });
+    }
+
+    // ~Add show to User's showsAttended array
+    await user.showsAttended.push(showId);
+    await user.save();
+    console.log(user);
+
+    // ~Respond to client
+    res.json({ status: 200, message: `SUCCESS: Show added to attended shows list.` });
+
   } catch (err) {
     console.log(err);
-    return res.status(500).json({ status: 500, error: 'Something went wrong. Please try again' });
+    return res.status(500).json({ status: 500, error: 'ERROR: Something went wrong. Please try again' });
   }
 }
 
@@ -51,7 +65,6 @@ async function addAttendedShow(req, res) {
 //! Get Attended Shows
 async function getMyShows(req, res) {
   try {
-    // currentUserId = req.currentUserId
     // ~Find User by ID
     const user = await db.User.findById(req.currentUserId);
     return res.json({ status: 200, profile: user });

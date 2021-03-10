@@ -5,7 +5,7 @@ async function auth(req, res, next) {
 
   // ~Check if token is present
   if (!token) {
-    return res.status(400).json({ status: 400, error: 'You are not authenticated. Please login and try again' });
+    return res.status(401).json({ status: 401, error: 'You are not authenticated. Please login and try again' });
   }
 
   // ~Decode token to verify User is logged in
