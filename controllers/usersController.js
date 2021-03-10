@@ -1,6 +1,8 @@
 const bcrypt = require('bcryptjs');
 const db = require('../models');
 
+
+//! Create New User
 async function create(req, res) {
   const { name, email, password } = req.body;
 
@@ -29,12 +31,30 @@ async function create(req, res) {
   }
 }
 
+
+//! Add Show to attendedShows
+async function addAttendedShow(req, res) {
+  try {
+    const currentUser = await db.User.findById(req.currentUserId);
+    console.log(currentUser);
+    console.log(req.params.showId);
+    await currentUser.showsAttended.push(req.params.showId);
+    await currentUser.save();
+    res.json();
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({ status: 500, error: 'Something went wrong. Please try again' });
+  }
+}
+
+
+//! Get Attended Shows
 async function getMyShows(req, res) {
   try {
     // currentUserId = req.currentUserId
     // ~Find User by ID
     const user = await db.User.findById(req.currentUserId);
-    return res.json({ status: 200, userData: user });
+    return res.json({ status: 200, profile: user });
   } catch (err) {
     console.log(err);
     return res.status(500).json({ status: 500, error: 'Something went wrong. Please try again' });
@@ -44,4 +64,5 @@ async function getMyShows(req, res) {
 module.exports = {
   create,
   getMyShows,
+  addAttendedShow,
 };
