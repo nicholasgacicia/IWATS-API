@@ -5,7 +5,7 @@ const index = (req, res) => {
   db.Show.find({}, (err, allShows) => {
     if (err) return console.log(err);
     res.json(allShows);
-  })
+  }).sort({ showdate: -1 })
 };
 
 const show = (req, res) => {
